@@ -2,33 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AdSense Verification</title>
+  <title>Ravi's Knowledge Hub | Free Learning, Tools & Profit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free, beautiful, and dynamic knowledge hub by Ravi. Learn, earn, and grow with top resources, AdSense, affiliate, and donation options. Always live, always fast." />
+  <meta name="keywords" content="free learning, AdSense, affiliate, donate, blog, knowledge, GitHub Pages, JavaScript, Playwright, MCP, automation, tech, tutorials, profit, SEO" />
+  <meta name="author" content="Ravi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://raviacn95.github.io/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ravi's Knowledge Hub | Free Learning, Tools & Profit" />
+  <meta property="og:description" content="Free, beautiful, and dynamic knowledge hub by Ravi. Learn, earn, and grow with top resources, AdSense, affiliate, and donation options." />
+  <meta property="og:url" content="https://raviacn95.github.io/" />
+  <meta property="og:site_name" content="Ravi's Knowledge Hub" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravi's Knowledge Hub | Free Learning, Tools & Profit" />
+  <meta name="twitter:description" content="Free, beautiful, and dynamic knowledge hub by Ravi. Learn, earn, and grow with top resources, AdSense, affiliate, and donation options." />
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Ravi's Knowledge Hub","url":"https://raviacn95.github.io/","description":"Free, beautiful, and dynamic knowledge hub by Ravi. Learn, earn, and grow with top resources, AdSense, affiliate, and donation options.","publisher":{"@type":"Person","name":"Ravi"}}</script>
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Ravi's Knowledge Hub","url":"https://raviacn95.github.io/","logo":"https://raviacn95.github.io/favicon.ico","sameAs":["https://github.com/raviacn95"]}</script>
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I earn from this site?","acceptedAnswer":{"@type":"Answer","text":"This site uses AdSense, affiliate links, and donations for ethical profit generation."}},{"@type":"Question","name":"Is this site free forever?","acceptedAnswer":{"@type":"Answer","text":"Yes, hosted on GitHub Pages, it is free and live forever."}}]}</script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- AdSense verification snippet -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2441085120272132" crossorigin="anonymous"></script>
+  <!-- Google Analytics (replace G-XXXXXXXXXX with your ID) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
   <style>
     .dynamic-hello { font-family: 'Montserrat', 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 900; color: #5ba4f5; letter-spacing: 0.03em; margin-bottom: 0.5rem; animation: pop 1.2s cubic-bezier(.23,1.01,.32,1); }
     @keyframes pop { 0% { transform: scale(0.7); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
     .pulse { animation: pulse 1.5s infinite alternate; }
     @keyframes pulse { from { color: #5ba4f5; } to { color: #ea4aaa; } }
-    .btn {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.7rem 2.2rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      background: linear-gradient(90deg, #5ba4f5 0%, #ea4aaa 100%);
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(91,164,245,0.13);
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
+    .btn { display: inline-block; margin-top: 1.2rem; padding: 0.7rem 2.2rem; font-size: 1.1rem; font-weight: 700; color: #fff; background: linear-gradient(90deg, #5ba4f5 0%, #ea4aaa 100%); border: none; border-radius: 8px; box-shadow: 0 2px 12px rgba(91,164,245,0.13); cursor: pointer; transition: background 0.2s, transform 0.2s; }
     .btn:hover { background: linear-gradient(90deg, #ea4aaa 0%, #5ba4f5 100%); transform: translateY(-2px) scale(1.04); }
     .dynamic-time { color: #ea4aaa; font-weight: 600; font-size: 1.1rem; margin-top: 0.7rem; }
+    .share-row { margin: 1.5rem 0 0.5rem; display: flex; gap: 0.7rem; justify-content: center; }
+    .share-btn { background: #fff; border: 1px solid #eee; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #5ba4f5; transition: box-shadow 0.2s, border-color 0.2s; cursor: pointer; }
+    .share-btn:hover { box-shadow: 0 2px 12px #5ba4f533; border-color: #ea4aaa; color: #ea4aaa; }
+    .affiliate-card { background: linear-gradient(90deg, #f8ffae 0%, #43c6ac 100%); border-radius: 12px; padding: 1.2rem 1rem; margin: 1.5rem auto 0.5rem; max-width: 400px; box-shadow: 0 2px 12px #43c6ac22; text-align: left; }
+    .affiliate-card h3 { margin: 0 0 0.3rem; font-size: 1.1rem; color: #1a1a2e; }
+    .affiliate-card p { margin: 0 0 0.5rem; color: #333; font-size: 0.98rem; }
+    .affiliate-cta { color: #ea4aaa; font-weight: 700; text-decoration: underline; }
+    .donate-row { margin: 1.2rem 0 0.5rem; display: flex; gap: 1rem; justify-content: center; }
+    .donate-btn { background: #ffdd00; color: #1a1a1a; border: none; border-radius: 8px; padding: 0.6rem 1.3rem; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+    .donate-btn:hover { background: #ffe877; transform: translateY(-2px) scale(1.04); }
+    .subscribe-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px #5ba4f522; padding: 1.2rem 1rem; max-width: 350px; margin: 1.5rem auto 0.5rem; text-align: center; }
+    .subscribe-box input[type=email] { padding: 0.6rem 1rem; border-radius: 6px; border: 1px solid #eee; font-size: 1rem; margin-bottom: 0.7rem; width: 80%; }
+    .subscribe-box button { background: #5ba4f5; color: #fff; border: none; border-radius: 6px; padding: 0.6rem 1.2rem; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+    .subscribe-box button:hover { background: #ea4aaa; }
   </style>
 </head>
 <body>
@@ -41,6 +68,26 @@
     <span style="font-size:1.5rem;">🚀</span></p>
     <button class="btn" onclick="window.location.reload()">Refresh</button>
     <div class="dynamic-time" id="time"></div>
+    <div class="share-row">
+      <button class="share-btn" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+this+free+knowledge+hub!+https://raviacn95.github.io/','_blank')">🐦</button>
+      <button class="share-btn" title="Share on LinkedIn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://raviacn95.github.io/','_blank')">💼</button>
+      <button class="share-btn" title="Share on WhatsApp" onclick="window.open('https://wa.me/?text=Check+out+this+free+knowledge+hub!+https://raviacn95.github.io/','_blank')">💬</button>
+      <button class="share-btn" title="Copy Link" onclick="navigator.clipboard.writeText('https://raviacn95.github.io/');alert('Link copied!')">🔗</button>
+    </div>
+    <div class="affiliate-card">
+      <h3>Featured Resource: Playwright E2E Masterclass</h3>
+      <p>End-to-end testing with Playwright — from zero to CI/CD. <span class="affiliate-cta"><a href="#" target="_blank" rel="noopener sponsored">Enroll Free →</a></span></p>
+    </div>
+    <div class="donate-row">
+      <a href="https://buymeacoffee.com/raviacn95" class="donate-btn" target="_blank" rel="noopener">☕ Buy Me a Coffee</a>
+      <a href="https://github.com/sponsors/raviacn95" class="donate-btn" style="background:#ea4aaa;color:#fff;" target="_blank" rel="noopener">💖 GitHub Sponsors</a>
+    </div>
+    <form class="subscribe-box" onsubmit="event.preventDefault();alert('Thank you for subscribing! (Demo only)');this.reset();">
+      <div style="font-weight:700;font-size:1.1rem;margin-bottom:0.5rem;">Subscribe for Updates</div>
+      <input type="email" placeholder="Your email address" required>
+      <br>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
   <div class="footer">&copy; 2026 Ravi | Powered by GitHub Pages</div>
   <script>
