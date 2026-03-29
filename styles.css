@@ -68,3 +68,39 @@ p {
     font-size: 1.3rem;
   }
 }
+
+.learning-theories {
+  background: linear-gradient(90deg, #f8ffae 0%, #43c6ac 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #43c6ac22;
+  padding: 1.5rem 1.2rem 1.2rem;
+  margin: 1.5rem auto 1rem;
+  max-width: 480px;
+  text-align: left;
+  animation: rise 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+.learning-theories h2 {
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  margin-bottom: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.learning-theories ul {
+  padding-left: 1.1em;
+  margin: 0;
+}
+
+.learning-theories li {
+  margin-bottom: 0.7em;
+  font-size: 1.05rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+.learning-theories strong {
+  color: #ea4aaa;
+  font-weight: 700;
+}
