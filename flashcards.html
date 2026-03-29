@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcard Revision | Ravi's Knowledge Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%); }
+    .flashcard-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 90vh; }
+    .flashcard { background: #fff; border-radius: 18px; box-shadow: 0 8px 32px #43c6ac33; padding: 2.2rem 1.5rem; max-width: 420px; min-height: 180px; text-align: center; font-size: 1.2rem; font-family: 'Space Grotesk', Arial, sans-serif; margin-bottom: 1.5rem; transition: box-shadow 0.2s, transform 0.2s; }
+    .flashcard strong { color: #ea4aaa; }
+    .flashcard-btns { display: flex; gap: 1.2rem; justify-content: center; margin-top: 1.2rem; }
+    .fc-btn { padding: 0.7rem 2.2rem; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+    .fc-btn.know { background: #5ba4f5; color: #fff; }
+    .fc-btn.review { background: #ea4aaa; color: #fff; }
+    .fc-btn:hover { transform: translateY(-2px) scale(1.04); }
+    .fc-progress { margin-bottom: 1.2rem; color: #1a1a2e; font-weight: 600; }
+    .fc-viewall { margin: 1.5rem 0 0.5rem; text-align: center; }
+    .fc-list { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #43c6ac22; padding: 1.2rem 1rem; max-width: 500px; margin: 0 auto; }
+    .fc-list li { margin-bottom: 0.7em; font-size: 1.05rem; color: #222; line-height: 1.6; }
+    .fc-list strong { color: #ea4aaa; }
+    .fc-back { margin-top: 2rem; display: inline-block; color: #5ba4f5; font-weight: 700; text-decoration: underline; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="flashcard-container">
+    <div class="fc-progress" id="fc-progress"></div>
+    <div class="flashcard" id="flashcard"></div>
+    <div class="flashcard-btns">
+      <button class="fc-btn know" onclick="nextCard('know')">Know it 👍</button>
+      <button class="fc-btn review" onclick="nextCard('review')">Review again 👈</button>
+    </div>
+    <div class="fc-viewall">
+      <button class="btn" onclick="toggleList()">View All as List</button>
+    </div>
+    <ul class="fc-list" id="fc-list" style="display:none;"></ul>
+    <a class="fc-back" href="index.html">← Back to Home</a>
+  </div>
+  <script>
+    // Example flashcards (replace with your 100+)
+    const flashcards = [
+      { front: '<strong>Spaced Repetition</strong>', back: 'Review material at increasing intervals to fight the forgetting curve.' },
+      { front: '<strong>Active Recall</strong>', back: 'Test yourself by retrieving information without looking at notes.' },
+      { front: '<strong>Interleaving Practice</strong>', back: 'Mix different topics or problem types in one session to improve adaptability.' },
+      { front: '<strong>Practice Testing</strong>', back: 'Simulate exam conditions to strengthen retrieval and reduce anxiety.' },
+      { front: '<strong>Elaboration</strong>', back: 'Explain concepts in your own words and connect them to prior knowledge.' },
+      { front: '<strong>Metacognition</strong>', back: 'Reflect on what you know vs. don’t know to guide study time efficiently.' }
+      // ...add all 100+ here
+    ];
+    let idx = 0, known = 0, review = 0;
+    function showCard() {
+      document.getElementById('flashcard').innerHTML = `${flashcards[idx].front}<br><span style="color:#444;font-size:1rem;">${flashcards[idx].back}</span>`;
+      document.getElementById('fc-progress').textContent = `Card ${idx+1} of ${flashcards.length}`;
+    }
+    function nextCard(type) {
+      if(type==='know') known++; else review++;
+      idx = (idx+1)%flashcards.length;
+      showCard();
+    }
+    function toggleList() {
+      const ul = document.getElementById('fc-list');
+      if(ul.style.display==='none') {
+        ul.innerHTML = flashcards.map(f=>`<li>${f.front}: <span style='color:#444;'>${f.back}</span></li>`).join('');
+        ul.style.display='block';
+      } else {
+        ul.style.display='none';
+      }
+    }
+    showCard();
+  </script>
+</body>
+</html>
