@@ -4,19 +4,57 @@
   <meta charset="UTF-8">
   <title>AdSense Verification</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- AdSense verification snippet -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2441085120272132" crossorigin="anonymous"></script>
+  <style>
+    .dynamic-hello { font-family: 'Montserrat', 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 900; color: #5ba4f5; letter-spacing: 0.03em; margin-bottom: 0.5rem; animation: pop 1.2s cubic-bezier(.23,1.01,.32,1); }
+    @keyframes pop { 0% { transform: scale(0.7); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    .pulse { animation: pulse 1.5s infinite alternate; }
+    @keyframes pulse { from { color: #5ba4f5; } to { color: #ea4aaa; } }
+    .btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.7rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(90deg, #5ba4f5 0%, #ea4aaa 100%);
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(91,164,245,0.13);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover { background: linear-gradient(90deg, #ea4aaa 0%, #5ba4f5 100%); transform: translateY(-2px) scale(1.04); }
+    .dynamic-time { color: #ea4aaa; font-weight: 600; font-size: 1.1rem; margin-top: 0.7rem; }
+  </style>
 </head>
 <body>
   <div class="container">
+    <div class="dynamic-hello pulse" id="hello">Welcome!</div>
     <h1>🎉 raviacn95.github.io is Live!</h1>
     <p class="verified">AdSense verification code is present and your site is ready for approval.</p>
     <p>Welcome to your beautiful root GitHub Pages site.<br>
     You can now verify your site in Google AdSense.<br>
     <span style="font-size:1.5rem;">🚀</span></p>
+    <button class="btn" onclick="window.location.reload()">Refresh</button>
+    <div class="dynamic-time" id="time"></div>
   </div>
   <div class="footer">&copy; 2026 Ravi | Powered by GitHub Pages</div>
+  <script>
+    // Dynamic greeting
+    const hello = document.getElementById('hello');
+    const greetings = ["Welcome!", "Hello, World!", "Namaste!", "Bonjour!", "Hola!", "Ciao!", "👋 Hi there!"];
+    hello.textContent = greetings[Math.floor(Math.random()*greetings.length)];
+    // Dynamic time
+    function updateTime() {
+      const t = new Date();
+      document.getElementById('time').textContent = `Current time: ${t.toLocaleString()}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
 </body>
 </html>
