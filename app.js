@@ -394,7 +394,7 @@ function renderHome() {
   const pagePosts = posts.slice(start, start + PAGE_SIZE);
 
   postCount.textContent = `${posts.length} tutorial${posts.length !== 1 ? "s" : ""}${
-    posts.length > PAGE_SIZE ? ` ┬╖ page ${currentPage}/${totalPages}` : ""
+    posts.length > PAGE_SIZE ? ` | page ${currentPage}/${totalPages}` : ""
   }`;
 
   const categoryLabels = {
@@ -556,7 +556,7 @@ function openPost(post) {
     <span class="card-category cat-${categoryClass(post.category)}">${escapeHtml(post.category)}</span>
     <span class="card-level lvl-${post.level}">${levelLabels[post.level] || post.level}</span>
     <span class="card-read-time">${post.readMins} min read</span>
-    ${postDate ? `<span class="card-date">By <strong>Ravi</strong> ┬╖ ${postDate}</span>` : ""}
+    ${postDate ? `<span class="card-date">By <strong>Ravi</strong> | ${postDate}</span>` : ""}
   `;
 
   pvTitle.textContent = post.title;
@@ -652,7 +652,7 @@ function goHome(scrollTop = true) {
   homeView.classList.remove("hidden");
   heroEl.classList.remove("hidden");
   document.getElementById("below-hero")?.classList.remove("hidden");
-  document.title = "JS ┬╖ Playwright ┬╖ TypeScript - Learning Hub | Basics to Architect | Free 2026";
+  document.title = "JS | Playwright | TypeScript - Learning Hub | Basics to Architect | Free 2026";
   history.pushState(null, "", window.location.pathname + (searchQuery ? `?q=${encodeURIComponent(searchQuery)}` : ""));
   renderHome();
   renderRecent();
@@ -680,7 +680,7 @@ function renderRelated(currentPost) {
     card.className = "related-card";
     card.tabIndex = 0;
     card.innerHTML = `
-      <div class="rc-cat">${escapeHtml(post.category)} ┬╖ ${post.readMins} min</div>
+      <div class="rc-cat">${escapeHtml(post.category)} | ${post.readMins} min</div>
       <h3>${escapeHtml(post.title)}</h3>
       <p>${escapeHtml(post.excerpt)}</p>
     `;
