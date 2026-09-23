@@ -5,6 +5,390 @@
 
 const ALL_POSTS = [
   {
+    "id": 143,
+    "category": "Playwright",
+    "title": "Playwright visual map: Test Architect topic graph",
+    "tags": [
+      "Mindmap",
+      "Flowchart",
+      "Playwright",
+      "Locators",
+      "Fixtures"
+    ],
+    "excerpt": "Free Mermaid map linking locators, fixtures, network, auth, traces, API, POM, and parallel projects.",
+    "sourceUrl": "https://learnhub.local/playwright/visual-map-hub",
+    "createdAt": "2026-09-23T13:45:03.608Z",
+    "level": "Beginner",
+    "content": "## Scope\nBridge across Playwright Q&A tutorials grounded in playwright.dev. Free Mermaid diagrams.\n\n## Learning path flowchart\n```mermaid\nflowchart TD\n  L[Locators] --> A[Assertions]\n  A --> F[Fixtures / hooks]\n  F --> N[Network mock]\n  N --> Auth[storageState auth]\n  Auth --> API[API request fixture]\n  API --> POM[Page objects]\n  POM --> Par[Projects / parallel]\n  Par --> Tr[Trace debug]\n```\n\n## Topic mindmap\n```mermaid\nmindmap\n  root((Playwright))\n    Select\n      getByRole\n      getByTestId\n    Structure\n      Fixtures\n      POM\n    Network\n      route\n      waitForResponse\n    Scale\n      Projects\n      Workers\n      Shards\n    Debug\n      Trace Viewer\n```\n",
+    "pipeline": true
+  },
+  {
+    "id": 142,
+    "category": "JavaScript",
+    "title": "JavaScript visual map: core language topic graph",
+    "tags": [
+      "Mindmap",
+      "Flowchart",
+      "JavaScript",
+      "Event Loop",
+      "Promises"
+    ],
+    "excerpt": "Free Mermaid map linking event loop, promises, closures, modules, DOM, and fetch tutorials.",
+    "sourceUrl": "https://learnhub.local/javascript/visual-map-hub",
+    "createdAt": "2026-09-23T13:45:03.592Z",
+    "level": "Beginner",
+    "content": "## Scope\nBridge across JavaScript Q&A tutorials. Diagrams use free **Mermaid.js**.\n\n## Learning path flowchart\n```mermaid\nflowchart TD\n  E[Event loop] --> P[Promises / async]\n  P --> C[Closures]\n  C --> T[this / prototypes]\n  T --> M[ES modules]\n  M --> A[Arrays]\n  A --> D[DOM events]\n  D --> F[Fetch]\n  F --> I[Interview mega]\n```\n\n## Topic mindmap\n```mermaid\nmindmap\n  root((JavaScript))\n    Runtime\n      Event loop\n      Microtasks\n    Async\n      Promises\n      async await\n    Scope\n      Closures\n      this\n    Structure\n      Modules\n      Prototypes\n    Web\n      DOM events\n      Fetch\n```\n",
+    "pipeline": true
+  },
+  {
+    "id": 141,
+    "category": "Playwright",
+    "title": "Playwright interview mega Q&A",
+    "tags": [
+      "Interview",
+      "Playwright",
+      "Locators",
+      "Fixtures",
+      "Network"
+    ],
+    "excerpt": "Dense Playwright interview drill — locators, fixtures, network races, auth, traces (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-interview-mega",
+    "createdAt": "2026-09-23T13:45:03.135Z",
+    "level": "Advanced",
+    "content": "## How to use\nAnswer in 40–60 seconds with a doc-backed definition.\n\n\n## Visual overview\nAlways connect the feature to flake prevention.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Q[Interview Q] --> Doc[Playwright.dev concept]\n  Doc --> Pat[Pattern]\n  Pat --> Flake[How it prevents flakes]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((PW interview))\n    Locators\n    Fixtures\n    Network\n    Auth\n    Trace\n    POM\n    Parallel\n```\n\n\n### Q1. Why locators over page.$?\n\n**Answer (documentation-aligned)**\n\nAuto-wait/retry; re-query DOM on action.\n\n### Q2. Best default locator?\n\n**Answer (documentation-aligned)**\n\ngetByRole with accessible name.\n\n### Q3. Fixture benefit?\n\n**Answer (documentation-aligned)**\n\nIsolation + composition + typed setup/teardown.\n\n### Q4. waitForResponse order?\n\n**Answer (documentation-aligned)**\n\nCreate promise before click, then await.\n\n### Q5. storageState purpose?\n\n**Answer (documentation-aligned)**\n\nReuse auth without UI login every test.\n\n### Q6. Trace when?\n\n**Answer (documentation-aligned)**\n\nOn failure / first retry in CI.\n\n### Q7. request fixture?\n\n**Answer (documentation-aligned)**\n\nAPIRequestContext for API setup/asserts.\n\n### Q8. Service worker issue?\n\n**Answer (documentation-aligned)**\n\nCan hide network from route; block SW or avoid conflicting MSW.\n\n\n## Documentation deep dive\nCite playwright.dev pages, not random blogs.\n\n**Why this matters**\nSDET interviews reward flake literacy.\n\n**Implementation checklist**\n- Prepare a 2-minute architecture of your suite\n\n**Common mistakes**\n- Saying 'Playwright auto-waits everything' without locator/expect nuance\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 140,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Projects, browsers, and parallelism",
+    "tags": [
+      "Projects",
+      "Parallelism",
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ],
+    "excerpt": "Projects and parallel execution Q&A — browsers, shards, and workers (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-projects-parallel",
+    "createdAt": "2026-09-23T13:45:03.121Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Browsers](https://playwright.dev/docs/browsers) and [Parallelism](https://playwright.dev/docs/test-parallel).\n\n\n## Visual overview\nProjects define environments; workers/shards scale runtime.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Config[playwright.config projects] --> Cr[Chromium]\n  Config --> Ff[Firefox]\n  Config --> Wk[WebKit]\n  Config --> Setup[Setup project]\n  Workers[Workers] --> Files[Test files parallel]\n  Shards[CI shards] --> Suite[Split suite]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Scale))\n    Projects\n      Browsers\n      Dependencies\n    Parallel\n      Workers\n      FullyParallel\n    CI\n      Sharding\n      Retries\n    Tradeoffs\n      Cost vs coverage\n```\n\n\n### Q1. What are projects?\n\n**Answer (documentation-aligned)**\n\nNamed configurations (browser, viewport, storageState, grep) in `playwright.config` — including setup dependencies.\n\n### Q2. How does parallelism work?\n\n**Answer (documentation-aligned)**\n\nMultiple worker processes run files/tests concurrently. Configure workers carefully on resource-constrained CI.\n\n### Q3. Sharding?\n\n**Answer (documentation-aligned)**\n\nSplit the suite across CI machines with shard flags for wall-clock speed.\n\n## Official references\n- [Browsers](https://playwright.dev/docs/browsers) · [Parallelism](https://playwright.dev/docs/test-parallel)\n\n\n## Documentation deep dive\nStart with Chromium-only in PR CI; run full browser matrix on main/nightly if cost demands.\n\n**Why this matters**\nSpeed without isolation guarantees is chaos — keep fixtures pure.\n\n**Implementation checklist**\n- Document project matrix\n- Cap workers to CPU\n\n**Common mistakes**\n- Fully parallel + shared backend without unique data\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 139,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Page Object Model and structure",
+    "tags": [
+      "POM",
+      "Page Object Model",
+      "Architecture",
+      "Maintainability"
+    ],
+    "excerpt": "POM Q&A from Playwright docs — when page objects help and how to keep them thin (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-pom",
+    "createdAt": "2026-09-23T13:45:03.106Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Page object models](https://playwright.dev/docs/pom).\n\n\n## Visual overview\nPOM reduces duplication — do not hide all assertions blindly.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Test[Test intent] --> POM[Page object methods]\n  POM --> Loc[Locators]\n  Loc --> Page[Page actions]\n  Test --> Expect[Assertions in test or POM carefully]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((POM))\n    Page classes\n      Locators\n      Actions\n    Fixtures\n      Inject pages\n    Keep thin\n      No giant god objects\n      Compose components\n    Avoid\n      Assert soup hiding failures\n```\n\n\n### Q1. What is POM in Playwright?\n\n**Answer (documentation-aligned)**\n\nEncapsulate locators and user actions for a page/component so tests read as user intent.\n\n### Q2. Fixtures + POM?\n\n**Answer (documentation-aligned)**\n\nProvide page objects via `test.extend` so tests stay clean and typed.\n\n### Q3. Anti-pattern?\n\n**Answer (documentation-aligned)**\n\nGod-objects with hundreds of methods, or assertions buried so failures become opaque.\n\n## Official references\n- [POM](https://playwright.dev/docs/pom)\n\n\n## Documentation deep dive\nOfficial POM guide favors clarity over ceremony.\n\n**Why this matters**\nStructure scales teams; poor POM slows them.\n\n**Implementation checklist**\n- One POM per page/component\n- Share locator helpers sparingly\n\n**Common mistakes**\n- Duplicating getByRole strings everywhere without reuse OR over-abstracting too early\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 138,
+    "category": "Playwright",
+    "title": "Playwright Q&A: API testing with request fixture",
+    "tags": [
+      "API Testing",
+      "request",
+      "APIRequestContext",
+      "HTTP"
+    ],
+    "excerpt": "API testing Q&A — request fixture, auth headers, and hybrid UI+API setups (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-api-testing",
+    "createdAt": "2026-09-23T13:45:03.093Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[API testing](https://playwright.dev/docs/api-testing).\n\n\n## Visual overview\nUse API for setup/teardown speed; UI for user-visible critical paths.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  API[request fixture] --> Create[Create test data]\n  Create --> UI[UI test uses data]\n  UI --> Cleanup[API cleanup]\n  API --> Assert[Status + body asserts]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((API in PW))\n    request\n      GET POST PUT\n      Headers storage\n    Hybrid\n      Seed via API\n      Assert via UI\n    Isolation\n      Per-test data\n      Cleanup\n```\n\n\n### Q1. What is the request fixture?\n\n**Answer (documentation-aligned)**\n\nIsolated `APIRequestContext` for HTTP calls without a browser page — great for seeding and pure API checks.\n\n### Q2. Hybrid pattern?\n\n**Answer (documentation-aligned)**\n\nCreate entities via API, exercise UI, delete via API — faster and more stable than pure UI setup.\n\n### Q3. Auth for API?\n\n**Answer (documentation-aligned)**\n\nSet extra HTTP headers or reuse storage state patterns where applicable; keep tokens out of the repo.\n\n## Official references\n- [API testing](https://playwright.dev/docs/api-testing)\n\n\n## Documentation deep dive\nPlaywright is not only browser E2E — request is first-class.\n\n**Why this matters**\nCuts flaky UI setup dramatically.\n\n**Implementation checklist**\n- Idempotent cleanup\n- Schema assertions on critical payloads\n\n**Common mistakes**\n- Sharing one mutable test user without isolation\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 137,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Trace Viewer and debugging failures",
+    "tags": [
+      "Trace Viewer",
+      "Debugging",
+      "Screenshots",
+      "Videos"
+    ],
+    "excerpt": "Debugging Q&A — traces, screenshots, and time-travel inspection (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-trace-debug",
+    "createdAt": "2026-09-23T13:45:03.078Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Trace Viewer](https://playwright.dev/docs/trace-viewer).\n\n\n## Visual overview\nTraces beat console.log archaeology for flaky E2E.\n\n### Process flowchart\n```mermaid\nflowchart LR\n  Fail[Test fails] --> Art[Trace / screenshot / video]\n  Art --> TV[Trace Viewer]\n  TV --> Action[Inspect action]\n  TV --> Net[Network]\n  TV --> Dom[DOM snapshot]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Debug))\n    Artifacts\n      Trace\n      Screenshot\n      Video\n    Trace Viewer\n      Actions\n      Consoles\n      Network\n    Local\n      UI mode\n      Inspector\n      Debug flag\n```\n\n\n### Q1. When should you collect traces?\n\n**Answer (documentation-aligned)**\n\nOn first retry / on failure in CI — balance disk vs debuggability (`trace: 'on-first-retry'` is a common policy).\n\n### Q2. What does Trace Viewer show?\n\n**Answer (documentation-aligned)**\n\nTimeline of actions, DOM snapshots, network, consoles — enough to see what the test saw.\n\n### Q3. Local debug tools?\n\n**Answer (documentation-aligned)**\n\nUI mode, Playwright Inspector, `debug` config — step through locators live.\n\n## Official references\n- [Trace Viewer](https://playwright.dev/docs/trace-viewer)\n\n\n## Documentation deep dive\nAlways attach traces in CI failure UX for the team.\n\n**Why this matters**\nSpeeds mean-time-to-fix dramatically.\n\n**Implementation checklist**\n- Standardize trace policy in playwright.config\n- Teach reading traces in onboarding\n\n**Common mistakes**\n- Only looking at final screenshot\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 136,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Authentication and storageState",
+    "tags": [
+      "Authentication",
+      "storageState",
+      "Session",
+      "Setup project"
+    ],
+    "excerpt": "Auth Q&A from Playwright docs — reuse signed-in state safely across tests (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-auth-storage",
+    "createdAt": "2026-09-23T13:45:03.063Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Authentication](https://playwright.dev/docs/auth).\n\n\n## Visual overview\nLogin once, reuse storageState — keep tests fast and less flaky.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Setup[Setup project login once] --> State[storageState JSON]\n  State --> Proj[Dependent projects]\n  Proj --> Test[Tests start signed-in]\n  Test --> Isolate[Still isolated contexts]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Auth))\n    storageState\n      Cookies\n      LocalStorage\n    Patterns\n      Setup project\n      Global setup\n    Safety\n      Secrets in CI\n      Per-role states\n    Avoid\n      UI login every test\n```\n\n\n### Q1. What is storageState?\n\n**Answer (documentation-aligned)**\n\nSaved cookies/local storage capturing a signed-in browser state you can inject into new contexts.\n\n### Q2. Recommended pattern?\n\n**Answer (documentation-aligned)**\n\nA setup project that authenticates and writes storageState; other projects depend on it. Avoid logging in through the UI in every test unless testing login itself.\n\n### Q3. Multiple roles?\n\n**Answer (documentation-aligned)**\n\nProduce multiple state files (admin/user) and select per project or fixture.\n\n## Official references\n- [Authentication](https://playwright.dev/docs/auth)\n\n\n## Documentation deep dive\nOfficial auth guide is the source of truth for setup projects vs global setup.\n\n**Why this matters**\nAuth is the #1 time sink in E2E suites when done naively.\n\n**Implementation checklist**\n- Keep secrets in CI secret store\n- Refresh state when sessions expire\n\n**Common mistakes**\n- Committing real prod tokens to git\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 135,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Assertions and auto-retrying expects",
+    "tags": [
+      "Assertions",
+      "expect",
+      "toBeVisible",
+      "Web-first"
+    ],
+    "excerpt": "Web-first assertions Q&A — auto-retrying expect matchers from Playwright Test (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-assertions",
+    "createdAt": "2026-09-23T13:45:03.051Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Assertions](https://playwright.dev/docs/test-assertions).\n\n\n## Visual overview\nPrefer locator assertions that retry; avoid manual waitForTimeout.\n\n### Process flowchart\n```mermaid\nflowchart LR\n  Expect[expect locator] --> Retry[Auto-retry until timeout]\n  Retry --> Pass[Assertion pass]\n  Retry --> Fail[Timeout failure + trace]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Assertions))\n    Web-first\n      toBeVisible\n      toHaveText\n      toHaveURL\n    Non-retry\n      Soft expects caution\n    Debug\n      Trace\n      Screenshots\n```\n\n\n### Q1. What are web-first assertions?\n\n**Answer (documentation-aligned)**\n\nMatchers like `toBeVisible`, `toHaveText` that auto-retry until the condition holds or timeout — aligned with locator auto-waiting.\n\n### Q2. Why not assert page.content() immediately?\n\n**Answer (documentation-aligned)**\n\nRace with rendering. Locator + expect retries match real UI readiness.\n\n### Q3. Soft assertions?\n\n**Answer (documentation-aligned)**\n\nUse sparingly; they continue after failure and can hide cascading issues if overused.\n\n## Official references\n- [Assertions](https://playwright.dev/docs/test-assertions)\n\n\n## Documentation deep dive\nCombine role locators with web-first asserts for readable tests.\n\n**Why this matters**\nDeletes most arbitrary sleeps from suites.\n\n**Implementation checklist**\n- Ban waitForTimeout in review\n- Use expect.poll only when needed\n\n**Common mistakes**\n- Manual sleep + non-retrying expect\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 134,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Network mocking, routing, and waits",
+    "tags": [
+      "Network",
+      "page.route",
+      "waitForResponse",
+      "Mocking"
+    ],
+    "excerpt": "Network Q&A from Playwright docs — route/fulfill, event ordering, service workers caveat (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-network",
+    "createdAt": "2026-09-23T13:45:03.037Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Network](https://playwright.dev/docs/network).\n\n\n## Visual overview\nRegister waitForResponse before the action that triggers the request.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Action[Click / navigation] --> Req[Browser request]\n  Req --> Route{page.route?}\n  Route -->|yes| Mock[fulfill / continue / abort]\n  Route -->|no| Net[Real network]\n  Mock --> Resp[Response]\n  Net --> Resp\n  Wait[waitForResponse registered first] --> Action\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Network))\n    Observe\n      on request response\n      waitForResponse\n    Mock\n      page.route\n      context.route\n      fulfill\n    Advanced\n      WebSockets\n      HAR\n    Caveats\n      Service workers\n      MSW takeover\n```\n\n\n### Q1. How do you mock an API?\n\n**Answer (documentation-aligned)**\n\n`page.route` / `browserContext.route` with `route.fulfill` — no extra server required.\n\n### Q2. Correct wait pattern?\n\n**Answer (documentation-aligned)**\n\nCreate the response promise first, then click, then await — avoids race where the response happens before you listen.\n\n### Q3. Missing network events?\n\n**Answer (documentation-aligned)**\n\nDocs: Service Workers can intercept before Playwright sees traffic. Set `serviceWorkers: 'block'` when using native routing. MSW installs its own SW and can hide requests from Playwright routes.\n\n### Q4. Modify responses?\n\n**Answer (documentation-aligned)**\n\nFetch original via APIRequestContext, then `fulfill` with overridden fields.\n\n## Official references\n- [Network](https://playwright.dev/docs/network)\n\n\n## Documentation deep dive\nWebSocket mocking is also documented in Playwright's API mocking guides.\n\n**Why this matters**\nDeterministic UI tests need deterministic network.\n\n**Implementation checklist**\n- Mock only what you own\n- Assert status/body of critical calls\n\n**Common mistakes**\n- Awaiting response after click without pre-arming the waiter\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 133,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Fixtures, hooks, and isolation",
+    "tags": [
+      "Fixtures",
+      "beforeEach",
+      "test.extend",
+      "Workers"
+    ],
+    "excerpt": "Fixtures Q&A from Playwright Test docs — page/context isolation and custom fixtures (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-fixtures",
+    "createdAt": "2026-09-23T13:45:03.021Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Fixtures](https://playwright.dev/docs/test-fixtures).\n\n\n## Visual overview\nMention a fixture in the test args — the runner sets it up and tears it down.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Worker[Worker process] --> WFix[Worker fixtures]\n  WFix --> Test[Test]\n  Test --> TFix[Test fixtures page/context]\n  TFix --> Run[Test body]\n  Run --> Teardown[Fixture teardown]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Fixtures))\n    Built-in\n      page\n      context\n      browser\n      request\n    Custom\n      test.extend\n      Auto fixtures\n    Hooks\n      beforeEach afterEach\n      beforeAll afterAll\n    Isolation\n      Per-test context\n      Worker reuse\n```\n\n\n### Q1. What are fixtures for?\n\n**Answer (documentation-aligned)**\n\nEstablish an environment per test with everything needed and nothing else. Fixtures are isolated between tests so you group by meaning, not shared mutable setup.\n\n### Q2. Built-in fixtures to know?\n\n**Answer (documentation-aligned)**\n\n`page`, `context`, `browser`, `browserName`, `request` (APIRequestContext), etc. TypeScript types them when used as arguments.\n\n### Q3. Worker vs test fixtures?\n\n**Answer (documentation-aligned)**\n\nWorker fixtures set up once per worker (servers/services). Test fixtures set up per test. Workers reuse when worker fixtures match.\n\n### Q4. Hooks vs fixtures?\n\n**Answer (documentation-aligned)**\n\nHooks (`beforeEach`, …) are file/describe scoped. Fixtures compose and type better for reusable environments — prefer fixtures for shared capabilities.\n\n## Official references\n- [Fixtures](https://playwright.dev/docs/test-fixtures)\n\n\n## Documentation deep dive\nAutomatic fixtures use tuple syntax with `{ auto: true }` when setup must always run.\n\n**Why this matters**\nIsolation is how Playwright keeps parallel tests sane.\n\n**Implementation checklist**\n- Put auth/token setup in fixtures\n- Keep tests free of manual browser launches\n\n**Common mistakes**\n- Shared mutable global page across tests\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 132,
+    "category": "Playwright",
+    "title": "Playwright Q&A: Locators and getByRole-first design",
+    "tags": [
+      "Locators",
+      "getByRole",
+      "getByTestId",
+      "Auto-waiting"
+    ],
+    "excerpt": "Locators Q&A from official Playwright docs — user-facing selectors and resilience (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/playwright/qa-locators",
+    "createdAt": "2026-09-23T13:45:03.002Z",
+    "level": "Intermediate",
+    "content": "## Scope\nOfficial [Locators](https://playwright.dev/docs/locators) guide.\n\n\n## Visual overview\nPlaywright: locators are the center of auto-waiting and retry-ability.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Need[Find element] --> Prefer[Prefer user-facing]\n  Prefer --> Role[getByRole]\n  Prefer --> Text[getByText / Label / Placeholder]\n  Prefer --> TestId[getByTestId contract]\n  Prefer -->|last resort| CSS[locator CSS/XPath]\n  Role --> Auto[Auto-wait + retry]\n  Text --> Auto\n  TestId --> Auto\n  CSS --> Auto\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Locators))\n    Recommended\n      getByRole\n      getByText\n      getByLabel\n      getByPlaceholder\n      getByAltText\n      getByTitle\n      getByTestId\n    Avoid first\n      Fragile CSS\n      Absolute XPath\n    Benefits\n      Auto-wait\n      Retryability\n```\n\n\n### Q1. What is a locator?\n\n**Answer (documentation-aligned)**\n\nA way to find element(s) on the page at any moment. Locators are lazy and re-evaluate when acted on — key to auto-waiting/retry.\n\n### Q2. What should you prioritize?\n\n**Answer (documentation-aligned)**\n\nDocs recommend user-facing attributes and explicit contracts — especially `getByRole()`. Use `getByTestId()` when you define a test-id contract; configure the attribute if not `data-testid`.\n\n### Q3. When is CSS/XPath OK?\n\n**Answer (documentation-aligned)**\n\nWhen you must — via `page.locator()`. Prefer role/text/test-id for resilience when the DOM churns.\n\n### Q4. Strict mode tip?\n\n**Answer (documentation-aligned)**\n\nLocators that resolve to multiple elements throw in strict mode — narrow with role name / `filter` / `nth` intentionally.\n\n## Official references\n- [Locators](https://playwright.dev/docs/locators)\n\n\n## Documentation deep dive\nBuilt-in getBy* APIs encode accessibility-first testing guidance from Playwright.\n\n**Why this matters**\nFlaky suites usually start with bad selectors, not slow CI.\n\n**Implementation checklist**\n- Role-first in new tests\n- Agree test-id convention with devs\n\n**Common mistakes**\n- Copying absolute XPath from DevTools as default\n\n## 3-minute study path\n1. Skim Q&As.\n2. Open the official Playwright doc link.\n3. Re-draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 131,
+    "category": "JavaScript",
+    "title": "JavaScript interview mega Q&A",
+    "tags": [
+      "Interview",
+      "JavaScript",
+      "Event Loop",
+      "Promises",
+      "Closures"
+    ],
+    "excerpt": "Dense JS interview drill covering event loop, promises, closures, this, and modules (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-interview-mega",
+    "createdAt": "2026-09-23T13:45:02.520Z",
+    "level": "Advanced",
+    "content": "## How to use\n40–60 second answers.\n\n\n## Visual overview\nInterview pattern: definition → MDN idea → example → trap.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Q[Question] --> Def[Definition]\n  Def --> MDN[MDN concept]\n  MDN --> Ex[Tiny example]\n  Ex --> Trap[Name a trap]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((JS interview))\n    Runtime\n      Event loop\n      Microtasks\n    Async\n      Promises\n      async await\n    Scope\n      Closures\n      this\n    Structure\n      Modules\n      Prototypes\n```\n\n\n### Q1. Order: sync, promise.then, setTimeout 0?\n\n**Answer (documentation-aligned)**\n\nSync, then microtasks (then), then timer task.\n\n### Q2. What does await do?\n\n**Answer (documentation-aligned)**\n\nPauses the async function until the promise settles; the function returns a promise.\n\n### Q3. Closure in one sentence?\n\n**Answer (documentation-aligned)**\n\nFunction + remembered lexical environment.\n\n### Q4. Arrow this?\n\n**Answer (documentation-aligned)**\n\nLexical this from surrounding scope — not call-site bound.\n\n### Q5. fetch and 404?\n\n**Answer (documentation-aligned)**\n\nResolves; check response.ok.\n\n### Q6. map vs forEach?\n\n**Answer (documentation-aligned)**\n\nmap returns array; forEach side effects.\n\n### Q7. Why ESM?\n\n**Answer (documentation-aligned)**\n\nStatic structure, better tooling/tree-shaking, standard on web.\n\n### Q8. Prevent bubbling?\n\n**Answer (documentation-aligned)**\n\nevent.stopPropagation(); prefer not overusing it.\n\n\n## Documentation deep dive\nTie every answer to a concrete snippet you can write on a whiteboard.\n\n**Why this matters**\nJS interviews reward precise runtime mental models.\n\n**Implementation checklist**\n- Prepare 2 live-coding snippets: closure loop + promise order\n\n**Common mistakes**\n- Memorizing without being able to predict output\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 130,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Equality, coercion, and sameness",
+    "tags": [
+      "Equality",
+      "Coercion",
+      "==",
+      "===",
+      "Object.is"
+    ],
+    "excerpt": "Equality comparisons Q&A from MDN — == vs === vs Object.is (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-equality",
+    "createdAt": "2026-09-23T13:45:02.509Z",
+    "level": "Beginner",
+    "content": "## Scope\n[Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).\n\n\n## Visual overview\nDefault to ===; coerce explicitly when needed.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Cmp[Compare a and b] --> Strict[\"=== strict\"]\n  Cmp --> Loose[\"== with coercion\"]\n  Cmp --> Is[\"Object.is\"]\n  Strict --> Rec[Prefer in app code]\n  Loose --> Avoid[Avoid unless intentional]\n  Is --> Special[NaN and +/-0 cases]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Equality))\n    Strict\n      No coercion\n    Loose\n      Coercion rules\n    Sameness\n      Object.is\n    Practical\n      Prefer ===\n      Explicit Number String\n```\n\n\n### Q1. === vs ==?\n\n**Answer (documentation-aligned)**\n\n`===` is strict (no coercion). `==` applies abstract equality coercion — surprising cases abound.\n\n### Q2. Object.is?\n\n**Answer (documentation-aligned)**\n\nSame-value equality: treats `NaN` as equal to `NaN`, and distinguishes `+0` / `-0`.\n\n### Q3. Best practice?\n\n**Answer (documentation-aligned)**\n\nUse `===` / `!==` daily; convert types intentionally (`Number(x)`, `String(x)`).\n\n## Official references\n- [Equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)\n\n\n## Documentation deep dive\nCoercion trivia appears in interviews; production code should be boring and explicit.\n\n**Why this matters**\nPrevents subtle bugs in filters and auth checks.\n\n**Implementation checklist**\n- Lint eqeqeq\n- Normalize API inputs early\n\n**Common mistakes**\n- Relying on == with null/undefined carelessly\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 129,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Fetch API and HTTP in the browser",
+    "tags": [
+      "Fetch",
+      "HTTP",
+      "JSON",
+      "AbortController",
+      "Errors"
+    ],
+    "excerpt": "Fetch API Q&A from MDN — requests, responses, errors, and aborting (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-fetch",
+    "createdAt": "2026-09-23T13:45:02.500Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[MDN Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).\n\n\n## Visual overview\nfetch only rejects on network failure — HTTP 404 still resolves; check response.ok.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Call[fetch URL] --> Resp[Response]\n  Resp --> OK{ok status?}\n  OK -->|yes| Body[json / text / blob]\n  OK -->|no| Err[Handle HTTP error]\n  Call -->|network fail| Net[Reject promise]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Fetch))\n    Request\n      method headers body\n      credentials\n    Response\n      status ok\n      body methods\n    Control\n      AbortController\n      Timeouts\n    Safety\n      CORS\n      CSRF tokens\n```\n\n\n### Q1. Does fetch throw on 404?\n\n**Answer (documentation-aligned)**\n\nNo. The promise resolves with a Response. Check `response.ok` or status before parsing.\n\n### Q2. How do you cancel a request?\n\n**Answer (documentation-aligned)**\n\nPass `signal` from `AbortController` and call `abort()` on navigation/unmount.\n\n### Q3. JSON pattern?\n\n**Answer (documentation-aligned)**\n\n`const data = await response.json()` after ok check. Handle malformed JSON separately.\n\n## Official references\n- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)\n\n\n## Documentation deep dive\nSame mental model applies when Playwright waits on API responses.\n\n**Why this matters**\nCorrect error taxonomy separates network vs HTTP vs parse failures.\n\n**Implementation checklist**\n- Always check ok\n- Abort in-flight requests on route change\n\n**Common mistakes**\n- Assuming fetch rejects on 500\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 128,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: DOM events and propagation",
+    "tags": [
+      "DOM",
+      "Events",
+      "Bubbling",
+      "Capturing",
+      "addEventListener"
+    ],
+    "excerpt": "DOM events Q&A — capturing, bubbling, delegation — aligned with MDN events learning materials (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-dom-events",
+    "createdAt": "2026-09-23T13:45:02.490Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[MDN Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events).\n\n\n## Visual overview\nMost UI handlers rely on bubbling; delegation scales better than per-node handlers.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Target[Event target] --> Cap[Capture phase down]\n  Cap --> At[At target]\n  At --> Bub[Bubble phase up]\n  Bub --> Root[Document / window]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((DOM events))\n    Register\n      addEventListener\n      options once passive\n    Phases\n      Capture\n      Target\n      Bubble\n    Patterns\n      Delegation\n      stopPropagation\n      preventDefault\n```\n\n\n### Q1. What is event bubbling?\n\n**Answer (documentation-aligned)**\n\nAfter the target handles the event, it propagates upward through ancestors unless stopped.\n\n### Q2. What is capturing?\n\n**Answer (documentation-aligned)**\n\nThe downward phase from root toward the target. Listeners can opt into capture via `addEventListener(..., true)` or `{ capture: true }`.\n\n### Q3. Why event delegation?\n\n**Answer (documentation-aligned)**\n\nOne parent listener handles many children via `event.target` — fewer listeners, works for dynamic lists.\n\n## Official references\n- [Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)\n\n\n## Documentation deep dive\nPlaywright users who understand real DOM events write better user-facing locators and fewer brittle clicks.\n\n**Why this matters**\nFrontend interviews always cover bubbling vs capturing.\n\n**Implementation checklist**\n- Prefer delegation on lists\n- Know when preventDefault is required\n\n**Common mistakes**\n- stopPropagation everywhere — breaks unrelated handlers\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 127,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Arrays, iteration, and transformation",
+    "tags": [
+      "Array",
+      "map",
+      "filter",
+      "reduce",
+      "Iteration"
+    ],
+    "excerpt": "Array methods Q&A aligned with MDN Array reference — immutability habits and reduce discipline (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-arrays",
+    "createdAt": "2026-09-23T13:45:02.478Z",
+    "level": "Beginner",
+    "content": "## Scope\n[MDN Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).\n\n\n## Visual overview\nPrefer non-mutating transforms for predictable UI/state code.\n\n### Process flowchart\n```mermaid\nflowchart LR\n  In[Array] --> Map[map]\n  In --> Filter[filter]\n  In --> Reduce[reduce]\n  Map --> Out1[New array]\n  Filter --> Out2[New array]\n  Reduce --> Acc[Accumulator]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Arrays))\n    Query\n      find\n      findIndex\n      includes\n      some every\n    Transform\n      map\n      flatMap\n      filter\n      reduce\n    Mutate\n      push splice sort\n    Prefer\n      Immutable transforms\n```\n\n\n### Q1. map vs forEach?\n\n**Answer (documentation-aligned)**\n\n`map` returns a new array of results. `forEach` is for side effects and returns undefined.\n\n### Q2. When to use reduce?\n\n**Answer (documentation-aligned)**\n\nWhen folding to a single value/structure. If you are rebuilding arrays, `map`/`filter` are clearer.\n\n### Q3. Mutation pitfalls?\n\n**Answer (documentation-aligned)**\n\n`sort`, `splice`, `push` mutate in place — clone first when sharing state (e.g., React).\n\n## Official references\n- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)\n\n\n## Documentation deep dive\nKnow which methods mutate; interviews love that distinction.\n\n**Why this matters**\nData pipelines in JS are mostly array transforms.\n\n**Implementation checklist**\n- Prefer immutable updates in UI state\n- Name reducer intent clearly\n\n**Common mistakes**\n- Giant reduces that hide map/filter logic\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 126,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: ES modules and package boundaries",
+    "tags": [
+      "ES Modules",
+      "import",
+      "export",
+      "CommonJS"
+    ],
+    "excerpt": "ESM Q&A from MDN Modules guide — import/export, static analysis, and CJS interop notes (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-modules",
+    "createdAt": "2026-09-23T13:45:02.469Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[MDN Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).\n\n\n## Visual overview\nES modules are static and enable better tooling than dynamic CommonJS patterns.\n\n### Process flowchart\n```mermaid\nflowchart LR\n  A[module A] -->|export| Bound[Live bindings]\n  Bound -->|import| B[module B]\n  B --> Graph[Static module graph]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Modules))\n    ESM\n      import export\n      Static structure\n      Strict by default\n    CJS\n      require\n      module.exports\n    Boundaries\n      Tree-shaking\n      Circular deps\n      package type\n```\n\n\n### Q1. What makes ES modules different?\n\n**Answer (documentation-aligned)**\n\nStatic `import`/`export`, deferred execution model in browsers, strict mode, and live bindings. Tooling can tree-shake reliably.\n\n### Q2. Default vs named exports?\n\n**Answer (documentation-aligned)**\n\nNamed exports are clearer for APIs; default exports are convenient but easier to rename inconsistently across a codebase.\n\n### Q3. CJS interop?\n\n**Answer (documentation-aligned)**\n\nNode historical `require` still exists. Mixing ESM/CJS needs care (`createRequire`, dual packages). Prefer one system per package.\n\n## Official references\n- [Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)\n\n\n## Documentation deep dive\nBrowsers and modern Node treat ESM as first-class; interviews expect import maps / package.json type awareness at a high level.\n\n**Why this matters**\nModule boundaries are architecture.\n\n**Implementation checklist**\n- Decide ESM-only for new packages\n- Avoid circular imports\n\n**Common mistakes**\n- Dynamic require sprawl that kills tree-shaking\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 125,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: this, prototypes, and classes",
+    "tags": [
+      "this",
+      "Prototypes",
+      "Classes",
+      "Inheritance"
+    ],
+    "excerpt": "this-binding and prototype chain Q&A aligned with MDN (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-this-prototypes",
+    "createdAt": "2026-09-23T13:45:02.458Z",
+    "level": "Advanced",
+    "content": "## Scope\n[MDN this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) and standard prototype/class model.\n\n\n## Visual overview\nthis is decided by call site (except arrows, which are lexical).\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Call[How function is called] --> Bind{Binding}\n  Bind -->|obj.method| O[obj]\n  Bind -->|call/apply/bind| E[Explicit]\n  Bind -->|new| N[New instance]\n  Bind -->|bare call| G[Undefined in strict / global non-strict]\n  Bind -->|arrow| L[Lexical this]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Objects model))\n    this\n      Call site\n      Arrow lexical\n    Prototype\n      [[Prototype]]\n      Delegation\n    class\n      Syntactic sugar\n      extends\n      super\n```\n\n\n### Q1. How is this determined?\n\n**Answer (documentation-aligned)**\n\nMostly by how a function is invoked: method call, `new`, `call`/`apply`/`bind`, or default. Arrow functions inherit `this` lexically.\n\n### Q2. What is the prototype chain?\n\n**Answer (documentation-aligned)**\n\nProperty lookup walks `[[Prototype]]` links until found or null. Classes desugar largely to constructor + prototype methods.\n\n### Q3. class vs function constructor?\n\n**Answer (documentation-aligned)**\n\n`class` is clearer syntax with stricter defaults (not callable without `new`), but the underlying prototype inheritance remains.\n\n## Official references\n- [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)\n\n\n## Documentation deep dive\nLosing this in extracted methods is a top bug — bind, arrow, or wrap.\n\n**Why this matters**\nOOP interviews in JS always probe this + prototypes.\n\n**Implementation checklist**\n- Prefer class fields/arrows carefully for methods\n- Know Object.create for delegation\n\n**Common mistakes**\n- Assuming this is always the defining object\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 124,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Closures and lexical scope",
+    "tags": [
+      "Closures",
+      "Lexical Scope",
+      "Scope Chain",
+      "Module Pattern"
+    ],
+    "excerpt": "Closures Q&A from MDN — lexical environments, private state, and classic loop traps (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-closures",
+    "createdAt": "2026-09-23T13:45:02.449Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[MDN Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).\n\n\n## Visual overview\nA closure is a function plus its remembered lexical environment.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Outer[Outer function] --> Env[Lexical environment]\n  Outer --> Inner[Inner function]\n  Inner -->|references| Env\n  Ret[Return inner] --> Closure[Closure lives on]\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Closures))\n    Lexical scope\n      Nested functions\n      Scope chain\n    Uses\n      Data privacy\n      Factories\n      Event handlers\n      Partial application\n    Pitfalls\n      Loop var capture\n      Accidental retention\n```\n\n\n### Q1. What is a closure?\n\n**Answer (documentation-aligned)**\n\nA function bundled with references to its surrounding lexical environment — it can access outer variables even after the outer function returned.\n\n### Q2. Why do closures matter?\n\n**Answer (documentation-aligned)**\n\nEncapsulation (module/factory patterns), callbacks that remember config, React/hooks mental models, and avoiding globals.\n\n### Q3. Classic for-loop trap?\n\n**Answer (documentation-aligned)**\n\nUsing `var` in a loop so all handlers share one binding. Fix with `let` per iteration or an explicit factory closure.\n\n### Q4. Memory note?\n\n**Answer (documentation-aligned)**\n\nClosures keep referenced outer data alive. Unneeded large objects retained by long-lived handlers cause leaks.\n\n## Official references\n- [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)\n\n\n## Documentation deep dive\nMDN emphasizes closures as fundamental to JS, not an edge case.\n\n**Why this matters**\nInterviewers use closures to test real language fluency.\n\n**Implementation checklist**\n- Explain one production use of a closure\n- Rewrite a var-loop bug with let\n\n**Common mistakes**\n- Over-closing huge DOM trees in listeners\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 123,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Promises and async/await",
+    "tags": [
+      "Promises",
+      "async/await",
+      "then",
+      "Error Handling"
+    ],
+    "excerpt": "Promises and async/await Q&A grounded in MDN — chaining, error paths, and concurrency (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-promises-async",
+    "createdAt": "2026-09-23T13:45:02.438Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) and [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).\n\n\n## Visual overview\nPromises invert control: the implementation schedules callbacks with strong ordering guarantees.\n\n### Process flowchart\n```mermaid\nflowchart LR\n  P[Promise pending] --> F[Fulfilled]\n  P --> R[Rejected]\n  F --> Then[then handlers]\n  R --> Catch[catch handlers]\n  Then --> Next[Next promise]\n  Catch --> Next\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((Promises))\n    Create\n      new Promise\n      Promise.resolve\n    Consume\n      then catch finally\n      async await\n    Combine\n      all\n      allSettled\n      race\n      any\n    Guarantees\n      Microtask callbacks\n      Ordered then\n```\n\n\n### Q1. What is a Promise?\n\n**Answer (documentation-aligned)**\n\nAn object representing eventual completion or failure of an async operation, with states pending → fulfilled/rejected.\n\n### Q2. Why prefer promises over raw callbacks?\n\n**Answer (documentation-aligned)**\n\nMDN notes inversion-of-control benefits: callbacks added with `then` are not invoked before the current JS turn finishes, run even if added after settlement, and run in registration order.\n\n### Q3. How does async/await relate?\n\n**Answer (documentation-aligned)**\n\n`async` functions always return promises. `await` pauses the async function until settlement, writing sync-looking code on top of promises.\n\n### Q4. Promise.all vs allSettled vs race?\n\n**Answer (documentation-aligned)**\n\n`all`: fail-fast on first reject. `allSettled`: wait for all outcomes. `race`: first settled wins. Pick based on whether partial failure is acceptable.\n\n### Q5. Error handling pattern?\n\n**Answer (documentation-aligned)**\n\nPrefer `try/catch` around `await`, or `.catch` on chains. Always handle rejections — unhandled rejections are production defects.\n\n## Official references\n- [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) · [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)\n\n\n## Documentation deep dive\nasync/await is syntactic sugar over promises; refactoring between styles is usually mechanical.\n\n**Why this matters**\nAlmost every modern JS interview and Playwright test hinges on correct awaiting.\n\n**Implementation checklist**\n- Await every promise you care about\n- Use Promise.all for independent parallel work\n- Log and classify rejection reasons\n\n**Common mistakes**\n- Floating promises without await\n- Swallowing errors in empty catch\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
+    "id": 122,
+    "category": "JavaScript",
+    "title": "JavaScript Q&A: Event loop, call stack, and microtasks",
+    "tags": [
+      "Event Loop",
+      "Call Stack",
+      "Microtasks",
+      "Macrotasks",
+      "Concurrency"
+    ],
+    "excerpt": "MDN-aligned Q&A on the JS event loop, stacks, and promise microtasks vs timer tasks (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/javascript/qa-event-loop",
+    "createdAt": "2026-09-23T13:45:02.423Z",
+    "level": "Intermediate",
+    "content": "## Scope\nRuntime model from [MDN Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) and promise scheduling notes in [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).\n\n\n## Visual overview\nEvent loop priority: finish stack → drain microtasks → next macrotask.\n\n### Process flowchart\n```mermaid\nflowchart TD\n  Stack[Call stack] --> Idle{Stack empty?}\n  Idle -->|yes| Micro[Microtask queue]\n  Micro --> Stack\n  Idle -->|micro empty| Macro[Task queue timers/IO]\n  Macro --> Stack\n```\n\n### Topic mindmap\n```mermaid\nmindmap\n  root((JS runtime))\n    Call stack\n      Sync frames\n    Microtasks\n      Promise then\n      queueMicrotask\n    Tasks\n      setTimeout\n      I/O events\n    Rendering\n      Browser paints\n```\n\n\n### Q1. What is the call stack?\n\n**Answer (documentation-aligned)**\n\nThe place where synchronous function frames run. JS is single-threaded for this stack: one frame at a time until it returns.\n\n### Q2. What is the event loop?\n\n**Answer (documentation-aligned)**\n\nThe browser/Node mechanism that waits until the stack is clear, then pulls the next work unit. MDN describes how messages/tasks are processed one after another.\n\n### Q3. Microtasks vs tasks?\n\n**Answer (documentation-aligned)**\n\nPromise reactions (`then`/`catch`/`finally`, `queueMicrotask`) are **microtasks** and run before the next timer/IO **task**. That is why `Promise.resolve().then(...)` often beats `setTimeout(0)`.\n\n### Q4. Interview trap?\n\n**Answer (documentation-aligned)**\n\nAssuming `setTimeout(fn, 0)` runs before promise callbacks. Order is: current sync → microtasks → timers.\n\n## Official references\n- [Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) · [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)\n\n\n## Documentation deep dive\nMDN: promise callbacks are queued as microtasks and do not run until the current run completes; they still run before ordinary tasks like timers.\n\n**Why this matters**\nAsync bugs and flaky UI logic come from misunderstanding queue order.\n\n**Implementation checklist**\n- Predict output of sync + promise + setTimeout snippets\n- Never block the stack with heavy sync work on the main thread\n- Use microtasks intentionally, not accidentally via deep then chains\n\n**Common mistakes**\n- Starving the page with endless microtask loops\n- Relying on timer order for business correctness\n\n## 3-minute study path\n1. Skim each Q&A.\n2. Open one MDN link and restate the definition aloud.\n3. Draw the flowchart from memory.\n",
+    "pipeline": true
+  },
+  {
     "id": 121,
     "category": "TOSCA",
     "title": "Tosca visual map: Automation Architect topic graph",
