@@ -5,6 +5,24 @@
 
 const ALL_POSTS = [
   {
+    "id": 48,
+    "category": "GenAI",
+    "title": "AI Architect role: designing production GenAI systems",
+    "tags": [
+      "ai-architect",
+      "genai",
+      "mlops",
+      "llmops",
+      "leadership"
+    ],
+    "excerpt": "What an AI Architect actually owns: problem framing, pipelines, model delivery, LLMOps, governance, and mentoring - across healthcare and enterprise.",
+    "sourceUrl": "https://raviacn95.github.io/#genai-path",
+    "createdAt": "2026-09-23T11:23:53.713Z",
+    "level": "advanced",
+    "content": "## Core idea\nAn AI Architect does not only pick models. You design the full path from a business or clinical problem to a monitored production system: data, features, training or RAG, deployment, evaluation, and governance.\n\n## What you own end to end\n- Problem framing with product, data, and domain stakeholders\n- Data and feature pipelines at scale (Python, SQL, Spark/Dask)\n- ML and GenAI delivery: classification, forecasting, NLP, LLM apps\n- MLOps/LLMOps: CI/CD, registry, tracking, drift, A/B tests\n- Compliance posture (HIPAA/PHI where relevant) and Responsible AI\n- Mentoring, standards, reliability, and executive-ready trade-off talks\n\n## Practical architecture checklist\n1. Define the decision the system must improve (not \"add an LLM\").\n2. Map data sources, freshness, and access controls.\n3. Choose classical ML vs LLM/RAG vs hybrid - based on latency, cost, and risk.\n4. Design evaluation before launch (offline metrics + human review).\n5. Plan rollback, monitoring, and ownership after go-live.\n\n## Try this\n```text\nProblem -> Data contract -> Baseline model/RAG -> Eval harness -> Deploy -> Monitor -> Retrain/reindex\n```\n\n## Quick quiz\nQ: What is the first deliverable of an AI Architect on a new GenAI initiative?\nA: A clear problem statement, success metrics, and a risk/compliance-aware architecture - not a demo prompt.\n\n## Key takeaway\nProduction GenAI is systems engineering: architecture, data, evaluation, and operations matter as much as the model.\n\nFurther reading: treat official cloud AI docs (SageMaker, Azure ML, Vertex AI) as reference, not copy-paste blueprints.",
+    "pipeline": true
+  },
+  {
     "id": 47,
     "category": "JavaScript",
     "title": "JavaScript Promises",

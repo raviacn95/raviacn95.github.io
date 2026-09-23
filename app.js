@@ -2,7 +2,7 @@
    APP.JS - LearnHub (fast, paginated, path-aware, dynamic)
    ================================================================ */
 
-const CONTENT_VERSION = 15;
+const CONTENT_VERSION = 16;
 const PAGE_SIZE = 9;
 const RECENT_KEY = "learnhub-recent-v1";
 const PROGRESS_KEY = "learnhub-progress-v1";
@@ -25,6 +25,12 @@ const LEARNING_PATHS = {
     title: "TypeScript depth",
     blurb: "Types, generics, and safer refactors at scale.",
     category: "TypeScript",
+  },
+  genai: {
+    id: "genai",
+    title: "AI Architect / GenAI",
+    blurb: "RAG, LLMOps, healthcare AI governance, and production platforms.",
+    category: "GenAI",
   },
 };
 
@@ -402,6 +408,7 @@ function renderHome() {
     JavaScript: "JavaScript tutorials",
     Playwright: "Playwright tutorials",
     TypeScript: "TypeScript tutorials",
+    GenAI: "GenAI / AI Architect tutorials",
     MCP: "MCP tutorials",
     TOSCA: "TOSCA tutorials",
   };
