@@ -5,6 +5,150 @@
 
 const ALL_POSTS = [
   {
+    "id": 62,
+    "category": "GenAI",
+    "title": "AI Architect leadership: roadmaps, mentoring, and stakeholders",
+    "tags": [
+      "Technical Leadership",
+      "Mentoring",
+      "Product Thinking",
+      "Stakeholders",
+      "Roadmaps"
+    ],
+    "excerpt": "Turn business problems into AI roadmaps, mentor engineers, and communicate trade-offs to executives clearly.",
+    "sourceUrl": "https://learnhub.local/genai/ai-architect-leadership",
+    "createdAt": "2026-09-23T11:26:56.539Z",
+    "level": "Advanced",
+    "content": "## Core idea\nSenior AI Architects succeed when delivery, standards, and trust move together. Code alone is not the job.\n\n## From problem to roadmap\n1. Clarify the decision or workflow to improve\n2. Frame options: rules, classical ML, RAG, agents - with cost and risk\n3. Sequence: data readiness -> MVP -> eval -> scale -> governance\n4. Publish milestones executives can track without jargon\n\n## Mentoring and standards\n- Code reviews that teach reliability and observability\n- Shared templates for prompts, evals, and deployment checklists\n- Pairing on incident reviews after production misses\n- Documentation that new engineers can run in one day\n\n## Stakeholder communication\n- Lead with outcome and risk, then architecture\n- Show demos with failure cases, not only happy paths\n- Separate research spikes from production commitments\n- Change management: who is trained, who approves, who owns rollback\n\n## Try this\nFor your next ask, write three slides only: problem, options with trade-offs, recommended 90-day plan.\n\n## Quick quiz\nQ: What should an executive update emphasize first?\nA: Business outcome, risk posture, and timeline - not model names.",
+    "pipeline": true
+  },
+  {
+    "id": 61,
+    "category": "GenAI",
+    "title": "LLM observability with LangFuse, LangTrace, and MLflow",
+    "tags": [
+      "LangFuse",
+      "LangTrace",
+      "MLflow",
+      "Observability",
+      "LLMOps"
+    ],
+    "excerpt": "Trace prompts, tools, costs, and quality so production GenAI systems are debuggable and governable.",
+    "sourceUrl": "https://learnhub.local/genai/llm-observability",
+    "createdAt": "2026-09-23T11:26:56.535Z",
+    "level": "Intermediate",
+    "content": "## Core idea\nIf you cannot reconstruct why an agent answered poorly, you cannot improve or audit it. Observability for LLMs means traces, metrics, and artifact lineage together.\n\n## What to capture\n- Prompt/version ids and model ids\n- Retrieval hits and tool calls with timings\n- Token usage and estimated cost\n- User feedback and evaluator scores\n- Redacted payloads only - never raw PHI in traces by default\n\n## Tooling roles\n- LangFuse / LangTrace: request traces, spans, and prompt analytics\n- MLflow: experiment tracking, model/prompt registry, deployment lineage\n- App metrics: p95 latency, error rate, cache hit rate\n\n## Operating rhythm\n- Daily: cost and error dashboards\n- Weekly: sample failing traces for prompt/RAG fixes\n- Release: compare eval suites before promoting a prompt version\n\n## Try this\n```text\nTrace id -> spans (retrieve, tool, llm) -> scores -> link to prompt version in registry\n```\n\n## Quick quiz\nQ: What must be true before you store full prompts in a trace backend?\nA: Data classification and redaction rules - especially for PHI/PII.",
+    "pipeline": true
+  },
+  {
+    "id": 60,
+    "category": "GenAI",
+    "title": "Experimental design and evaluation for ML and GenAI",
+    "tags": [
+      "Experimental Design",
+      "A/B Testing",
+      "Statistics",
+      "Evaluation",
+      "Hypothesis Testing"
+    ],
+    "excerpt": "Prove that a model or prompt change helps: hypotheses, offline suites, online A/B tests, and guardrail metrics.",
+    "sourceUrl": "https://learnhub.local/genai/experimental-design-eval",
+    "createdAt": "2026-09-23T11:26:56.531Z",
+    "level": "Intermediate",
+    "content": "## Core idea\nShipping GenAI without a measurement plan is guessing. Treat every prompt, index, or model swap as an experiment with a clear success metric and a kill switch.\n\n## Offline first\n- Define hypothesis and primary metric (task success, latency, cost, safety rate)\n- Hold out labeled cases; avoid tuning on the test set\n- Score faithfulness, usefulness, and format compliance separately\n- Stratify by domain slices (e.g. claims vs clinical notes)\n\n## Online experiments\n- A/B or shadow traffic with identical routing rules\n- Pre-register minimum sample size and stop rules\n- Watch guardrail metrics even if primary metric improves\n- Roll back automatically on safety or error spikes\n\n## Statistics without theater\n- Know when uplift is noise vs signal\n- Prefer practical significance (cost/latency) alongside p-values\n- Document confounding (seasonality, user mix, UI changes)\n\n## Try this\nWrite a one-page experiment brief before your next prompt change: hypothesis, metric, sample size, abort criteria.\n\n## Quick quiz\nQ: Why keep safety metrics as hard gates in A/B tests?\nA: A \"better\" answer rate that increases harmful outputs is a failed experiment.",
+    "pipeline": true
+  },
+  {
+    "id": 59,
+    "category": "GenAI",
+    "title": "FHIR, HL7, and EHR-aware GenAI architecture",
+    "tags": [
+      "FHIR",
+      "HL7",
+      "EHR",
+      "Healthcare",
+      "Medical NLP"
+    ],
+    "excerpt": "Integrate GenAI with clinical systems using FHIR/HL7 concepts, EHR workflows, and strict PHI boundaries.",
+    "sourceUrl": "https://learnhub.local/genai/fhir-ehr-genai",
+    "createdAt": "2026-09-23T11:26:56.527Z",
+    "level": "Advanced",
+    "content": "## Core idea\nHealthcare GenAI is an integration and safety problem first. You must respect EHR workflows, clinical data contracts, and the fact that clinicians own the decision.\n\n## Standards you must speak\n- HL7 messaging concepts for event-driven clinical updates\n- FHIR resources (Patient, Encounter, Observation, MedicationRequest) as the modern API shape\n- EHR UX constraints: interruptibility, audit, and order workflows\n\n## Architecture patterns\n- Prefer FHIR APIs or approved clinical data platforms over scraping charts\n- De-identify or minimize PHI before any LLM call when possible\n- Separate clinical decision support suggestions from automated actions\n- Cite source notes/resources in the UI for clinician verification\n\n## Risk controls\n- Intended use statements and contraindication lists\n- Human confirmation for orders or care-plan changes\n- Full audit: who asked, what context was sent, which model version answered\n\n## Try this\nMap one user story to FHIR resources and a GenAI step that never writes back without a clinician click.\n\n## Quick quiz\nQ: Why is \"chat with the chart\" dangerous without FHIR/ACL design?\nA: Unscoped retrieval can expose the wrong patient's PHI or unsupported clinical advice.",
+    "pipeline": true
+  },
+  {
+    "id": 58,
+    "category": "GenAI",
+    "title": "Feature stores and lakehouse patterns for ML",
+    "tags": [
+      "Feature Store",
+      "Lakehouse",
+      "Delta Lake",
+      "Spark",
+      "Data Pipelines"
+    ],
+    "excerpt": "Serve consistent training and online features with lakehouse storage, feature stores, and governed pipelines.",
+    "sourceUrl": "https://learnhub.local/genai/feature-store-lakehouse",
+    "createdAt": "2026-09-23T11:26:56.524Z",
+    "level": "Advanced",
+    "content": "## Core idea\nModels fail in production when training features disagree with online features. Feature stores and lakehouse patterns keep definitions, freshness, and lineage aligned.\n\n## Lakehouse building blocks\n- Raw + curated zones (Parquet/Delta) with clear ownership\n- ETL/ELT via Spark/Dask and orchestrators (Airflow/Prefect)\n- Data quality checks and schema contracts\n- Time-travel and audit for regulated workloads\n\n## Feature store responsibilities\n- Register feature definitions and owners\n- Point-in-time correct training sets (no leakage)\n- Low-latency online serving for inference\n- Monitoring: freshness, null rates, distribution shift\n\n## GenAI overlap\nLLM apps still need classical features for ranking, risk scores, and routing. Keep feature and vector pipelines as sibling systems with shared governance.\n\n## Try this\nDocument one feature: source table, transform, offline path, online path, SLA, and owner. If any field is unknown, that is your first backlog item.\n\n## Quick quiz\nQ: What is point-in-time correctness?\nA: Training rows only use feature values that would have been available at prediction time historically.",
+    "pipeline": true
+  },
+  {
+    "id": 57,
+    "category": "GenAI",
+    "title": "Embeddings, vector indexes, and retrieval evaluation",
+    "tags": [
+      "Embeddings",
+      "Vector Indexing",
+      "RAG",
+      "Hugging Face",
+      "Evaluation"
+    ],
+    "excerpt": "Build retrieval that actually finds the right chunks: embedding choice, indexes, hybrid search, and recall metrics.",
+    "sourceUrl": "https://learnhub.local/genai/embeddings-vector-eval",
+    "createdAt": "2026-09-23T11:26:56.518Z",
+    "level": "Intermediate",
+    "content": "## Core idea\nRAG quality is mostly retrieval quality. Bad chunks and weak indexes make even strong LLMs invent answers.\n\n## Embedding and index basics\n- Choose embedding models for your domain language (clinical vs enterprise docs)\n- Chunk by semantic units (sections, FAQs), not arbitrary token cuts alone\n- Store metadata: source, date, access tier, document type\n- Indexes: dense vectors + optional keyword/hybrid search\n- Re-rank top candidates before the LLM sees them\n\n## Evaluation that matters\n- Recall@k and MRR on a labeled question set\n- Faithfulness / groundedness of final answers\n- Latency and cost per query\n- Freshness: reindex SLA when source docs change\n\n## Common failure modes\n- Overlapping chunks that dilute signal\n- Missing ACL filters so users see unauthorized snippets\n- Stale indexes after policy updates\n- Embedding drift after model upgrades without reindexing\n\n## Try this\n```text\nQuery -> embed -> ANN top 50 -> hybrid filter -> re-rank top 8 -> LLM with citations\n```\n\n## Quick quiz\nQ: What should you measure before changing the LLM?\nA: Retrieval recall and groundedness - often the bottleneck is the index, not the model.",
+    "pipeline": true
+  },
+  {
+    "id": 56,
+    "category": "GenAI",
+    "title": "Cloud AI platforms: SageMaker, Azure ML, Vertex AI, Bedrock",
+    "tags": [
+      "AWS SageMaker",
+      "Azure ML",
+      "GCP Vertex AI",
+      "AWS Bedrock",
+      "Cloud AI"
+    ],
+    "excerpt": "Choose and operate cloud AI services for training, hosting, and managed LLMs without locking into one vendor blindly.",
+    "sourceUrl": "https://learnhub.local/genai/cloud-ai-platforms",
+    "createdAt": "2026-09-23T11:26:56.513Z",
+    "level": "Intermediate",
+    "content": "## Core idea\nCloud AI platforms give you managed training, endpoints, and foundation models. An AI Architect picks the control plane that matches data residency, IAM, cost, and team skills.\n\n## Platform map\n- AWS SageMaker: training jobs, pipelines, endpoints, Feature Store\n- AWS Bedrock: managed foundation models and agents with AWS IAM\n- Azure ML: workspaces, managed endpoints, Responsible AI tooling\n- GCP Vertex AI: training, prediction, Vector Search, Model Garden\n\n## Decision checklist\n1. Where does PHI/PII live, and which regions are allowed?\n2. Do you need custom training GPUs or only hosted LLM APIs?\n3. How will secrets, VPC endpoints, and private networking work?\n4. Can you export models and prompts if you change clouds later?\n5. What is the unit economics: tokens vs GPU-hours vs managed markup?\n\n## Production patterns\n- Separate accounts/projects for experiment vs prod\n- IAM least privilege for training and inference roles\n- Cloud monitoring + app-level quality metrics together\n- Prefer serverless or autoscaled endpoints with hard spend caps\n\n## Try this\nPick one workload (classification vs RAG chat). Write a one-page matrix: latency target, data class, preferred cloud service, fallback path.\n\n## Quick quiz\nQ: Why pair Bedrock/Vertex hosted LLMs with your own eval and logging?\nA: Managed APIs do not replace your quality, cost, and compliance controls.",
+    "pipeline": true
+  },
+  {
+    "id": 55,
+    "category": "GenAI",
+    "title": "Prompt engineering, fine-tuning, and guardrails",
+    "tags": [
+      "Prompt Engineering",
+      "Fine-tuning",
+      "Guardrails",
+      "Evaluation",
+      "LLMs"
+    ],
+    "excerpt": "Design prompts, decide when to fine-tune, and ship safety rails so GenAI answers stay useful and auditable.",
+    "sourceUrl": "https://learnhub.local/genai/prompt-finetune-guardrails",
+    "createdAt": "2026-09-23T11:26:56.506Z",
+    "level": "Intermediate",
+    "content": "## Core idea\nPrompt design is the fastest lever. Fine-tuning is for stable style or domain behavior when prompts and RAG are not enough. Guardrails are non-optional in healthcare and enterprise.\n\n## Prompt stack that scales\n- System prompt: role, scope, refusal rules, citation policy\n- Developer/tool prompts: structured schemas and tool contracts\n- User prompt: task + constraints; keep PHI out of free text when possible\n- Prompt chaining: retrieve -> reason -> verify -> format\n- Token and context budgets: summarize long histories; pin critical facts\n\n## When to fine-tune\n- Consistent tone, format, or classification labels across thousands of examples\n- Domain jargon that RAG alone cannot stabilize\n- Not a substitute for fresh knowledge - still pair with retrieval for changing policies\n\n## Guardrails and evaluation\n- Input filters: PII/PHI detection, jailbreak patterns, allowed intents\n- Output filters: toxicity, medical advice disclaimers, schema validation\n- Offline eval sets with golden answers and rubrics\n- Online: sampling, human review queues, and rollback on quality drop\n\n## Try this\n```text\nUser input\n  -> PHI/PII scrub\n  -> Intent allowlist\n  -> Prompt + RAG context\n  -> Model\n  -> Schema + safety check\n  -> Response + audit id\n```\n\n## Quick quiz\nQ: When is fine-tuning usually better than a longer prompt?\nA: When you need stable behavior across many examples and prompts alone keep drifting.",
+    "pipeline": true
+  },
+  {
     "id": 54,
     "category": "GenAI",
     "title": "Agentic AI with LangGraph, CrewAI, and AutoGen",
