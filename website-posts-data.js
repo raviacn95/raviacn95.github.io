@@ -5,6 +5,117 @@
 
 const ALL_POSTS = [
   {
+    "id": 54,
+    "category": "GenAI",
+    "title": "Agentic AI with LangGraph, CrewAI, and AutoGen",
+    "tags": [
+      "agentic-ai",
+      "langgraph",
+      "crewai",
+      "autogen",
+      "guardrails"
+    ],
+    "excerpt": "Design multi-agent GenAI workflows with tool permissions, budgets, evaluation, and observability.",
+    "sourceUrl": "https://raviacn95.github.io/#agentic-ai",
+    "createdAt": "2026-09-23T11:24:44.950Z",
+    "level": "advanced",
+    "content": "## Core idea\nAgentic AI systems coordinate tools and LLM steps to complete goals. Without budgets, permissions, and eval, agents become unpredictable cost and risk machines.\n\n## Design rules\n- Give each agent a narrow role and typed tools\n- Cap tokens, time, and tool calls per run\n- Log every tool invocation with inputs/outputs redacted of secrets/PHI\n- Evaluate trajectories (did the plan make sense?) not only final text\n- Prefer human approval gates for irreversible actions\n\n## Stack examples\nLangGraph for stateful graphs, CrewAI for role crews, AutoGen for multi-agent chats - pick one pattern and standardize observability (LangFuse/LangTrace-style traces).\n\n## Try this\n```text\nplanner -> researcher(tool) -> critic -> executor(tool) -> human_gate? -> result\n```\n\n## Quick quiz\nQ: What is the first control to add to an agent demo before production?\nA: Tool allowlists + hard stop budgets + audit logs.\n\n## Key takeaway\nAgents are distributed systems. Architect them with the same discipline as microservices.",
+    "pipeline": true
+  },
+  {
+    "id": 53,
+    "category": "GenAI",
+    "title": "Deploying LLMs at scale: Kubernetes, GPUs, and GitOps",
+    "tags": [
+      "kubernetes",
+      "docker",
+      "terraform",
+      "gitops",
+      "gpu",
+      "bentoml"
+    ],
+    "excerpt": "Ship LLM apps with containers, Kubernetes, Terraform/GitOps, and GPU-aware scaling without losing cost control.",
+    "sourceUrl": "https://raviacn95.github.io/#llm-k8s-gitops",
+    "createdAt": "2026-09-23T11:24:44.947Z",
+    "level": "advanced",
+    "content": "## Core idea\nScalable LLM deployment is platform engineering: package the service, declare infra as code, autoscale thoughtfully (including GPUs), and observe cost and latency continuously.\n\n## Delivery building blocks\n- Package: Docker images for API + workers\n- Serve: FastAPI/BentoML or managed endpoints (SageMaker, Azure ML, Vertex AI, Bedrock)\n- Orchestrate: Kubernetes, Helm; GPU node pools when self-hosting\n- Provision: Terraform / CloudFormation; GitOps for promotions\n- Scale: HPA/KEDA on QPS, queue depth, or GPU util - with budget caps\n- Observe: metrics, traces, token/cost dashboards, alert on SLO burn\n\n## Cloud AI services\nUse managed training/hosting when it reduces undifferentiated heavy lifting - but keep exit plans, eval harnesses, and IAM boundaries consistent across clouds.\n\n## Try this\n```text\ncommit -> CI eval -> build image -> GitOps PR -> canary 5% -> full rollout\n```\n\n## Quick quiz\nQ: What is the biggest risk of naive GPU autoscaling?\nA: Cost explosions and noisy-neighbor contention without quotas and idle scale-down.\n\n## Key takeaway\nProduction LLM platforms optimize for reliability and unit economics as much as raw tokens per second.",
+    "pipeline": true
+  },
+  {
+    "id": 52,
+    "category": "GenAI",
+    "title": "Data and feature pipelines for ML and GenAI",
+    "tags": [
+      "python",
+      "sql",
+      "spark",
+      "etl",
+      "feature-store",
+      "airflow"
+    ],
+    "excerpt": "Build robust data/feature pipelines with Python, SQL, Spark/Dask, and orchestration for training and RAG corpora.",
+    "sourceUrl": "https://raviacn95.github.io/#data-feature-pipelines",
+    "createdAt": "2026-09-23T11:24:44.943Z",
+    "level": "intermediate",
+    "content": "## Core idea\nModels and RAG systems are only as good as their data contracts. AI Architects design pipelines that are reproducible, observable, and safe for large clinical, claims, or enterprise datasets.\n\n## Stack patterns\n- Transform: Python (pandas/NumPy), SQL, Spark/Dask\n- Orchestrate: Airflow or Prefect\n- Store: warehouses/lakes, Parquet/Delta, optional feature store\n- Quality: schema checks, freshness SLAs, null/anomaly alerts\n- Lineage: know which raw tables fed which model or index version\n\n## Design rules\n1. Separate raw, cleaned, and feature/ready-for-model layers.\n2. Make jobs idempotent; prefer incremental loads with watermarks.\n3. Version training sets and RAG corpora the same way you version code.\n4. Never \"fix in notebook\" without promoting logic into tested jobs.\n\n## Try this\n```text\nraw -> validate -> curated -> features_or_chunks -> train_or_index -> publish_artifact\n```\n\n## Quick quiz\nQ: What breaks first when pipelines skip data contracts?\nA: Silent training/serving skew and irreproducible metrics.\n\n## Key takeaway\nTreat data pipelines as production software: tested, scheduled, monitored, and owned.",
+    "pipeline": true
+  },
+  {
+    "id": 51,
+    "category": "GenAI",
+    "title": "Healthcare GenAI: HIPAA, PHI, and Responsible AI",
+    "tags": [
+      "healthcare",
+      "hipaa",
+      "phi",
+      "responsible-ai",
+      "governance"
+    ],
+    "excerpt": "Design healthcare AI with PHI handling, access controls, auditability, and Responsible AI governance baked into the architecture.",
+    "sourceUrl": "https://raviacn95.github.io/#healthcare-hipaa",
+    "createdAt": "2026-09-23T11:24:44.939Z",
+    "level": "advanced",
+    "content": "## Core idea\nHealthcare GenAI fails if it cannot protect PHI, prove access control, and show audit trails. Architecture choices must assume HIPAA-minded controls even when you are not a lawyer - partner with compliance early.\n\n## Non-negotiables\n- Minimize PHI in prompts and logs; prefer de-identification where possible\n- Encrypt in transit and at rest; strict IAM and least privilege\n- Audit who accessed what data and which model version answered\n- Human-in-the-loop for clinical decision support - AI assists, does not silently decide\n- Vendor BAAs and data residency reviews for cloud LLM APIs\n- Document intended use, known failure modes, and escalation paths\n\n## Domain interfaces\nFamiliarize with clinical/claims data shapes and standards conversations around HL7/FHIR and EHR workflows - enough to ask the right integration questions with clinical IT.\n\n## Try this\n```text\nRequest -> AuthZ -> PHI filter -> Model/RAG -> Redaction -> Response + audit log\n```\n\n## Quick quiz\nQ: Should raw clinical notes go into an unmanaged public LLM?\nA: No. Use approved environments, contracts, and minimization; prefer enterprise-controlled deployments.\n\n## Key takeaway\nIn healthcare, trust and compliance are product features. Build them into the pipeline, not as a slide after launch.",
+    "pipeline": true
+  },
+  {
+    "id": 50,
+    "category": "GenAI",
+    "title": "LLMOps and MLOps: CI/CD for models and agents",
+    "tags": [
+      "llmops",
+      "mlops",
+      "mlflow",
+      "ci-cd",
+      "monitoring",
+      "drift"
+    ],
+    "excerpt": "Establish production MLOps/LLMOps: registries, experiment tracking, CI/CD, monitoring, drift detection, and A/B testing.",
+    "sourceUrl": "https://raviacn95.github.io/#llmops-mlops",
+    "createdAt": "2026-09-23T11:24:44.936Z",
+    "level": "advanced",
+    "content": "## Core idea\nMLOps/LLMOps is how models and LLM apps survive contact with production: versioned artifacts, automated tests, controlled releases, and continuous monitoring.\n\n## Minimum viable LLMOps platform\n- Experiment tracking and model/prompt registry (e.g. MLflow)\n- Packaging and serving (Docker, BentoML, Kubernetes)\n- CI/CD for code, prompts, eval suites, and infra (GitOps/Terraform)\n- Runtime monitoring: latency, cost/tokens, error rate, quality scores\n- Drift and data quality signals; scheduled retrain or reindex\n- A/B or shadow deployments before full cutover\n\n## Agentic systems note\nCrewAI, LangGraph, and AutoGen add multi-step agents. Treat agents like distributed systems: timeouts, budgets, tool permissions, and evaluation of trajectories - not only final answers.\n\n## Try this\n```yaml\npipeline:\n  - unit_tests\n  - eval_suite (offline)\n  - build_image\n  - deploy_shadow\n  - compare_metrics\n  - promote_or_rollback\n```\n\n## Quick quiz\nQ: What should gate a production LLM release?\nA: Passing eval thresholds (quality, safety, cost/latency) plus a rollback plan - not a successful demo.\n\n## Key takeaway\nIf you cannot version, evaluate, monitor, and roll back a GenAI change, you do not have LLMOps yet.",
+    "pipeline": true
+  },
+  {
+    "id": 49,
+    "category": "GenAI",
+    "title": "RAG pipelines for enterprise and healthcare GenAI",
+    "tags": [
+      "rag",
+      "langchain",
+      "llamaindex",
+      "embeddings",
+      "vector-indexing"
+    ],
+    "excerpt": "Build Retrieval Augmented Generation the right way: chunking, embeddings, indexing, grounding, evaluation, and guardrails.",
+    "sourceUrl": "https://raviacn95.github.io/#rag-pipelines",
+    "createdAt": "2026-09-23T11:24:44.929Z",
+    "level": "advanced",
+    "content": "## Core idea\nRAG (Retrieval Augmented Generation) grounds LLM answers in your documents so the model cites retrieved context instead of inventing facts. In healthcare and enterprise, grounding and auditability are non-negotiable.\n\n## Pipeline shape\n1. Ingest allowlisted documents (policies, SOPs, knowledge bases).\n2. Chunk with overlap; keep source IDs and section metadata.\n3. Embed and index (vector store + optional keyword hybrid search).\n4. Retrieve top-k; re-rank if needed.\n5. Prompt with citations; enforce guardrails and PHI filters.\n6. Evaluate faithfulness, relevance, and refusal quality.\n\n## Tooling map\n- Orchestration: LangChain, LlamaIndex, LangGraph\n- Observability: LangFuse, LangTrace, custom traces\n- Serving: FastAPI, BentoML, cloud endpoints\n- Do not paste proprietary clinical text into public models without approval.\n\n## Try this\n```text\nquery -> retrieve(k) -> filter(ACL/PHI) -> prompt(context+citations) -> answer -> log(trace_id)\n```\n\n## Quick quiz\nQ: Why is hybrid search often better than vectors alone?\nA: Exact identifiers (policy IDs, codes, drug names) often match keywords better than embeddings alone.\n\n## Key takeaway\nRAG quality is mostly retrieval + evaluation + access control - not prompt cleverness alone.",
+    "pipeline": true
+  },
+  {
     "id": 48,
     "category": "GenAI",
     "title": "AI Architect role: designing production GenAI systems",
