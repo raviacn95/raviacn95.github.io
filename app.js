@@ -2,7 +2,7 @@
    APP.JS - LearnHub (fast, paginated, path-aware, dynamic)
    ================================================================ */
 
-const CONTENT_VERSION = 16;
+const CONTENT_VERSION = 17;
 const PAGE_SIZE = 9;
 const RECENT_KEY = "learnhub-recent-v1";
 const PROGRESS_KEY = "learnhub-progress-v1";
@@ -31,6 +31,12 @@ const LEARNING_PATHS = {
     title: "AI Architect / GenAI",
     blurb: "RAG, LLMOps, healthcare AI governance, and production platforms.",
     category: "GenAI",
+  },
+  tosca: {
+    id: "tosca",
+    title: "Tricentis Tosca",
+    blurb: "Modules, ActionModes, TestCase-Design, ExecutionLists, and DEX — documentation-aligned Q&A.",
+    category: "TOSCA",
   },
 };
 

@@ -5,6 +5,183 @@
 
 const ALL_POSTS = [
   {
+    "id": 72,
+    "category": "TOSCA",
+    "title": "Tosca interview mega Q&A (documentation-aligned)",
+    "tags": [
+      "Interview",
+      "Tosca Commander",
+      "TBox",
+      "MLOps-free",
+      "Certification prep"
+    ],
+    "excerpt": "A dense set of documentation-aligned interview Q&As spanning Commander, TBox, ActionModes, Design, Execution, and DEX.",
+    "sourceUrl": "https://learnhub.local/tosca/interview-mega-qa",
+    "createdAt": "2026-09-23T11:50:45.630Z",
+    "level": "Advanced",
+    "content": "## How to use this\nAnswer each question in your own words, then compare with the documentation-aligned answer. Prefer official wording for definitions.\n\n### Q1. Define ModuleAttribute vs TestStepValue.\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nModuleAttributes live on the Module (technical parameters/controls). Creating a TestStep from a Module generates TestStepValues you fill with business data and ActionModes. Change data on TestStepValues; change identification on Modules.\n\n### Q2. Name ActionModes you must know cold.\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nInput, Verify, Buffer, WaitOn, Select, Constraint, Output, Insert, DoNothing, plus Delete/Modify for array operations. Know which are input vs reading operations.\n\n### Q3. Syntax to reuse a buffer?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n`{B[Name]}`. Array element: `{B[Name][Index]}`. Dynamic substring capture during Verify: `{XB[Name]}`.\n\n### Q4. Default MaximumRepetitions for DO/WHILE?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n30.\n\n### Q5. ScratchBook results persist — true or false?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nFalse. ScratchBook is for trial runs; use ExecutionLists for persistent results.\n\n### Q6. Can DEX run on a single-user workspace?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDocumentation states DEX is for multi-user workspaces with a shared repository.\n\n### Q7. What does AOS change for Agents?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nWith Automation Object Service, Agents execute without hosting local workspaces; artifacts/results flow through AOS and the common repository.\n\n### Q8. What combinatorial methods exist in TestCase-Design?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nAll combinations, Orthogonal, Pairwise, Linear expansion, Linear expansion with Relations.\n\n### Q9. When is StraightThrough required?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nFor linear expansion combinatorics — it is the least-dependent, highest-risk happy path.\n\n### Q10. What is the Standard subset OpenUrl Module for?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nA prepared Standard subset Module that opens a URL in a browser; you supply the URL parameter instead of scanning that navigation step.\n\n### Q11. Verify is case-sensitive — true or false?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTrue per ActionModes documentation; entire string is precisely verified unless you intentionally use regex patterns.\n\n### Q12. Where do you prepare ExecutionLists?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nExecution tab/section in Tosca Commander.\n\n### Q13. Name the three first-steps elements again.\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nScanning, Modules, TestCases.\n\n### Q14. Engines 3.0 sit on which framework?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTosca **TBox** (.NET).\n\n### Q15. What should you do after a DEX TestEvent finishes?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nUpdate your workspace (Update all) and inspect ExecutionList results; optionally monitor via the DEX Monitor.\n\n## Official reference hub\n- [Get to know Tosca](https://documentation.tricentis.com/sap/ect/2024.2/en/content/first_steps/get_to_know_tosca.htm)\n- [ActionModes](https://docs.tricentis.com/tosca-2026.1/en-us/content/tbox/action_modes.htm)\n- [Conditions](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/conditional_statements.htm)\n- [TestCase-Design Instances](https://docs.tricentis.com/tosca-2026.1/en-us/content/testcase_design/instances.htm)\n- [Execution overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/execution_overview.htm)\n- [DEX overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/distributed_execution/distributed_execution_overview.htm)\n\n## Study drill\nTimebox 20 minutes: answer Q1–Q10 aloud without notes, then open the linked docs only for misses.",
+    "pipeline": true
+  },
+  {
+    "id": 71,
+    "category": "TOSCA",
+    "title": "Tosca scanning and identifiers best-practice Q&A",
+    "tags": [
+      "XScan",
+      "Scanning",
+      "Identifiers",
+      "SAP",
+      "API Scan"
+    ],
+    "excerpt": "Q&A on scan options (Application, API, WebDriver, Salesforce, File) and why stable identifiers matter.",
+    "sourceUrl": "https://learnhub.local/tosca/scanning-identifiers-qa",
+    "createdAt": "2026-09-23T11:50:45.625Z",
+    "level": "Intermediate",
+    "content": "## Scope\nBased on [Create Modules by scanning](https://documentation.tricentis.com/sap/ect/2024.1/en/content/tosca_commander/scan_modules_overview.htm) and Tricentis scanning best-practice guidance referenced there.\n\n### Q1. Why scan at all?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nApplications expose controls. Scanning pulls technical identification into Tosca as Modules so later TestCases can steer those controls without hard-coding brittle low-level details in every TestStep.\n\n### Q2. How do you start a scan?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nRight-click a Module folder or use the dynamic Modules menu → **Scan**.\n\n### Q3. What major scan options does documentation list?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n- **Application** – GUI technologies (for example DotNet WinForms, Browser, JavaFX, SAP).\n- **API** – API Scan for interfaces.\n- **Remote Terminal** – Host emulator / PuTTY engines.\n- **More → WebDriver** – browsers/apps/debug ports locally or remote.\n- **More → Salesforce Scan**\n- **More → File Scan** – JSON/XML files.\n\n### Q4. What should you review before creating Modules for DEX Agents?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTricentis points to Distributed Execution best practices before creating new Modules when Agents will execute tests — identification and environment assumptions must hold on Agent machines, not only on the scanner's desktop.\n\n### Q5. What is the key interview answer about identifiers?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nPrefer stable, unique identifiers. Weak identifiers (absolute indexes, volatile labels) cause Module maintenance spikes. Strong identifiers keep TestCases stable when layout shifts slightly.\n\n### Q6. Scan once or scan forever?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nScan to create/update Modules when the UI/API contract changes. Do not rescanning as a substitute for TestCase data design — data belongs in TestStepValues / TestCase-Design Instances.\n\n## Official references\n- [Create Modules by scanning](https://documentation.tricentis.com/sap/ect/2024.1/en/content/tosca_commander/scan_modules_overview.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 70,
+    "category": "TOSCA",
+    "title": "Tosca Distributed Execution (DEX) Q&A",
+    "tags": [
+      "DEX",
+      "Distributed Execution",
+      "TestEvents",
+      "AOS",
+      "Agents"
+    ],
+    "excerpt": "Q&A on DEX architecture, AOS, Agents, TestEvents, TCDistribution, and activation notes from official docs.",
+    "sourceUrl": "https://learnhub.local/tosca/dex-qa",
+    "createdAt": "2026-09-23T11:50:45.620Z",
+    "level": "Advanced",
+    "content": "## Scope\nAligned with [Tosca Distributed Execution overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/distributed_execution/distributed_execution_overview.htm) and [Create and execute TestEvents](https://docs.tricentis.com/tosca-2026.1/en-us/content/distributed_execution/create_and_execute_testevents.htm).\n\n### Q1. What workspace type is required for DEX?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDistributed Execution is available for **multi-user workspaces** that share a common repository for test data and results.\n\n### Q2. What are the three main DEX elements?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n1. **User machines** – create tests and trigger execution.\n2. **Tosca Distribution Server** – uses Automation Object Service (**AOS**) to manage/distribute tests via its own workspace connected to the common repository.\n3. **Agent machines** – execute tests. With AOS, Agents do **not** need local workspaces; results return to the common repository via AOS.\n\n### Q3. What Agent types does documentation mention?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n- **Execution Agent** – executes TestCases created with Engines 3.0.\n- Agent that is a **full Tosca Commander client** installation.\n\n### Q4. What is a TestEvent?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nThe construct used to execute via DEX. It needs one or more **ExecutionLists** plus **Configurations** that specify which Distribution Agents should run which ExecutionLists.\n\n### Q5. What is TCDistribution?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nAn ExecutionList property. Set `TCDistribution = True` when that ExecutionList's TestCases are independent and may run in parallel across Agents.\n\n### Q6. What pre-checks are commonly documented before Execute now?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDistribution Server running; at least one Idle Agent; ExecutionLists checked in (recommend Checkin all); and if using AOS, the AOS workspace should be closed. After completion, **Update all** in Home to refresh results into your workspace.\n\n### Q7. Important version note from recent docs?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nAs of Tosca **2026.1 LTS**, Distributed Execution is **not enabled by default**. Commander installer option for Distributed Execution Agent and Tosca Server DEX-related services must be enabled/activated manually per Tricentis guidance.\n\n## Official references\n- [Distributed Execution overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/distributed_execution/distributed_execution_overview.htm)\n- [Create and execute TestEvents](https://docs.tricentis.com/tosca-2026.1/en-us/content/distributed_execution/create_and_execute_testevents.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 69,
+    "category": "TOSCA",
+    "title": "Tosca ExecutionLists and ScratchBook Q&A",
+    "tags": [
+      "ExecutionLists",
+      "ScratchBook",
+      "Execution",
+      "Results"
+    ],
+    "excerpt": "Detailed Q&A on ScratchBook trial runs vs persistent ExecutionLists, folders, and result handling.",
+    "sourceUrl": "https://learnhub.local/tosca/executionlists-qa",
+    "createdAt": "2026-09-23T11:50:45.616Z",
+    "level": "Beginner",
+    "content": "## Scope\nBased on [Test execution: Overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/execution_overview.htm) and [Create an ExecutionList](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/execution_lists_section.htm).\n\n### Q1. What is ScratchBook for?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTrial runs only. You can quickly check if a TestCase (or even individual TestSteps) would work. **Results do not persist.** Tricentis recommends ScratchBook for experimentation, not formal reporting.\n\n### Q2. What is an ExecutionList?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nA collection of TestCases prepared and arranged for execution in a specified order in the **Execution** section. Results **persist**, so you can track progress over time, visualize outcomes, and export results.\n\n### Q3. Why do you need ExecutionLists for DEX?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nYou also need ExecutionLists to create **TestEvents** for Tosca Distributed Execution.\n\n### Q4. Fastest way to create an ExecutionList?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDrag and drop a TestCase or TestCases folder onto the ExecutionLists object. You can also create folders and empty ExecutionLists from the mini toolbar, then organize linked ExecutionEntry folders.\n\n### Q5. What is the documented Execution preparation flow?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n1. Create ExecutionLists (set up execution).\n2. Configure execution behavior.\n3. Run ExecutionLists in Commander (or use TestEvents for DEX).\n4. Process results (export, archive logs, trend charts).\n\n### Q6. ScratchBook vs ExecutionList — one-line distinction?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nScratchBook = non-persistent dry run; ExecutionList = ordered, reportable, persistent execution structure.\n\n## Official references\n- [Test execution overview](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/execution_overview.htm)\n- [Create an ExecutionList](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/execution_lists_section.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 68,
+    "category": "TOSCA",
+    "title": "Tosca IF, DO, and WHILE conditions Q&A",
+    "tags": [
+      "IF",
+      "DO",
+      "WHILE",
+      "MaximumRepetitions",
+      "Conditions"
+    ],
+    "excerpt": "Q&A on conditional statements and loops in TestCases, Conditions folders, ELSE, and MaximumRepetitions defaults.",
+    "sourceUrl": "https://learnhub.local/tosca/conditions-loops-qa",
+    "createdAt": "2026-09-23T11:50:45.611Z",
+    "level": "Intermediate",
+    "content": "## Scope\nFrom official [Using conditional statements and loops in TestCases](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/conditional_statements.htm).\n\n### Q1. Which conditional constructs does Tosca support in TestCases?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n**IF**, **DO**, and **WHILE** statements. They can be applied to nested structures.\n\n### Q2. How do you create them?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nVia the context menu of TestCases or TestStep folders, or via **Create Object** in the dynamic TestCases menu. Tosca creates a **Conditions** object where you define what must be true for the next branch/loop step.\n\n### Q3. What objects does IF create?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIF automatically creates a **THEN** statement with the Conditions object. You can add an **ELSE** statement from the IF context menu or Create Object → ELSE Statement.\n\n### Q4. What do DO and WHILE create?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nBoth create a **Loop** object with the Conditions object. Loops include **MaximumRepetitions** to avoid infinite loops. Default MaximumRepetitions value is **30**.\n\n### Q5. What is the practical difference between DO and WHILE conceptually?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nBoth repeat based on Conditions and are capped by MaximumRepetitions. In documented usage patterns, Conditions typically evaluate buffers/control state (often with evaluation tools) to decide whether looping continues — always design an exit condition and respect the repetition cap.\n\n### Q6. Interview tip grounded in docs: what must you mention for loops?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nAlways mention **Conditions**, the **Loop** object, and **MaximumRepetitions (default 30)**. Interviewers often probe whether you understand infinite-loop protection.\n\n## Official references\n- [Conditional statements and loops](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/conditional_statements.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 67,
+    "category": "TOSCA",
+    "title": "Tosca TestCase-Design Q&A: Instances and combinatorics",
+    "tags": [
+      "TestCase-Design",
+      "Instances",
+      "Pairwise",
+      "Orthogonal",
+      "Linear expansion"
+    ],
+    "excerpt": "Detailed Q&A on Instances, Character/Position, NULL/EMPTY, and combinatorial methods from official TestCase-Design docs.",
+    "sourceUrl": "https://learnhub.local/tosca/testcase-design-qa",
+    "createdAt": "2026-09-23T11:50:45.607Z",
+    "level": "Advanced",
+    "content": "## Scope\nBased on [Work with Instances](https://docs.tricentis.com/tosca-2026.1/en-us/content/testcase_design/instances.htm) and [Generate and combine Instances](https://docs.tricentis.com/tosca-2026.1/en-us/content/testcase_design/instance_combinatorics.htm).\n\n### Q1. What is the main purpose of TestCase-Design?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nGenerate entire test datasets from defined Attributes and their value ranges, then use those datasets to organize TestCases with controlled coverage instead of hand-writing every combination.\n\n### Q2. Where can you create Instances?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nFor a **TestSheet**, a **TestCase-Design Attribute**, or a **TestCase-Design Class**.\n\n### Q3. What is Instance Character?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nCharacter options:\n- **Valid** (default): expected to succeed for the business process.\n- **Invalid**: expected to produce an error (negative testing).\n- **Straight Through**: path with least dependencies and highest risk if it fails (most frequently used). Required for **linear expansion**.\n\n### Q4. What is Instance Position?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nMarks a value as **Inner** or **Boundary**. Boundary values near edges of ranges often need extra testing attention.\n\n### Q5. What are NULL-Instance and EMPTY-Instance?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nNULL-Instance: Instance with value zero (one per structural element).\nEMPTY-Instance: Instance with an empty string, considered during combination and when instantiating TestCase Templates (one per structural element).\n\n### Q6. Which combinatorial methods are documented?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n1. **All combinations**\n2. **Orthogonal**\n3. **Pairwise**\n4. **Linear expansion**\n5. **Linear expansion [Relations]**\n\nChoose based on required granularity vs number of generated combinations.\n\n### Q7. How does linear expansion work?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nYou must define a **StraightThrough** path. Linear expansion switches out one StraightThrough Instance for one non-StraightThrough Instance in each combination — efficient risk-focused coverage around the happy path.\n\n### Q8. How do you generate Instances in Commander?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nRight-click the TestSheet / Class / Attribute → **Generate Instances** → choose combinatorial method. To combine only selected Instances, multi-select with Ctrl, then Generate Instances.\n\n## Official references\n- [Work with Instances](https://docs.tricentis.com/tosca-2026.1/en-us/content/testcase_design/instances.htm)\n- [Generate and combine Instances](https://docs.tricentis.com/tosca-2026.1/en-us/content/testcase_design/instance_combinatorics.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 66,
+    "category": "TOSCA",
+    "title": "Tosca Modules, XModules, and Standard subset Q&A",
+    "tags": [
+      "XModules",
+      "Standard subset",
+      "Engines 3.0",
+      "TBox"
+    ],
+    "excerpt": "Q&A on Module types, ModuleAttributes vs TestStepValues, XModules, Engines 3.0, and Standard subset contents.",
+    "sourceUrl": "https://learnhub.local/tosca/modules-standard-subset-qa",
+    "createdAt": "2026-09-23T11:50:45.603Z",
+    "level": "Beginner",
+    "content": "## Scope\nAligned with [Create and manage Modules](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/modules_section_orange.htm), [Steer with Engines 3.0 / TBox](https://docs.tricentis.com/tosca-2024.1/en-us/content/tbox/tbox_intro.htm), and [Standard subset](https://docs.tricentis.com/tosca-2024.1/en-us/content/standard_subset/standard_subset_overview.htm).\n\n### Q1. Where do you create and manage Modules?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIn the **Modules** section/tab of Tosca Commander.\n\n### Q2. What Module sources does documentation list?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n1. Modules from the **Standard subset**\n2. Modules created by **scanning**\n3. Modules from **Tricentis ARA** (Automation Recording Assistant)\n4. Modules created **manually**\n\nModern automation uses **XModules** with **Engines 3.0**.\n\n### Q3. What are ModuleAttributes?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nEach Module consists of ModuleAttributes.\n- In Standard subset Modules: parameters needed for a special execution task.\n- In scanned Modules: the controls selected during the scan.\n\nWhen you create a TestStep from a Module, Tosca creates **TestStepValues** from those ModuleAttributes.\n\n### Q4. What is the Tosca TBox framework?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTBox is the .NET basis for steering **Engines 3.0** for GUI and non-GUI tests. Documented advantages include higher performance, one common interface across technologies, easier XModule/TestCase creation with XScan and ARA, common dynamic expressions, and a broader ActionMode range.\n\n### Q5. What can you do with XModules structurally?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nYou can nest XModules hierarchically, use them as classes, and reference them in other XModules.\n\n### Q6. What does the Standard subset contain?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDefault objects to automate and streamline work, typically including:\n- XModules for special tasks (open URL, delete buffers, TBox automation tools)\n- Engine-specific Modules\n- Test Data Management Modules\n- Sample TestCases and ExecutionLists\n- Virtual folders with search queries\n- Reporting templates\n\nDefault file location is commonly under `%TRICENTIS_PROJECTS%ToscaCommander` as `Standard.tsu` (imported into new workspaces).\n\n### Q7. Why prefer reusing Modules instead of rescanning every time?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nModules isolate technical identification. TestCases reuse Modules with different TestStepValues. Changing business data in the TestCase does not require a new scan; changing UI identification does — which should happen once at Module level.\n\n## Official references\n- [Modules](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/modules_section_orange.htm)\n- [TBox / Engines 3.0](https://docs.tricentis.com/tosca-2024.1/en-us/content/tbox/tbox_intro.htm)\n- [Standard subset](https://docs.tricentis.com/tosca-2024.1/en-us/content/standard_subset/standard_subset_overview.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 65,
+    "category": "TOSCA",
+    "title": "Tosca Buffer and XBuffer Q&A",
+    "tags": [
+      "Buffer",
+      "XBuffer",
+      "Dynamic Expressions",
+      "TBox"
+    ],
+    "excerpt": "Detailed Q&A on buffering values, reading {B[]}, array buffers, and dynamic XBuffer capture with Verify.",
+    "sourceUrl": "https://learnhub.local/tosca/buffer-xbuffer-qa",
+    "createdAt": "2026-09-23T11:50:45.599Z",
+    "level": "Intermediate",
+    "content": "## Scope\nFrom official ActionModes documentation on **Buffer** and **XBuffer**.\n\n### Q1. Why use ActionMode Buffer?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nWhen a value is needed more than once, Buffer saves values or control properties into a **global variable buffer** that can be read anywhere later in execution. Buffers can also store control state results (for example whether a button is enabled).\n\n### Q2. How do you read a buffered value?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nUse the Value syntax:\n\n`{B[BufferName]}`\n\nTosca provides auto-completion for previously saved buffer names.\n\n### Q3. How do buffered table rows/columns work?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nWhen Tosca buffers a row or column of a table, it organizes values into an **array**.\n- Iterate all values: Standard Module **TBox Iterate Array**\n- Add/delete/modify/verify elements: **TBox Array Operation**\n- Read one element: `{B[BufferName][Index]}` (example: `{B[Price][3]}`)\n\n### Q4. What is XBuffer and when do you use it?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nXBuffers read **dynamic portions of a string** while verifying the rest. Syntax inside strings:\n\n`{XB[BufferName]}`\n\nUsed with ActionMode **Verify**. Ideal for runtime IDs or messages like \"Transfer order {XB[OrderID]} has been created\" where the surrounding text is verified and the dynamic part is captured into a buffer.\n\n### Q5. How do Buffer and XBuffer differ?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nBuffer typically captures a control value/property into a named buffer for reuse. XBuffer captures a dynamic substring during a Verify of a larger string pattern. Both produce reusable buffered values, but XBuffer is specialized for dynamic string segments.\n\n### Q6. Where can you inspect buffers?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDocumentation references the **Buffer Viewer** to view, create, and edit buffers at any time.\n\n## Official references\n- [ActionModes — Buffer / XBuffer](https://docs.tricentis.com/tosca-2026.1/en-us/content/tbox/action_modes.htm)\n\n## Practice prompt\nDesign three TestSteps: Buffer an order id from a table cell, reuse it with `{B[OrderId]}` in a search field, then Verify a confirmation message using `{XB[ConfirmId]}`.",
+    "pipeline": true
+  },
+  {
+    "id": 64,
+    "category": "TOSCA",
+    "title": "Tosca ActionModes Q&A (Input, Verify, WaitOn, and more)",
+    "tags": [
+      "ActionModes",
+      "TBox",
+      "Verify",
+      "WaitOn",
+      "Input"
+    ],
+    "excerpt": "Deep Q&A on ActionModes that steer XTestStepValues: Input, Verify, WaitOn, Select, Insert, Constraint, Delete, Modify.",
+    "sourceUrl": "https://learnhub.local/tosca/actionmodes-qa",
+    "createdAt": "2026-09-23T11:50:45.594Z",
+    "level": "Intermediate",
+    "content": "## Scope\nBased on official [ActionModes](https://docs.tricentis.com/tosca-2026.1/en-us/content/tbox/action_modes.htm) and [XTestStep Values](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/teststepvalue_xteststepvalue.htm) documentation.\n\nActionModes define **how the Value field is applied** to steer a control for an XTestStepValue. Available ActionModes depend on the InterfaceType of the referenced XModule.\n\n### Q1. What problem do ActionModes solve?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nThey tell Engines 3.0 whether the Value is an input operation (modify a property) or a reading operation (read a property). Without the correct ActionMode, the same Value string means different things.\n\n### Q2. Which ActionModes are documented for input operations?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n**Input** and **Insert**.\n- Input: transfer values to the test object (type into edit boxes, click buttons, select combo boxes).\n- Insert: create objects in non-visual / non-UI interface environments (classic example: adding an entry to an XML file).\n\n### Q3. Which ActionModes are documented for reading operations?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n**Buffer / XBuffer**, **Constraint**, **Verify**, **WaitOn**, and **Select**.\n\n### Q4. What does ActionMode Input do in detail?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIt transfers the Value into the control: enter text, perform clicks, select dropdown entries. If a ValueRange exists on the ModuleAttribute, those values appear in a drop-down for the XTestStepValue; custom values are still allowed. Multi-line input uses Shift+Enter; converting a dropdown cell to an edit box for multi-line uses Ctrl+Shift+T on the selected XTestStepValue.\n\n### Q5. What does ActionMode Verify do?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIt verifies values or control properties against the Value column. The target node must be uniquely defined. If no property is specified, the control's **default property** is verified. Verification is **case-sensitive** and compares the entire string; regular expressions are supported.\n\n### Q6. What does ActionMode WaitOn do?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIt pauses TestCase execution until the control has the Value/property you specified, or until the wait expires. Wait duration is governed by the setting **Synchronization Timeout during WaitOn**. Classic example: wait until a progress bar reaches 100% before clicking Restart.\n\n### Q7. What does ActionMode Select do?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIt selects a specified node that must have a unique name, often so a following Verify can assert a cell or related control in that row/node.\n\n### Q8. What does ActionMode Constraint do?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nIt limits the search for a superordinate node until the search can resolve to a single element (business-based table steering, XML node selection). You can further force a single match with `#` / `#n` patterns when multiple rows match.\n\n### Q9. What are Delete and Modify ActionModes for?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nThey apply to tests built from the **TBox Array Operation** Module: Delete removes buffered-array elements; Modify overwrites elements in a buffered array.\n\n### Q10. What is DoNothing?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nDocumented on XTestStep Values: DoNothing performs no action; Value content does not influence the control. The Module's test object may still be steered at a higher level, but the control itself is not acted on.\n\n### Q11. What is ActionMode Output?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nReads the value provided by the application for the control and stores it in the XML result set. After execution via an ExecutionList, values are available in Tosca Commander (Used Value column in the ExecutionList details view).\n\n## Official references\n- [ActionModes](https://docs.tricentis.com/tosca-2026.1/en-us/content/tbox/action_modes.htm)\n- [TestStep Values / XTestStep Values](https://docs.tricentis.com/tosca-2026.1/en-us/content/tosca_commander/teststepvalue_xteststepvalue.htm)",
+    "pipeline": true
+  },
+  {
+    "id": 63,
+    "category": "TOSCA",
+    "title": "Tosca fundamentals Q&A: Scanning, Modules, and TestCases",
+    "tags": [
+      "Tosca",
+      "Modules",
+      "TestCases",
+      "Scanning",
+      "Tosca Commander"
+    ],
+    "excerpt": "Detailed interview-style Q&A on Tosca's core model: controls, scanning, Modules, TestSteps, and the automated test lifecycle.",
+    "sourceUrl": "https://learnhub.local/tosca/fundamentals-qa",
+    "createdAt": "2026-09-23T11:50:45.586Z",
+    "level": "Beginner",
+    "content": "## Scope\nThis lesson follows the official Tricentis Tosca model: **Scanning → Modules → TestCases**, as described in [Get to know Tricentis Tosca](https://documentation.tricentis.com/sap/ect/2024.2/en/content/first_steps/get_to_know_tosca.htm).\n\n### Q1. What is Tricentis Tosca used for according to the documentation?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nTosca is positioned as an end-to-end automation product so you do not have to walk the system under test manually. Documented examples include navigating UI (clicks, menus, toolbars), entering/saving/verifying data in web apps, Excel, or databases, and exchanging messages with APIs.\n\n### Q2. What three main elements tell Tosca what to do and how to do it?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nOfficial first-steps documentation names three building blocks:\n1. **Scanning** – capture technical information about controls.\n2. **Modules** – reusable building blocks that hold that technical information.\n3. **TestCases** – ordered sequences of automated actions (TestSteps) built from Modules.\n\n### Q3. What is a control in Tosca?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nControls are the interactive elements of the system under test that Tosca must steer: buttons, text fields, toolbars, table cells, SAP dialogs, and similar UI or interface objects. Steering means actions such as click, type, or verify.\n\n### Q4. What does scanning do?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nScanning grabs the technical information for the controls you select and stores it as a **Module**. Without a scan (or another Module source), Tosca cannot locate and steer those controls reliably. See [Create Modules by scanning](https://documentation.tricentis.com/sap/ect/2024.1/en/content/tosca_commander/scan_modules_overview.htm).\n\n### Q5. What is a Module?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nModules are the building blocks of tests. They contain the technical information Tosca needs to navigate and interact with the system under test (for example options in a drop-down, Excel headers, or how to select a checkbox).\n\nYou use:\n- Modules you create (scan / ARA / manual)\n- Modules Tricentis provides in the **Standard subset** (for example OpenUrl)\n\n### Q6. What is a TestCase and how do you create one?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nA TestCase is a sequence of actions on the system under test. Each action is a **TestStep** (an automated task you would otherwise do manually).\n\nDocumented creation flow:\n1. Choose which Modules make up the TestCase.\n2. Drag Modules into the required order (this creates TestSteps from Modules).\n3. Fill out TestSteps (text to type, menu selection, click type, and so on).\n\n### Q7. What is the documented end-to-end automation lifecycle?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\n1. Identify **Requirements** for the system under test.\n2. Optionally design coverage with **TestCase-Design**.\n3. **Scan** to create Modules.\n4. Build **TestCases** from Modules.\n5. Optionally create **configurations** (reuse with different credentials/environments).\n6. **Execute** tests and map results back to requirements for status visibility.\n\n### Q8. If you change a Module after TestSteps exist, what happens?\n\n**Answer (per Tricentis Tosca documentation concepts)**\n\nPer Module documentation: TestSteps are created from Modules, but you normally modify the TestStep values for a specific case while the Module keeps technical information. If you **modify the Module itself**, Tosca updates TestSteps created from that Module and applies the change to future TestSteps from the same Module. That is why Module hygiene and stable identifiers matter.\n\n## Official references\n- [Get to know Tricentis Tosca](https://documentation.tricentis.com/sap/ect/2024.2/en/content/first_steps/get_to_know_tosca.htm)\n- [Create and manage Modules](https://docs.tricentis.com/tosca-2024.2/en-us/content/tosca_commander/modules_section_orange.htm)\n- [Create Modules by scanning](https://documentation.tricentis.com/sap/ect/2024.1/en/content/tosca_commander/scan_modules_overview.htm)\n\n## Quick self-check\nExplain out loud: control → scan → Module → ModuleAttribute → TestStep → TestStepValue.",
+    "pipeline": true
+  },
+  {
     "id": 62,
     "category": "GenAI",
     "title": "AI Architect leadership: roadmaps, mentoring, and stakeholders",
