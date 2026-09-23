@@ -939,6 +939,26 @@ h1, h2, h3, .logo-text, .hero-brand, .pv-title {
   color: inherit;
   font-family: var(--font-mono);
 }
+.pv-body .diagram-wrap {
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  overflow-x: auto;
+}
+.pv-body .diagram-wrap pre.mermaid {
+  background: transparent;
+  border: none;
+  color: inherit;
+  margin: 0;
+  padding: 0.35rem 0;
+  text-align: center;
+}
+.pv-body .diagram-wrap svg {
+  max-width: 100%;
+  height: auto;
+}
 .pv-body code {
   background: #f1f5f9;
   border: 1px solid var(--border);

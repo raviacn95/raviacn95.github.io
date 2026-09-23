@@ -2,7 +2,7 @@
    APP.JS - LearnHub (fast, paginated, path-aware, dynamic)
    ================================================================ */
 
-const CONTENT_VERSION = 19;
+const CONTENT_VERSION = 20;
 const PAGE_SIZE = 9;
 const RECENT_KEY = "learnhub-recent-v1";
 const PROGRESS_KEY = "learnhub-progress-v1";
@@ -214,7 +214,14 @@ function getFilteredPosts() {
 
 /* ΓöÇΓöÇ Markdown ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function markdownToHtml(md) {
-  const e = escapeHtml(md || "");
+  const placeholders = [];
+  let raw = String(md || "").replace(/```(?:mermaid|mindmap)\n?([\s\S]*?)```/gi, (_m, code) => {
+    const i = placeholders.length;
+    placeholders.push(String(code || "").trim());
+    return `\n\n@@MERMAID_${i}@@\n\n`;
+  });
+
+  const e = escapeHtml(raw);
 
   let html = e.replace(/```(\w*)\n?([\s\S]*?)```/g, (_m, lang, code) => {
     const cls = lang ? ` class="lang-${lang}"` : "";
@@ -280,15 +287,26 @@ function markdownToHtml(md) {
 
   html = html.replace(/(?:^|\n)&gt;\s+(.+)/g, "<blockquote>$1</blockquote>");
 
-  return html
+  html = html
     .split(/\n\n+/)
     .map((block) => {
       const t = block.trim();
       if (!t) return "";
       if (/^<(h[1-3]|ul|ol|pre|table|blockquote|div)/.test(t)) return t;
+      if (/^@@MERMAID_\d+@@$/.test(t)) return t;
       return `<p>${t.replace(/\n/g, "<br>")}</p>`;
     })
     .join("\n");
+
+  placeholders.forEach((code, i) => {
+    const safe = escapeHtml(code);
+    html = html.replace(
+      `@@MERMAID_${i}@@`,
+      `<div class="diagram-wrap" role="img" aria-label="Topic diagram"><pre class="mermaid">${safe}</pre></div>`
+    );
+  });
+
+  return html;
 }
 
 function extractToc(md) {
@@ -300,6 +318,48 @@ function extractToc(md) {
     else if (h2) headings.push({ level: 2, text: h2[1].trim(), id: slugify(h2[1]) });
   }
   return headings;
+}
+
+function renderMermaidDiagrams(root) {
+  if (!root || typeof window === "undefined") return;
+  const nodes = root.querySelectorAll("pre.mermaid");
+  if (!nodes.length) return;
+  const run = () => {
+    try {
+      if (window.mermaid && typeof window.mermaid.run === "function") {
+        window.mermaid.run({ nodes });
+      }
+    } catch (err) {
+      console.warn("[LearnHub] Mermaid render skipped:", err);
+    }
+  };
+  if (window.mermaid && window.mermaid.run) {
+    run();
+    return;
+  }
+  // Free CDN Mermaid — loaded on demand the first time a diagram appears
+  if (document.getElementById("mermaid-cdn")) {
+    document.getElementById("mermaid-cdn").addEventListener("load", run, { once: true });
+    return;
+  }
+  const s = document.createElement("script");
+  s.id = "mermaid-cdn";
+  s.src = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
+  s.async = true;
+  s.onload = () => {
+    try {
+      window.mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: "strict",
+        theme: "neutral",
+        flowchart: { htmlLabels: false, curve: "basis" },
+      });
+    } catch (_) {
+      /* ignore */
+    }
+    run();
+  };
+  document.head.appendChild(s);
 }
 
 function renderTocHtml(headings) {
@@ -584,6 +644,7 @@ function openPost(post) {
   pvTags.innerHTML = (post.tags || []).map((t) => `<span class="pv-tag">#${escapeHtml(t)}</span>`).join("");
   pvBody.innerHTML = markdownToHtml(post.content);
   wireCopyButtons(pvBody);
+  renderMermaidDiagrams(pvBody);
 
   const headings = extractToc(post.content);
   const tocHtml = renderTocHtml(headings);
