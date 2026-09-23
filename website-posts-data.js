@@ -5,6 +5,513 @@
 
 const ALL_POSTS = [
   {
+    "id": 100,
+    "category": "GenAI",
+    "title": "Leadership Q&A: Stakeholders, executives, collaboration, change, innovation",
+    "tags": [
+      "Stakeholder Communication",
+      "Executive Reporting",
+      "Cross-Functional Collaboration",
+      "Change Management",
+      "Innovation Leadership"
+    ],
+    "excerpt": "Communication and change-management Q&A for AI Architects influencing executives and teams.",
+    "sourceUrl": "https://learnhub.local/genai/qa-stakeholders-change",
+    "createdAt": "2026-09-23T12:26:29.193Z",
+    "level": "Advanced",
+    "content": "## Scope\nExecutive and change leadership for AI delivery.\n\n### Q1. How should executive reporting sound?\n\n**Answer (documentation-aligned)**\n\nOutcome, risk posture, timeline, cost—then architecture. Avoid model-name theater.\n\n### Q2. Stakeholder communication pattern?\n\n**Answer (documentation-aligned)**\n\nDifferent views for clinical, compliance, engineering, and product. Same facts; different decisions each group owns.\n\n### Q3. Cross-functional collaboration?\n\n**Answer (documentation-aligned)**\n\nShared backlog with explicit owners for data, model, UX, and policy. AI fails when those swimlanes pretend to be one hero engineer.\n\n### Q4. Change management?\n\n**Answer (documentation-aligned)**\n\nTraining, champions, feedback loops, and rollback criteria when workflows change. Adoption is part of the architecture.\n\n### Q5. Innovation leadership without chaos?\n\n**Answer (documentation-aligned)**\n\nTime-boxed spikes, kill criteria, and a path from sandbox → controlled pilot → production controls.\n\n## Try this\nThree-slide update: problem, options/trade-offs, 90-day plan.",
+    "pipeline": true
+  },
+  {
+    "id": 99,
+    "category": "GenAI",
+    "title": "Leadership Q&A: Mentoring, code reviews, docs, reliability, observability",
+    "tags": [
+      "Technical Leadership",
+      "Team Mentoring",
+      "Code Reviews",
+      "Documentation Standards",
+      "Reliability Engineering",
+      "Observability"
+    ],
+    "excerpt": "Engineering leadership Q&A for standards that keep GenAI systems maintainable.",
+    "sourceUrl": "https://learnhub.local/genai/qa-engineering-leadership",
+    "createdAt": "2026-09-23T12:26:29.186Z",
+    "level": "Advanced",
+    "content": "## Scope\nReliability and mentoring norms for AI platform teams.\n\n### Q1. What should code reviews enforce for GenAI?\n\n**Answer (documentation-aligned)**\n\nTests/evals present, no secrets/PHI in fixtures, typed interfaces, observability hooks, and rollback plan—not only style nits.\n\n### Q2. Documentation standards?\n\n**Answer (documentation-aligned)**\n\nRunbooks, model/prompt cards, architecture decision records, and onboarding paths that let a new engineer ship a safe change in days.\n\n### Q3. Reliability engineering for LLM apps?\n\n**Answer (documentation-aligned)**\n\nSLOs for availability/latency/quality, error budgets, graceful degradation (retrieve-only / template fallback), and chaos-tested dependencies.\n\n### Q4. Observability as leadership?\n\n**Answer (documentation-aligned)**\n\nMake traces/metrics the shared language in incidents. Blameless reviews that improve harnesses and evals.\n\n### Q5. Mentoring move that scales?\n\n**Answer (documentation-aligned)**\n\nPair on the first production incident and the first eval design—skills that lectures do not transfer.\n\n## Self-check\nList your team's Definition of Done for a prompt change.",
+    "pipeline": true
+  },
+  {
+    "id": 98,
+    "category": "GenAI",
+    "title": "Leadership Q&A: Product thinking, ideation, prototyping, accelerators",
+    "tags": [
+      "Product Thinking",
+      "Ideation",
+      "Prototyping",
+      "Accelerator Development"
+    ],
+    "excerpt": "Product leadership Q&A for AI Architects turning fuzzy ideas into validated accelerators.",
+    "sourceUrl": "https://learnhub.local/genai/qa-product-thinking",
+    "createdAt": "2026-09-23T12:26:29.179Z",
+    "level": "Intermediate",
+    "content": "## Scope\nProduct practice for technical leaders shipping AI capabilities.\n\n### Q1. What is product thinking for AI Architects?\n\n**Answer (documentation-aligned)**\n\nStart from user job-to-be-done and measurable outcomes, not model novelty. Define success metrics before choosing RAG vs classical ML.\n\n### Q2. Ideation hygiene?\n\n**Answer (documentation-aligned)**\n\nDiverge on problem statements, constrain by data readiness/risk tier, then converge on a thin slice MVP.\n\n### Q3. What makes a good prototype?\n\n**Answer (documentation-aligned)**\n\nTests the riskiest assumption (retrieval quality, clinician trust, latency) with real-ish data and an eval harness—not a slideware demo.\n\n### Q4. What is accelerator development?\n\n**Answer (documentation-aligned)**\n\nReusable packaged capability (templates, eval packs, connectors) that shortens the next team's delivery—with docs and ownership, not a one-off repo dump.\n\n## Try this\nOne-pager: problem, user, metric, risk tier, 30-day prototype plan.",
+    "pipeline": true
+  },
+  {
+    "id": 97,
+    "category": "GenAI",
+    "title": "Healthcare Q&A: CDS, population health, predictive care, risk stratification",
+    "tags": [
+      "Clinical Decision Support",
+      "Population Health",
+      "Predictive Healthcare",
+      "Risk Stratification"
+    ],
+    "excerpt": "Care-delivery AI Q&A: decision support boundaries, cohorts, and risk models.",
+    "sourceUrl": "https://learnhub.local/genai/qa-cds-population-risk",
+    "createdAt": "2026-09-23T12:26:29.173Z",
+    "level": "Advanced",
+    "content": "## Scope\nClinical decision support and population analytics practice for AI Architects.\n\n### Q1. What is Clinical Decision Support (CDS)?\n\n**Answer (documentation-aligned)**\n\nTools that provide clinicians with knowledge/patient-specific info to enhance decisions. AI CDS should assist—not silently place orders—and expose rationale/citations.\n\n### Q2. Population health vs individual prediction?\n\n**Answer (documentation-aligned)**\n\nPopulation health manages cohorts (gaps in care, prevention). Individual predictive healthcare estimates a person's risk/outcome. Methods and metrics differ; governance differs too.\n\n### Q3. What is risk stratification?\n\n**Answer (documentation-aligned)**\n\nSegmenting patients by predicted risk to target interventions. Requires calibration, fairness checks across subgroups, and operational playbooks for outreach.\n\n### Q4. GenAI role?\n\n**Answer (documentation-aligned)**\n\nSummarize charts, draft outreach, explain cohort criteria—always with human approval for clinical actions.\n\n## Self-check\nWrite an intended-use sentence for a readmission model vs a chart-summary copilot.",
+    "pipeline": true
+  },
+  {
+    "id": 96,
+    "category": "GenAI",
+    "title": "Healthcare Q&A: Medical NLP, PHI, HIPAA, HL7, FHIR, EHR",
+    "tags": [
+      "Medical NLP",
+      "PHI Security",
+      "HIPAA",
+      "HL7",
+      "FHIR",
+      "EHR Systems"
+    ],
+    "excerpt": "Interoperability and privacy Q&A citing HL7 FHIR R4 and HHS HIPAA guidance.",
+    "sourceUrl": "https://learnhub.local/genai/qa-fhir-hipaa-ehr",
+    "createdAt": "2026-09-23T12:26:29.167Z",
+    "level": "Advanced",
+    "content": "## Scope\n[HL7 FHIR R4](https://hl7.org/fhir/R4/), [HL7](https://www.hl7.org/), [US Core](https://www.hl7.org/fhir/us/core/), [SMART App Launch](https://hl7.org/fhir/smart-app-launch/), [HHS HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html).\n\n### Q1. What is Medical NLP?\n\n**Answer (documentation-aligned)**\n\nNLP on clinical text: sectioning, NER (problems/meds), coding assistance, summarization. High-stakes: require clinician review pathways and strong evaluation on clinical corpora.\n\n### Q2. HL7 vs FHIR?\n\n**Answer (documentation-aligned)**\n\nHL7 is the standards organization (and legacy v2 messaging). **FHIR** is HL7's modern healthcare API/resource standard widely used for EHR integration. US regulation references FHIR R4 and US Core IGs for certified APIs.\n\n### Q3. What EHR-aware GenAI must respect?\n\n**Answer (documentation-aligned)**\n\nPatient context scoping, SMART-on-FHIR style auth patterns where applicable, audit, and non-interruptive UX. Prefer FHIR APIs over scraping chart UIs.\n\n### Q4. HIPAA-minded GenAI controls?\n\n**Answer (documentation-aligned)**\n\nMinimum necessary, BAAs for vendors, encryption, access controls, audit logs, and no unconstrained PHI in third-party prompts without review.\n\n### Q5. PHI security in RAG?\n\n**Answer (documentation-aligned)**\n\nIndex per tenant/patient ACL; redact logs; separate de-identified research indexes from production PHI indexes.\n\n## Official references\n- [FHIR R4](https://hl7.org/fhir/R4/) · [SMART App Launch](https://hl7.org/fhir/smart-app-launch/) · [HHS HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html)",
+    "pipeline": true
+  },
+  {
+    "id": 95,
+    "category": "GenAI",
+    "title": "Healthcare Q&A: Clinical data, claims, outcomes, ops, and analytics",
+    "tags": [
+      "Clinical Data",
+      "Claims Data",
+      "Patient Outcomes",
+      "Healthcare Operations",
+      "Healthcare Analytics"
+    ],
+    "excerpt": "Domain Q&A for healthcare AI Architects working across clinical and administrative data.",
+    "sourceUrl": "https://learnhub.local/genai/qa-healthcare-domain-data",
+    "createdAt": "2026-09-23T12:26:29.158Z",
+    "level": "Intermediate",
+    "content": "## Scope\nHealthcare analytics domain literacy for GenAI/ML solution design.\n\n### Q1. Clinical vs claims data?\n\n**Answer (documentation-aligned)**\n\nClinical: EHR observations, meds, notes, orders—care delivery context. Claims: billing/adjudication events—useful for cost/utilization but lagged and coding-biased. Many models need both with clear provenance.\n\n### Q2. What are patient outcomes?\n\n**Answer (documentation-aligned)**\n\nMeasurable results of care (readmission, mortality, control of chronic conditions, PROMs). Predictive models must define outcome windows carefully.\n\n### Q3. Healthcare operations analytics?\n\n**Answer (documentation-aligned)**\n\nFlow, staffing, throughput, denials, schedule optimization—often forecasting + optimization, not only GenAI chat.\n\n### Q4. Architect warning?\n\n**Answer (documentation-aligned)**\n\nDo not train on mixed clinical/claims features without a data dictionary and leakage review. Outcome labels from claims can mis-specify clinical truth.\n\n## Self-check\nName one KPI each for clinical quality, operations, and finance.",
+    "pipeline": true
+  },
+  {
+    "id": 94,
+    "category": "GenAI",
+    "title": "DevOps Q&A: Cloud security, IAM, monitoring, logging, microservices, APIs",
+    "tags": [
+      "Cloud Security",
+      "Cloud IAM",
+      "Cloud Monitoring",
+      "Cloud Logging",
+      "Microservices",
+      "API Management"
+    ],
+    "excerpt": "Platform security and API management Q&A for production GenAI services.",
+    "sourceUrl": "https://learnhub.local/genai/qa-cloud-security-apis",
+    "createdAt": "2026-09-23T12:26:29.152Z",
+    "level": "Intermediate",
+    "content": "## Scope\nCloud well-architected security/ops patterns applied to GenAI APIs.\n\n### Q1. Cloud IAM essentials for GenAI?\n\n**Answer (documentation-aligned)**\n\nLeast privilege roles for training, retrieval stores, and inference; short-lived credentials; no long-lived keys in prompts or notebooks.\n\n### Q2. Monitoring vs logging?\n\n**Answer (documentation-aligned)**\n\nMonitoring: metrics/SLOs/alerts (latency, error, cost/tokens). Logging: event detail for forensics—with redaction. Traces bridge both for agents.\n\n### Q3. Microservices fit?\n\n**Answer (documentation-aligned)**\n\nSplit retrieval, inference, eval, and policy services when teams/scale demand it. Avoid premature microservice sprawl for a single RAG app.\n\n### Q4. API management?\n\n**Answer (documentation-aligned)**\n\nGateway for authN/Z, rate limits, quota per tenant, schema validation, and WAF. Critical when exposing LLM endpoints internally or to partners.\n\n### Q5. Cloud security checklist?\n\n**Answer (documentation-aligned)**\n\nPrivate networking to model endpoints where required, encryption in transit/at rest, secret managers, continuous image scanning, and incident runbooks.\n\n## Self-check\nDraw trust boundaries for browser → API gateway → RAG service → vector DB → LLM API.",
+    "pipeline": true
+  },
+  {
+    "id": 93,
+    "category": "GenAI",
+    "title": "DevOps Q&A: SageMaker, Bedrock, Azure ML, Vertex AI deep dive",
+    "tags": [
+      "AWS SageMaker",
+      "AWS Bedrock",
+      "Azure ML",
+      "GCP Vertex AI",
+      "Cloud AI"
+    ],
+    "excerpt": "Managed cloud AI Q&A with official doc anchors for training, hosting, and foundation models.",
+    "sourceUrl": "https://learnhub.local/genai/qa-cloud-ai-deep",
+    "createdAt": "2026-09-23T12:26:29.145Z",
+    "level": "Advanced",
+    "content": "## Scope\n[SageMaker](https://docs.aws.amazon.com/sagemaker/), [Bedrock](https://docs.aws.amazon.com/bedrock/), [Azure ML](https://learn.microsoft.com/en-us/azure/machine-learning/), [Vertex AI](https://cloud.google.com/vertex-ai/docs).\n\n### Q1. SageMaker vs Bedrock?\n\n**Answer (documentation-aligned)**\n\nSageMaker: build/train/host custom ML/LLM pipelines, feature store, endpoints. Bedrock: managed foundation models/agents via AWS APIs with IAM—less undifferentiateed GPU ops, more model API consumption.\n\n### Q2. What is Azure Machine Learning?\n\n**Answer (documentation-aligned)**\n\nAzure's workspace-centric platform for jobs, environments, managed endpoints, and Responsible AI tooling integrated with Azure identity/governance.\n\n### Q3. What is Vertex AI?\n\n**Answer (documentation-aligned)**\n\nGCP's unified ML platform: training, prediction, Model Garden, Vector Search, and pipelines—aligned with GCP IAM and data products.\n\n### Q4. How do you choose?\n\n**Answer (documentation-aligned)**\n\nData residency, existing cloud estate, GPU quota, team skills, and exit strategy. Always keep eval harnesses and prompt/model registries portable.\n\n### Q5. Serverless AI meaning?\n\n**Answer (documentation-aligned)**\n\nConsumption-based model APIs / managed endpoints that hide server ops. Still require auth, quotas, logging redaction, and quality monitoring.\n\n## Official references\n- [SageMaker](https://docs.aws.amazon.com/sagemaker/) · [Bedrock](https://docs.aws.amazon.com/bedrock/) · [Azure ML](https://learn.microsoft.com/en-us/azure/machine-learning/) · [Vertex AI](https://cloud.google.com/vertex-ai/docs)",
+    "pipeline": true
+  },
+  {
+    "id": 92,
+    "category": "GenAI",
+    "title": "DevOps Q&A: CI/CD, DevOps, MLOps, and GPU-aware scaling",
+    "tags": [
+      "CI/CD",
+      "DevOps",
+      "MLOps",
+      "GPU-Aware Scaling",
+      "Cloud Deployment"
+    ],
+    "excerpt": "Delivery Q&A connecting software CI/CD to MLOps/LLMOps and GPU autoscaling risks.",
+    "sourceUrl": "https://learnhub.local/genai/qa-cicd-mlops-gpu",
+    "createdAt": "2026-09-23T12:26:29.138Z",
+    "level": "Advanced",
+    "content": "## Scope\nMLOps/LLMOps delivery practice on top of standard DevOps.\n\n### Q1. DevOps vs MLOps vs LLMOps?\n\n**Answer (documentation-aligned)**\n\nDevOps: ship software reliably. MLOps: add data/model artifacts, training pipelines, drift. LLMOps: add prompts, eval suites, token cost, retrieval indexes, and agent traces.\n\n### Q2. What belongs in CI for GenAI?\n\n**Answer (documentation-aligned)**\n\nUnit tests, prompt/eval regression, policy checks (secrets/PHI patterns), image build/scan, and infra plan. CD promotes only after eval gates.\n\n### Q3. What is GPU-aware scaling?\n\n**Answer (documentation-aligned)**\n\nAutoscaling that considers GPU utilization, queue depth, and model parallelism—not only CPU. Naive scale-out can explode cost; use caps, scale-to-zero where safe, and batching.\n\n### Q4. Hybrid cloud note?\n\n**Answer (documentation-aligned)**\n\nKeep portable packaging (OCI) and consistent IAM/logging patterns across on-prem/cloud so PHI residency constraints do not fork the whole stack.\n\n## Try this\n```text\ncommit → CI eval → build image → GitOps PR → canary → promote/rollback\n```",
+    "pipeline": true
+  },
+  {
+    "id": 91,
+    "category": "GenAI",
+    "title": "DevOps Q&A: Docker, Kubernetes, Helm, Terraform, GitOps, CloudFormation",
+    "tags": [
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "Terraform",
+      "GitOps",
+      "CloudFormation"
+    ],
+    "excerpt": "Infrastructure-as-code and container platform Q&A for LLM/ML deployments.",
+    "sourceUrl": "https://learnhub.local/genai/qa-containers-iac",
+    "createdAt": "2026-09-23T12:26:29.132Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Docker](https://docs.docker.com/), [Kubernetes](https://kubernetes.io/docs/home/), [Helm](https://helm.sh/docs/), [Terraform](https://developer.hashicorp.com/terraform/docs), [OpenGitOps](https://opengitops.dev/), [CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html).\n\n### Q1. Docker's role in ML/GenAI?\n\n**Answer (documentation-aligned)**\n\nReproducible runtime for training/serving images. Pin base images and dependency locks; scan for CVEs.\n\n### Q2. Why Kubernetes for LLM serving?\n\n**Answer (documentation-aligned)**\n\nDeclarative deploy, scaling, GPU scheduling, rolling updates, and service discovery. Pair with resource quotas and PodDisruptionBudgets.\n\n### Q3. Helm vs raw manifests?\n\n**Answer (documentation-aligned)**\n\nHelm packages K8s apps as versioned charts—useful for promoting the same LLM service across envs with values overlays.\n\n### Q4. Terraform vs CloudFormation?\n\n**Answer (documentation-aligned)**\n\nTerraform: multi-cloud IaC. CloudFormation: AWS-native stacks. Many orgs use Terraform for cloud resources + Helm/GitOps for cluster apps.\n\n### Q5. What is GitOps?\n\n**Answer (documentation-aligned)**\n\nDesired state in Git; controllers reconcile clusters to that state ([OpenGitOps](https://opengitops.dev/) principles). Ideal for auditable LLM/app promotions.\n\n## Official references\n- [Kubernetes](https://kubernetes.io/docs/home/) · [Terraform](https://developer.hashicorp.com/terraform/docs) · [OpenGitOps](https://opengitops.dev/)",
+    "pipeline": true
+  },
+  {
+    "id": 90,
+    "category": "GenAI",
+    "title": "Data Q&A: Governance, privacy, quality, PHI, HIPAA, audit, access",
+    "tags": [
+      "Data Governance",
+      "Data Privacy",
+      "Data Quality",
+      "PHI",
+      "HIPAA",
+      "Auditability",
+      "Access Controls"
+    ],
+    "excerpt": "Regulated-data Q&A for healthcare/enterprise GenAI—aligned with HHS HIPAA professional guidance.",
+    "sourceUrl": "https://learnhub.local/genai/qa-data-governance-hipaa",
+    "createdAt": "2026-09-23T12:26:29.125Z",
+    "level": "Advanced",
+    "content": "## Scope\nPrivacy/security practice with [HHS HIPAA for professionals](https://www.hhs.gov/hipaa/for-professionals/index.html) as the regulatory north star (engage compliance counsel for legal determinations).\n\n### Q1. What is data governance?\n\n**Answer (documentation-aligned)**\n\nOwnership, standards, stewardship, and decision rights over data assets—catalogs, quality rules, retention, and access policies.\n\n### Q2. Privacy vs security?\n\n**Answer (documentation-aligned)**\n\nPrivacy: lawful/ethical use and minimization. Security: protect confidentiality, integrity, availability. GenAI needs both (what you send to a model + how you protect it).\n\n### Q3. What is PHI and why it matters for GenAI?\n\n**Answer (documentation-aligned)**\n\nProtected Health Information under HIPAA. Minimize PHI in prompts/logs; prefer de-identification; encrypt; restrict vendors via BAAs; audit access.\n\n### Q4. What is auditability?\n\n**Answer (documentation-aligned)**\n\nAbility to reconstruct who accessed what data, which model/prompt version answered, and what context was used—essential for incidents and regulators.\n\n### Q5. Access controls baseline?\n\n**Answer (documentation-aligned)**\n\nLeast privilege IAM, tenant/patient scoping at retrieval, break-glass procedures, and periodic access reviews.\n\n### Q6. Data quality for ML?\n\n**Answer (documentation-aligned)**\n\nCompleteness, validity, consistency, timeliness. Quality failures should fail the pipeline, not silently train.\n\n## Official references\n- [HHS HIPAA](https://www.hhs.gov/hipaa/for-professionals/index.html)",
+    "pipeline": true
+  },
+  {
+    "id": 89,
+    "category": "GenAI",
+    "title": "Data Q&A: Lakes, warehouses, Parquet, Delta, lakehouse, feature stores",
+    "tags": [
+      "Data Lakes",
+      "Data Warehouses",
+      "Parquet",
+      "Delta Lake",
+      "Lakehouse",
+      "Feature Store"
+    ],
+    "excerpt": "Storage architecture Q&A for analytics and ML feature consistency.",
+    "sourceUrl": "https://learnhub.local/genai/qa-lakehouse-feature-store",
+    "createdAt": "2026-09-23T12:26:29.118Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Parquet](https://parquet.apache.org/docs/), [Delta Lake](https://docs.delta.io/latest/index.html), and lakehouse/feature-store patterns.\n\n### Q1. Lake vs warehouse?\n\n**Answer (documentation-aligned)**\n\nLakes store broad multi-format data cheaply; warehouses optimize governed SQL analytics. Lakehouse blends lake storage with warehouse reliability (ACID, schema, time travel)—often via Delta/Iceberg/Hudi tables.\n\n### Q2. Why Parquet?\n\n**Answer (documentation-aligned)**\n\nColumnar, compressed, analytics-friendly format. Standard for ML feature extracts and lake tables.\n\n### Q3. What does Delta Lake add?\n\n**Answer (documentation-aligned)**\n\nACID transactions, scalable metadata, time travel, and schema enforcement on data lakes (see Delta docs)—critical for reproducible training sets.\n\n### Q4. What is a feature store?\n\n**Answer (documentation-aligned)**\n\nRegistry + serving of features with offline (training) and online (inference) paths, ownership, and point-in-time joins to prevent leakage.\n\n### Q5. GenAI note?\n\n**Answer (documentation-aligned)**\n\nVector indexes are siblings to feature stores—not replacements. Risk scores/routing features still need classical feature pipelines.\n\n## Official references\n- [Parquet](https://parquet.apache.org/docs/) · [Delta Lake](https://docs.delta.io/latest/index.html)",
+    "pipeline": true
+  },
+  {
+    "id": 88,
+    "category": "GenAI",
+    "title": "Data Q&A: Spark, Dask, Airflow, Prefect, and ETL pipelines",
+    "tags": [
+      "Spark",
+      "Dask",
+      "Airflow",
+      "Prefect",
+      "ETL",
+      "Data Pipelines"
+    ],
+    "excerpt": "Scale and orchestration Q&A for large clinical/claims/enterprise datasets.",
+    "sourceUrl": "https://learnhub.local/genai/qa-spark-dask-orchestrators",
+    "createdAt": "2026-09-23T12:26:29.111Z",
+    "level": "Advanced",
+    "content": "## Scope\n[Apache Spark](https://spark.apache.org/docs/latest/), [Dask](https://docs.dask.org/en/stable/), [Airflow](https://airflow.apache.org/docs/), [Prefect](https://docs.prefect.io/).\n\n### Q1. Spark vs Dask?\n\n**Answer (documentation-aligned)**\n\nSpark: JVM-centric distributed engine, SQL/DataFrame APIs, lakehouse workhorse. Dask: parallelizes native Python/Pandas-like workflows. Choose Spark for large SQL/ETL estates; Dask when Python-native scale-out fits better.\n\n### Q2. What is ETL vs modern ELT?\n\n**Answer (documentation-aligned)**\n\nETL transforms before load; ELT loads then transforms in the warehouse/lakehouse. GenAI pipelines often ELT raw docs to object storage, then transform to chunks/embeddings.\n\n### Q3. Airflow vs Prefect?\n\n**Answer (documentation-aligned)**\n\nBoth orchestrate DAGs/flows with retries, schedules, and observability. Airflow is widely standardized in enterprises; Prefect emphasizes modern Pythonic flows. Pick one platform per org—avoid dual orchestrators.\n\n### Q4. Pipeline SLOs for ML/GenAI?\n\n**Answer (documentation-aligned)**\n\nFreshness, completeness, schema contracts, and data quality gates before training/reindex jobs. Failed quality checks should block model promotion.\n\n## Official references\n- [Spark](https://spark.apache.org/docs/latest/) · [Dask](https://docs.dask.org/en/stable/) · [Airflow](https://airflow.apache.org/docs/) · [Prefect](https://docs.prefect.io/)",
+    "pipeline": true
+  },
+  {
+    "id": 87,
+    "category": "GenAI",
+    "title": "Data Q&A: Python, Pandas, NumPy, and SQL for ML/GenAI",
+    "tags": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Data Engineering"
+    ],
+    "excerpt": "Core data stack Q&A for feature work, analysis, and GenAI evaluation datasets.",
+    "sourceUrl": "https://learnhub.local/genai/qa-python-pandas-sql",
+    "createdAt": "2026-09-23T12:26:29.100Z",
+    "level": "Beginner",
+    "content": "## Scope\n[Pandas](https://pandas.pydata.org/docs/), [NumPy](https://numpy.org/doc/stable/), and standard SQL practice for analytics/ML.\n\n### Q1. Why is Python the default for ML/GenAI engineering?\n\n**Answer (documentation-aligned)**\n\nRich ecosystem (Pandas/NumPy/Spark clients, HF, LangChain), fast experimentation, and strong serving options (FastAPI). Architects still demand packaging, typing, and tests—not notebooks-only delivery.\n\n### Q2. What are Pandas and NumPy roles?\n\n**Answer (documentation-aligned)**\n\nNumPy: efficient n-dimensional arrays and numerics. Pandas: labeled tabular dataframes for wrangling, joins, time series, and export to Parquet/SQL. Official docs are the source of truth for APIs and performance notes.\n\n### Q3. Where does SQL still win?\n\n**Answer (documentation-aligned)**\n\nPush-down filters/aggregations in warehouses/lakes, governed access, and reproducible feature extracts. ML features should be definable in SQL or Spark with clear ownership.\n\n### Q4. GenAI-specific data tasks?\n\n**Answer (documentation-aligned)**\n\nBuild eval sets, chunk metadata tables, track retrieval labels, and join production traces to outcomes—still Pandas/SQL work.\n\n## Official references\n- [Pandas](https://pandas.pydata.org/docs/) · [NumPy](https://numpy.org/doc/stable/)",
+    "pipeline": true
+  },
+  {
+    "id": 86,
+    "category": "GenAI",
+    "title": "ML Q&A: Model training, deployment, monitoring, registry, and drift",
+    "tags": [
+      "Model Training",
+      "Model Deployment",
+      "Model Monitoring",
+      "Model Registry",
+      "Drift Detection"
+    ],
+    "excerpt": "MLOps lifecycle Q&A from training through registry, deploy, monitor, and drift response.",
+    "sourceUrl": "https://learnhub.local/genai/qa-model-lifecycle",
+    "createdAt": "2026-09-23T12:26:28.607Z",
+    "level": "Advanced",
+    "content": "## Scope\nMLOps lifecycle aligned with [MLflow](https://mlflow.org/docs/latest/) registry concepts and production monitoring norms.\n\n### Q1. What belongs in model training discipline?\n\n**Answer (documentation-aligned)**\n\nReproducible data snapshots, pinned code/deps, tracked hyperparameters, eval suites, and bias/slice metrics—not only leaderboard scores.\n\n### Q2. What is a model registry?\n\n**Answer (documentation-aligned)**\n\nSystem of record for versions, stages (Staging/Production), signatures, and approvals. Promotions should require eval evidence.\n\n### Q3. What is model deployment?\n\n**Answer (documentation-aligned)**\n\nServing a specific artifact behind an API/batch job with rollout strategy (canary/shadow), resource limits, and rollback.\n\n### Q4. What is model monitoring?\n\n**Answer (documentation-aligned)**\n\nTrack service health (latency/errors) and ML health (prediction distribution, calibration, groundedness for GenAI, feedback labels).\n\n### Q5. What is drift detection?\n\n**Answer (documentation-aligned)**\n\nDetect shifts in input data or prediction behavior vs training/reference. Drift is a signal to investigate—not auto-retrain blindly.\n\n## Official references\n- [MLflow](https://mlflow.org/docs/latest/)",
+    "pipeline": true
+  },
+  {
+    "id": 85,
+    "category": "GenAI",
+    "title": "ML Q&A: Hypothesis testing, experimental design, and A/B testing",
+    "tags": [
+      "Hypothesis Testing",
+      "Experimental Design",
+      "A/B Testing",
+      "Statistics"
+    ],
+    "excerpt": "Statistics Q&A for trustworthy model and prompt launches—including guardrail metrics.",
+    "sourceUrl": "https://learnhub.local/genai/qa-stats-experiments",
+    "createdAt": "2026-09-23T12:26:28.601Z",
+    "level": "Intermediate",
+    "content": "## Scope\nClassical experimental design applied to ML/GenAI changes.\n\n### Q1. What is hypothesis testing here?\n\n**Answer (documentation-aligned)**\n\nFormal check whether an observed uplift is likely noise. Pair statistical significance with **practical** significance (cost, latency, clinical risk).\n\n### Q2. What is experimental design for ML?\n\n**Answer (documentation-aligned)**\n\nPre-register primary metric, sample size, stop rules, and strata. Separate train/val/test. For GenAI, keep offline eval before online exposure.\n\n### Q3. How should A/B tests treat safety?\n\n**Answer (documentation-aligned)**\n\nSafety/guardrail metrics are hard gates. A “better” engagement metric that increases harmful outputs is a failed experiment.\n\n### Q4. Shadow vs A/B?\n\n**Answer (documentation-aligned)**\n\nShadow runs new model without user-visible change—good for latency/error checks. A/B exposes variants to measure outcome impact.\n\n## Self-check\nDraft a one-page experiment brief for a prompt change.",
+    "pipeline": true
+  },
+  {
+    "id": 84,
+    "category": "GenAI",
+    "title": "ML Q&A: Predictive analytics, classification, forecasting, feature engineering",
+    "tags": [
+      "Predictive Analytics",
+      "Classification",
+      "Forecasting",
+      "Feature Engineering"
+    ],
+    "excerpt": "Applied ML Q&A connecting problem types to metrics, features, and leakage-safe pipelines.",
+    "sourceUrl": "https://learnhub.local/genai/qa-predictive-features",
+    "createdAt": "2026-09-23T12:26:28.595Z",
+    "level": "Intermediate",
+    "content": "## Scope\nStandard supervised learning practice used in enterprise ML and healthcare analytics.\n\n### Q1. What is predictive analytics?\n\n**Answer (documentation-aligned)**\n\nUsing historical data to estimate future outcomes or unknown labels—risk scores, demand, readmission, churn—supporting decisions under uncertainty.\n\n### Q2. Classification vs forecasting?\n\n**Answer (documentation-aligned)**\n\nClassification predicts discrete labels (fraud/not). Forecasting predicts future numeric/temporal values (census, volume). Metrics differ (AUC/F1 vs MAPE/wQL).\n\n### Q3. What is feature engineering?\n\n**Answer (documentation-aligned)**\n\nCreating informative inputs: aggregations, lags, embeddings, clinical codifications. Must preserve **point-in-time correctness** to avoid leakage.\n\n### Q4. Common leakage example?\n\n**Answer (documentation-aligned)**\n\nUsing post-outcome labs or claim finalization fields that would not exist at prediction time.\n\n### Q5. GenAI overlap?\n\n**Answer (documentation-aligned)**\n\nLLMs can assist feature ideation/NLP features, but tabular risk models still need classical training, calibration, and monitoring.\n\n## Try this\nWrite a feature contract: name, source, freshness SLA, allowed prediction time, owner.",
+    "pipeline": true
+  },
+  {
+    "id": 83,
+    "category": "GenAI",
+    "title": "ML Q&A: CNN, RNN, GANs, AutoML, and Reinforcement Learning",
+    "tags": [
+      "CNN",
+      "RNN",
+      "GANs",
+      "AutoML",
+      "Reinforcement Learning"
+    ],
+    "excerpt": "Architecture and paradigm Q&A for CNNs, RNNs, GANs, AutoML, and RL—with when each still matters.",
+    "sourceUrl": "https://learnhub.local/genai/qa-cnn-rnn-gan-automl-rl",
+    "createdAt": "2026-09-23T12:26:28.589Z",
+    "level": "Intermediate",
+    "content": "## Scope\nCore ML architecture literacy expected in AI Architect interviews.\n\n### Q1. What are CNNs best known for?\n\n**Answer (documentation-aligned)**\n\nConvolutional Neural Networks excel at grid-like data (images, some time-frequency signals) via local receptive fields and weight sharing.\n\n### Q2. Where do RNNs still appear?\n\n**Answer (documentation-aligned)**\n\nRecurrent nets (LSTM/GRU) modeled sequential dependence before Transformers dominated many NLP tasks. Still seen in some time-series/sensor settings, though temporal Transformers/CNNs often compete.\n\n### Q3. What are GANs?\n\n**Answer (documentation-aligned)**\n\nGenerative Adversarial Networks: generator vs discriminator training for realistic samples (images historically). Modern image generation often uses diffusion; understand GANs for literacy and legacy systems.\n\n### Q4. What is AutoML?\n\n**Answer (documentation-aligned)**\n\nAutomated search over models/features/hyperparameters to reduce manual trial-and-error. Useful for baselines; still requires data quality, leakage checks, and human oversight for regulated domains.\n\n### Q5. What is Reinforcement Learning?\n\n**Answer (documentation-aligned)**\n\nLearning policies via reward signals from environment interaction. Relevant to tool-use agents, robotics, and optimization—but reward design and safety constraints are the hard parts.\n\n## Self-check\nMap one business problem to CNN, one to RL, one to AutoML tabular search.",
+    "pipeline": true
+  },
+  {
+    "id": 82,
+    "category": "GenAI",
+    "title": "ML Q&A: NLP, LLMs, Transformers, GPT, and BERT",
+    "tags": [
+      "NLP",
+      "LLM",
+      "Transformers",
+      "GPT",
+      "BERT"
+    ],
+    "excerpt": "Q&A on modern NLP stack: Transformer architecture families and when to use encoders vs decoders.",
+    "sourceUrl": "https://learnhub.local/genai/qa-nlp-llm-transformers",
+    "createdAt": "2026-09-23T12:26:28.583Z",
+    "level": "Intermediate",
+    "content": "## Scope\nTransformer NLP as implemented in [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) and major model cards.\n\n### Q1. What is NLP in enterprise terms?\n\n**Answer (documentation-aligned)**\n\nAutomating language tasks: classification, NER, summarization, search, translation, conversation—on tickets, contracts, clinical notes, etc.\n\n### Q2. What is an LLM?\n\n**Answer (documentation-aligned)**\n\nA large neural language model trained at scale for next-token or related objectives, used zero-shot/few-shot or fine-tuned for downstream tasks.\n\n### Q3. What did Transformers change?\n\n**Answer (documentation-aligned)**\n\nSelf-attention enables parallel sequence modeling and transfer learning at scale, replacing many RNN-first pipelines for NLP SOTA.\n\n### Q4. GPT vs BERT—interview answer?\n\n**Answer (documentation-aligned)**\n\nGPT: autoregressive decoder, strong at generation. BERT: bidirectional encoder, strong at understanding/classification with fine-tuning. Different pretraining objectives → different sweet spots.\n\n### Q5. Production caution?\n\n**Answer (documentation-aligned)**\n\nLLMs hallucinate. For factual enterprise/healthcare answers, pair with retrieval, citations, and verification—not unconstrained generation.\n\n## Official references\n- [Transformers](https://huggingface.co/docs/transformers/index)",
+    "pipeline": true
+  },
+  {
+    "id": 81,
+    "category": "GenAI",
+    "title": "ML Q&A: AI, ML, Deep Learning, and Generative AI foundations",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Generative AI"
+    ],
+    "excerpt": "Foundations Q&A clarifying AI vs ML vs DL vs GenAI with precise production implications.",
+    "sourceUrl": "https://learnhub.local/genai/qa-ml-foundations",
+    "createdAt": "2026-09-23T12:26:28.576Z",
+    "level": "Beginner",
+    "content": "## Scope\nStandard ML taxonomy used across textbooks and vendor docs (no hype definitions).\n\n### Q1. Define Artificial Intelligence vs Machine Learning.\n\n**Answer (documentation-aligned)**\n\nAI is the broad field of systems that perform tasks associated with human cognition. ML is the subset that learns patterns from data rather than only hand-coded rules.\n\n### Q2. What is Deep Learning?\n\n**Answer (documentation-aligned)**\n\nML using multi-layer neural networks that learn hierarchical representations (vision, speech, NLP). Higher data/compute needs; strong when features are hard to hand-engineer.\n\n### Q3. What is Generative AI?\n\n**Answer (documentation-aligned)**\n\nModels that generate new content (text, images, code, audio) typically via large neural models (often Transformers). Distinct from purely discriminative classifiers, though hybrids exist.\n\n### Q4. When is classical ML still the right call?\n\n**Answer (documentation-aligned)**\n\nTabular clinical/claims risk scores, forecasting with strong features, constrained latency/cost, or when explainability and stable monitoring matter more than open-ended generation.\n\n### Q5. Architect takeaway?\n\n**Answer (documentation-aligned)**\n\nStart from the decision and constraints. GenAI is one tool in the AI stack—not the default for every prediction problem.\n\n## Self-check\nGive one example workload for rules, classical ML, DL classifier, and GenAI RAG.",
+    "pipeline": true
+  },
+  {
+    "id": 80,
+    "category": "GenAI",
+    "title": "GenAI Q&A: AI governance, compliance, and Responsible AI",
+    "tags": [
+      "AI Governance",
+      "AI Compliance",
+      "Responsible AI",
+      "NIST AI RMF",
+      "Auditability"
+    ],
+    "excerpt": "Governance Q&A mapped to NIST AI RMF concepts: map, measure, manage, govern—plus enterprise auditability.",
+    "sourceUrl": "https://learnhub.local/genai/qa-ai-governance",
+    "createdAt": "2026-09-23T12:26:28.571Z",
+    "level": "Advanced",
+    "content": "## Scope\nAligned with [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) concepts and enterprise audit practice.\n\n### Q1. What is AI governance?\n\n**Answer (documentation-aligned)**\n\nPolicies, roles, and controls for how AI systems are proposed, approved, monitored, and retired—covering risk, ethics, security, and business accountability.\n\n### Q2. What is AI compliance?\n\n**Answer (documentation-aligned)**\n\nMeeting applicable legal/regulatory obligations (sector rules, privacy law, contractual BAAs, customer policies). Compliance is evidence-based: logs, model cards, DPIAs/AIAs, access reviews.\n\n### Q3. How does NIST AI RMF organize the work?\n\n**Answer (documentation-aligned)**\n\nHigh-level functions commonly summarized as **Govern, Map, Measure, Manage**: establish culture/accountability, map context/risks, measure trustworthy characteristics, and manage residual risk with controls and monitoring.\n\n### Q4. What artifacts should an Architect keep?\n\n**Answer (documentation-aligned)**\n\nIntended use statement, data lineage, eval reports, incident playbooks, human-oversight design, vendor assessments, and versioned prompts/models in a registry.\n\n### Q5. Governance vs blocking innovation?\n\n**Answer (documentation-aligned)**\n\nUse risk tiers: low-risk copilots move fast with standard controls; clinical decision support requires human-in-the-loop, stronger validation, and clear non-autonomous UX.\n\n## Official references\n- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)",
+    "pipeline": true
+  },
+  {
+    "id": 79,
+    "category": "GenAI",
+    "title": "GenAI Q&A: RAG, vector indexing, and retrieval quality",
+    "tags": [
+      "RAG",
+      "Vector Indexing",
+      "Embeddings",
+      "Context Optimization",
+      "Groundedness"
+    ],
+    "excerpt": "Q&A on retrieval-augmented generation, indexes, hybrid search, and measuring recall before blaming the LLM.",
+    "sourceUrl": "https://learnhub.local/genai/qa-rag-vectors",
+    "createdAt": "2026-09-23T12:26:28.564Z",
+    "level": "Intermediate",
+    "content": "## Scope\nRAG patterns as documented across LlamaIndex (index/query engines) and LangChain retrieval components; evaluation practice for grounded generation.\n\n### Q1. What is RAG?\n\n**Answer (documentation-aligned)**\n\nRetrieval-Augmented Generation: fetch relevant external knowledge, place it in context, then generate. Separates **knowledge freshness** from model weights.\n\n### Q2. What is vector indexing?\n\n**Answer (documentation-aligned)**\n\nStore embedding vectors of chunks in an ANN index (plus metadata filters). Production systems often add **hybrid** keyword + dense retrieval and a re-ranker before the LLM sees top-k.\n\n### Q3. What metrics matter first?\n\n**Answer (documentation-aligned)**\n\nRetrieval **Recall@k / MRR**, then answer **groundedness/faithfulness**, then latency and cost. Changing the LLM before fixing retrieval is a common failure.\n\n### Q4. Chunking pitfalls?\n\n**Answer (documentation-aligned)**\n\nArbitrary token cuts without headings destroy meaning. Prefer semantic sections, keep metadata (source, date, ACL tier), and reindex on policy updates.\n\n### Q5. Security note for enterprise/healthcare RAG?\n\n**Answer (documentation-aligned)**\n\nEnforce document ACLs at retrieval time. Never retrieve across patient/tenant boundaries. Redact PHI before logging retrieved text.\n\n## Try this\n```text\nQuery → embed → ANN top-N → hybrid filter + ACL → re-rank → LLM with citations → groundedness score\n```",
+    "pipeline": true
+  },
+  {
+    "id": 78,
+    "category": "GenAI",
+    "title": "GenAI Q&A: Prompt engineering, chaining, evaluation, and guardrails",
+    "tags": [
+      "Prompt Engineering",
+      "Prompt Chaining",
+      "Prompt Evaluation",
+      "Guardrails",
+      "Token Control"
+    ],
+    "excerpt": "Detailed Q&A on prompt design, chained pipelines, eval harnesses, guardrails, and token/context control.",
+    "sourceUrl": "https://learnhub.local/genai/qa-prompts-guardrails",
+    "createdAt": "2026-09-23T12:26:28.558Z",
+    "level": "Intermediate",
+    "content": "## Scope\nIndustry practice aligned with provider evaluation guides ([OpenAI Evaluation](https://platform.openai.com/docs/guides/evaluation)) and production LLMOps norms.\n\n### Q1. What is prompt engineering in production?\n\n**Answer (documentation-aligned)**\n\nVersioned instructions that define role, scope, tools, citation rules, and refusal policy—treated as code: reviewed, tested, and released. Not one-off chat tinkering.\n\n### Q2. What is prompt chaining?\n\n**Answer (documentation-aligned)**\n\nDecomposing a task into sequenced prompts (retrieve → extract → reason → verify → format). Each stage has its own schema and eval. Prefer chaining/graphs over one mega-prompt when steps need different tools or confidence gates.\n\n### Q3. How do you evaluate prompts?\n\n**Answer (documentation-aligned)**\n\nOffline: golden sets, rubrics (correctness, groundedness, safety, format), regression vs previous prompt version. Online: A/B or shadow traffic with guardrail metrics as hard gates. Document hypothesis and abort criteria.\n\n### Q4. What are guardrails?\n\n**Answer (documentation-aligned)**\n\nInput/output controls: PII/PHI filters, allowlisted intents, schema validation, toxicity/jailbreak detection, tool permission boundaries, and human escalation. Guardrails belong in the harness, not only in the system prompt.\n\n### Q5. What is token control / context optimization?\n\n**Answer (documentation-aligned)**\n\nBudget max input/output tokens, summarize history, pin critical facts, drop low-relevance retrieved chunks, and monitor cost per successful task. Context optimization is an engineering problem: retrieval quality + packing strategy + truncation policy.\n\n### Q6. What is memory management for LLM apps?\n\n**Answer (documentation-aligned)**\n\nShort-term conversational state vs long-term stores (profiles, prior tickets). Persist structured memories with retention/TTL and access control; never treat the raw chat log as the only memory system.\n\n## Official references\n- [OpenAI Evaluation](https://platform.openai.com/docs/guides/evaluation) · pair with your chosen framework's prompt versioning (LangSmith/Langfuse/MLflow)",
+    "pipeline": true
+  },
+  {
+    "id": 77,
+    "category": "GenAI",
+    "title": "GenAI Q&A: MLflow, BentoML, Ray, Truss, and FastAPI serving",
+    "tags": [
+      "MLflow",
+      "BentoML",
+      "Ray",
+      "Truss",
+      "FastAPI"
+    ],
+    "excerpt": "Serving and registry Q&A: experiment tracking, packaging, scalable inference, and API edges.",
+    "sourceUrl": "https://learnhub.local/genai/qa-serving-registry",
+    "createdAt": "2026-09-23T12:26:28.552Z",
+    "level": "Advanced",
+    "content": "## Scope\n[MLflow](https://mlflow.org/docs/latest/), [BentoML](https://docs.bentoml.com/), [Ray Serve](https://docs.ray.io/en/latest/serve/index.html), [FastAPI](https://fastapi.tiangolo.com/); Truss as a model-packaging/serve pattern in the same design space.\n\n### Q1. What does MLflow provide for GenAI?\n\n**Answer (documentation-aligned)**\n\nExperiment tracking, model/prompt registry, packaging flavors (including LangChain/LlamaIndex integrations), evaluation, and tracing hooks so artifacts and lineage are auditable across train/serve cycles.\n\n### Q2. What is BentoML for?\n\n**Answer (documentation-aligned)**\n\nPackage ML/LLM services into deployable Bentos/containers with scalable APIs. Common pattern: BentoML service wrapping vLLM or similar backends, then ship OCI images to Kubernetes.\n\n### Q3. What is Ray Serve?\n\n**Answer (documentation-aligned)**\n\nRay's scalable, framework-agnostic online inference library. Documented strengths: composition of models + business logic, autoscaling, multi-GPU/multi-node LLM features (streaming, batching). Runs anywhere Ray runs (laptop, K8s, cloud).\n\n### Q4. Where does FastAPI sit?\n\n**Answer (documentation-aligned)**\n\nFastAPI is the high-performance Python API layer for request validation, auth, and OpenAPI docs. It is often the edge in front of model workers (Ray/Bento/vLLM), not a replacement for a model server.\n\n### Q5. What is Truss in this bank?\n\n**Answer (documentation-aligned)**\n\nTruss is a model packaging/deployment toolkit (Baseten ecosystem) aimed at turning Python model code into reliable services quickly—same architectural concern as Bento: reproducible build → container → scale.\n\n### Q6. Recommended production topology?\n\n**Answer (documentation-aligned)**\n\nTrain/track in MLflow → package (Bento/Truss/custom) → serve (Ray Serve / vLLM / managed cloud) → expose via FastAPI/API gateway → observe with Langfuse/LangSmith + infra metrics.\n\n## Official references\n- [MLflow](https://mlflow.org/docs/latest/) · [BentoML](https://docs.bentoml.com/) · [Ray Serve](https://docs.ray.io/en/latest/serve/index.html) · [FastAPI](https://fastapi.tiangolo.com/)",
+    "pipeline": true
+  },
+  {
+    "id": 76,
+    "category": "GenAI",
+    "title": "GenAI Q&A: Hugging Face Transformers and model hub practice",
+    "tags": [
+      "Hugging Face",
+      "Transformers",
+      "BERT",
+      "GPT",
+      "Model Hub"
+    ],
+    "excerpt": "Documentation-aligned Q&A on Hugging Face Transformers, model cards, pipelines, and safe production use.",
+    "sourceUrl": "https://learnhub.local/genai/qa-huggingface",
+    "createdAt": "2026-09-23T12:26:28.545Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Hugging Face Transformers docs](https://huggingface.co/docs/transformers/index) and hub/model-card practice.\n\n### Q1. What is Hugging Face Transformers?\n\n**Answer (documentation-aligned)**\n\nThe de-facto open library for loading pretrained Transformer models (NLP, vision, audio, multimodal) with consistent `pipeline` / tokenizer / model APIs across PyTorch and other backends.\n\n### Q2. How do GPT and BERT relate in this ecosystem?\n\n**Answer (documentation-aligned)**\n\nBoth are Transformer families commonly hosted on the Hub. **BERT**-style encoders excel at understanding/classification with bidirectional context. **GPT**-style decoders excel at generative next-token tasks. Choose architecture for the task; do not force a decoder-only model where an encoder classifier is cheaper and clearer.\n\n### Q3. What should you read before productionizing a Hub model?\n\n**Answer (documentation-aligned)**\n\nModel card: intended use, limitations, training data risks, license, eval metrics, and hardware needs. Verify license compatibility and whether fine-tuning data would create PHI leakage.\n\n### Q4. How do you typically serve HF models?\n\n**Answer (documentation-aligned)**\n\nLocal `pipeline` for prototypes; production via FastAPI + GPU workers, **BentoML**, **Ray Serve**, vLLM/TGI-style servers, or cloud managed endpoints. Pin revisions (commit SHA) for reproducibility.\n\n### Q5. What is a common enterprise failure mode?\n\n**Answer (documentation-aligned)**\n\nPulling `latest` tags without pin, no eval gate, and no offline toxicity/privacy checks—then discovering drift after a silent Hub update.\n\n## Official references\n- [Transformers](https://huggingface.co/docs/transformers/index)",
+    "pipeline": true
+  },
+  {
+    "id": 75,
+    "category": "GenAI",
+    "title": "GenAI Q&A: LangFuse, LangTrace, observability, and agent evaluation",
+    "tags": [
+      "LangFuse",
+      "LangTrace",
+      "Observability",
+      "Agent Evaluation",
+      "Reflection Loops"
+    ],
+    "excerpt": "Q&A on LLM observability stacks, evaluation loops, reflection patterns, and what to capture without leaking PHI.",
+    "sourceUrl": "https://learnhub.local/genai/qa-observability-eval",
+    "createdAt": "2026-09-23T12:26:28.540Z",
+    "level": "Intermediate",
+    "content": "## Scope\n[Langfuse × LangChain/LangGraph](https://langfuse.com/integrations/frameworks/langchain), [Langfuse × LlamaIndex](https://langfuse.com/integrations/frameworks/llamaindex), plus evaluation practice aligned with vendor eval guides such as [OpenAI Evaluation](https://platform.openai.com/docs/guides/evaluation).\n\n### Q1. What does Langfuse capture?\n\n**Answer (documentation-aligned)**\n\nLangfuse positions itself as an AI engineering/observability platform: traces of LLM interactions including inputs, outputs, tool usage, retries, latencies, and costs—so you can debug, analyze, and evaluate. LangChain integration uses **Callbacks**; LlamaIndex commonly via OpenTelemetry instrumentation exporting spans to Langfuse.\n\n### Q2. What is LangTrace in this keyword bank?\n\n**Answer (documentation-aligned)**\n\nLangTrace refers to LLM/application tracing tooling used similarly to capture spans for prompts, retrieval, and tools. In LangChain's first-party stack, **LangSmith** is the documented tracing/eval platform. Architects should pick one primary trace backend, standardize span names, and enforce redaction policies.\n\n### Q3. What is agent evaluation vs single-turn LLM eval?\n\n**Answer (documentation-aligned)**\n\nSingle-turn eval scores final text. Agent evaluation scores **trajectories**: tool choice correctness, loop termination, policy adherence, cost/latency, and task success. Offline golden tasks + online sampling with human review is the production pattern.\n\n### Q4. What are reflection loops?\n\n**Answer (documentation-aligned)**\n\nA design pattern where an agent critiques or verifies its own draft (self-reflection / reviewer agent) before acting. Useful for reducing tool mistakes—but must be budgeted (extra tokens) and gated so reflection cannot bypass safety policy.\n\n### Q5. What must never land in traces by default?\n\n**Answer (documentation-aligned)**\n\nRaw PHI/PII, secrets, full clinical notes, or unrestricted EHR payloads. Store redacted prompts, hash identifiers, and link to access-controlled source systems.\n\n### Q6. Minimum observability checklist for LLMOps?\n\n**Answer (documentation-aligned)**\n\nPrompt/version IDs, model IDs, retrieval hit metadata, tool spans, token/cost metrics, error rates, eval scores, and user feedback—tied to a model/prompt registry (e.g. MLflow).\n\n## Official references\n- [Langfuse LangChain](https://langfuse.com/integrations/frameworks/langchain) · [Langfuse LlamaIndex](https://langfuse.com/integrations/frameworks/llamaindex) · [OpenAI Evaluation](https://platform.openai.com/docs/guides/evaluation)",
+    "pipeline": true
+  },
+  {
+    "id": 74,
+    "category": "GenAI",
+    "title": "GenAI Q&A: LangGraph, CrewAI, AutoGen, and Semantic Kernel",
+    "tags": [
+      "LangGraph",
+      "CrewAI",
+      "AutoGen",
+      "Semantic Kernel",
+      "Agentic AI"
+    ],
+    "excerpt": "Agent framework Q&A: LangGraph runtime vs multi-agent CrewAI/AutoGen vs Microsoft Semantic Kernel (often mistyped as Symantec Kernel).",
+    "sourceUrl": "https://learnhub.local/genai/qa-agent-frameworks",
+    "createdAt": "2026-09-23T12:26:28.533Z",
+    "level": "Advanced",
+    "content": "## Scope\nOfficial sources: [LangGraph overview](https://docs.langchain.com/oss/python/langgraph/overview), [CrewAI docs](https://docs.crewai.com/), [AutoGen](https://microsoft.github.io/autogen/stable/), [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/).\n\n> Note: Job descriptions often write **Symantec Kernel**. The Microsoft product is **Semantic Kernel**.\n\n### Q1. What is LangGraph officially?\n\n**Answer (documentation-aligned)**\n\nA **low-level orchestration framework and runtime** for long-running, stateful agents. It mixes deterministic hand-coded steps with LLM-driven steps in one graph. Core benefits documented: durable execution, persistence, human-in-the-loop, short/long-term memory, streaming, and production deployment patterns. It can be used without LangChain; LangChain agents sit on top of LangGraph.\n\n### Q2. How do LangChain / LangGraph / Deep Agents differ in LangChain's own words?\n\n**Answer (documentation-aligned)**\n\nDeep Agents = batteries-included harness (planning, subagents, filesystem, context management) on LangGraph. LangChain = agent framework (`create_agent` + middleware). LangGraph = orchestration runtime (durable, HITL, persistence). LangSmith = tracing/eval/prompts/deployment platform.\n\n### Q3. What is CrewAI used for?\n\n**Answer (documentation-aligned)**\n\nCrewAI documents multi-agent crews with roles, tasks, and process orchestration—useful when work is naturally split across specialist agents (researcher, writer, reviewer) with explicit task contracts.\n\n### Q4. What is AutoGen?\n\n**Answer (documentation-aligned)**\n\nMicrosoft AutoGen documents multi-agent conversation patterns where agents collaborate via messages, tools, and configurable topologies—strong fit for research/coding agents and human-in-the-loop chats.\n\n### Q5. What is Semantic Kernel?\n\n**Answer (documentation-aligned)**\n\nMicrosoft's SDK (C#, Python, Java) for building AI apps/agents with swappable AI service connectors (chat, embeddings, multimodal) and plugins (including Logic Apps and Azure Container Apps dynamic sessions). See [integrations](https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/integrations).\n\n### Q6. How should an Architect choose among them?\n\n**Answer (documentation-aligned)**\n\nNeed fine-grained stateful graphs + HITL → **LangGraph**. Need role-based crew workflows → **CrewAI**. Need conversational multi-agent research loops → **AutoGen**. Need enterprise .NET/Azure plugin ecosystem → **Semantic Kernel**. Often: one orchestration runtime + shared eval/observability, not five overlapping frameworks.\n\n### Q7. What is Agentic AI in production terms?\n\n**Answer (documentation-aligned)**\n\nSystems where models plan, call tools, and loop. Treat them as distributed systems: timeouts, tool allowlists, budgets, idempotency, and trajectory evaluation—not only final-answer scoring.\n\n## Official references\n- [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) · [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) · [CrewAI](https://docs.crewai.com/) · [AutoGen](https://microsoft.github.io/autogen/stable/)",
+    "pipeline": true
+  },
+  {
+    "id": 73,
+    "category": "GenAI",
+    "title": "GenAI Q&A: LangChain, LlamaIndex, and LLM app orchestration",
+    "tags": [
+      "LangChain",
+      "LlamaIndex",
+      "LLMOps",
+      "RAG",
+      "Orchestration"
+    ],
+    "excerpt": "Deep Q&A contrasting LangChain (agent framework) vs LlamaIndex (data/index/retrieval) with official product positioning.",
+    "sourceUrl": "https://learnhub.local/genai/qa-langchain-llamaindex",
+    "createdAt": "2026-09-23T12:26:28.523Z",
+    "level": "Intermediate",
+    "content": "## Scope\nOfficial positioning from [LangChain overview](https://docs.langchain.com/oss/python/langchain/overview) and [LlamaIndex](https://docs.llamaindex.ai/en/stable/) / [MLflow LlamaIndex flavor](https://mlflow.org/docs/latest/genai/flavors/llama-index/).\n\n### Q1. What is LangChain according to current official docs?\n\n**Answer (documentation-aligned)**\n\nLangChain frames an agent as **Model + Harness**. The harness wraps the model loop: prompt, tools, and middleware. `create_agent` is the documented minimal, configurable harness. LangChain standardizes provider APIs so you can swap models without rewriting the whole stack. Its agents are built on top of **LangGraph** for durable execution, human-in-the-loop, and persistence.\n\n### Q2. What is LlamaIndex's primary job?\n\n**Answer (documentation-aligned)**\n\nLlamaIndex is a **data-centric** framework for connecting private/domain data to LLMs: connectors, indices, retrieval/query interfaces, QueryEngine/ChatEngine, and event-driven **Workflows** for RAG, agents, and extraction pipelines. MLflow documents logging/tracing LlamaIndex engines and Workflows for observability and packaging.\n\n### Q3. When should you prefer LlamaIndex vs LangChain?\n\n**Answer (documentation-aligned)**\n\nPrefer LlamaIndex when the hard problem is **ingestion → index → retrieval quality**. Prefer LangChain when the hard problem is **tool-calling agent loops, middleware, and provider-normalized orchestration**. Many production systems combine both: LlamaIndex (or equivalent) for retrieval, LangChain/LangGraph for agent control flow.\n\n### Q4. How do LangSmith and Langfuse fit?\n\n**Answer (documentation-aligned)**\n\nLangChain docs recommend **LangSmith** for tracing, evaluation, prompts, and deployment across their stack. **Langfuse** documents CallbackHandler tracing for LangChain/LangGraph and OTel-based tracing for LlamaIndex—inputs, outputs, tools, retries, latency, and cost for debug/eval.\n\n### Q5. What must an AI Architect still own outside the framework?\n\n**Answer (documentation-aligned)**\n\nEval suites, data classification/redaction, deployment SLOs, cost budgets, and governance. Frameworks accelerate wiring; they do not replace Responsible AI controls.\n\n## Official references\n- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) · [LlamaIndex](https://docs.llamaindex.ai/en/stable/) · [Langfuse × LangChain](https://langfuse.com/integrations/frameworks/langchain) · [MLflow × LlamaIndex](https://mlflow.org/docs/latest/genai/flavors/llama-index/)",
+    "pipeline": true
+  },
+  {
     "id": 72,
     "category": "TOSCA",
     "title": "Tosca interview mega Q&A (documentation-aligned)",
