@@ -5,6 +5,335 @@
 
 const ALL_POSTS = [
   {
+    "id": 118,
+    "category": "Teradata",
+    "title": "Teradata interview mega Q&A for Lead DBA / Platform Architect",
+    "tags": [
+      "Interview",
+      "Teradata Vantage",
+      "TASM",
+      "DBQL",
+      "Leadership"
+    ],
+    "excerpt": "Dense interview drill covering architecture, TASM, DBQL, physical design, cloud, and leadership (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-interview-mega",
+    "createdAt": "2026-09-23T12:53:13.061Z",
+    "level": "Advanced",
+    "content": "## How to use\nAnswer aloud in 40–60 seconds each, then compare.\n\n### Q1. Explain PE → BYNET → AMP in one minute.\n\n**Answer (documentation-aligned)**\n\nPE parses/optimizes and ships steps; BYNET transports point-to-point/multicast/broadcast messages with redundancy; AMPs execute on their data slices in a shared-nothing MPP design.\n\n### Q2. When is a query single-AMP?\n\n**Answer (documentation-aligned)**\n\nTypically unique-PI targeted retrieval. Many-row unconstrained access becomes selected/all-AMP and costs more—design and TASM must account for that.\n\n### Q3. Name modern TPT utility names vs legacy.\n\n**Answer (documentation-aligned)**\n\nTPTLOAD / TPTUPD / TPTEXP are current UtilityName examples; standalone FASTLOAD / MULTILOAD / FASTEXP appear as deprecated in DBQL application docs.\n\n### Q4. How do you enable useful DBQL without drowning?\n\n**Answer (documentation-aligned)**\n\nTargeted BEGIN QUERY LOGGING by user/account/app; use THRESHOLD/SUMMARY; separate utility APPLNAME rules; avoid WITH ALL everywhere.\n\n### Q5. Tactical vs timeshare workloads?\n\n**Answer (documentation-aligned)**\n\nTactical: short, protected, high priority. Timeshare: leftover resources after tactical/SLG needs—exact methods depend on SLES/TASM generation in Viewpoint.\n\n### Q6. First three checks for sudden SLA breach?\n\n**Answer (documentation-aligned)**\n\nViewpoint health + AWT/throttle delays; DBQL for new heavy SQL/apps; skew/hot AMP and stats freshness on touched tables.\n\n### Q7. Cloud migration first deliverable?\n\n**Answer (documentation-aligned)**\n\nWorkload inventory + risk/cost wave plan with dual-run strategy—not a provisioned empty system.\n\n### Q8. How do you show leadership in interviews?\n\n**Answer (documentation-aligned)**\n\nCite a metric you moved (SLA%, incident repeat rate, batch window, cost) and the governance you installed (CAB, runbooks, mentoring).\n\n\n## Documentation deep dive\nAnchor answers to Teradata public architecture + Viewpoint + DBQL docs. Precision beats buzzwords.\n\n**Why this matters for Lead / Principal / Architect roles**\nLead interviews are oral architecture exams under time pressure.\n\n**Implementation checklist**\n- Prepare 2 production stories with numbers\n- Draw AMP/PI skew on a whiteboard\n- Explain one TASM ruleset change end-to-end\n\n**Common mistakes**\n- Tool laundry lists without outcomes\n- Blaming 'the optimizer' without evidence\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 117,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Banking domain, 24x7 ops, regulatory excellence",
+    "tags": [
+      "Banking Domain",
+      "24x7 Operations",
+      "Regulatory Compliance",
+      "Business Continuity",
+      "Digital Transformation"
+    ],
+    "excerpt": "Enterprise/banking context Q&A for mission-critical Teradata platforms (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-banking-enterprise-context",
+    "createdAt": "2026-09-23T12:53:13.051Z",
+    "level": "Advanced",
+    "content": "## Scope\nIndustry context that separates Principal Consultants from generic DBAs.\n\n### Q1. What does banking domain experience mean for Teradata?\n\n**Answer (documentation-aligned)**\n\nMonth-end/year-end peaks, regulatory extracts, strict access audits, tactical channels (online/ATM/fraud) competing with heavy analytics, and zero tolerance for untested changes.\n\n### Q2. 24×7 / mission-critical operations?\n\n**Answer (documentation-aligned)**\n\nFollow-the-sun support, clear severity definitions, bridge protocols, and capacity headroom for peak events. Documented business continuity and DR rehearsals.\n\n### Q3. Regulatory and data security compliance?\n\n**Answer (documentation-aligned)**\n\nEvidence of least privilege, audit logs, encryption, retention, and change records. Align platform controls to policy—not after an audit finding.\n\n### Q4. Digital transformation / legacy modernization?\n\n**Answer (documentation-aligned)**\n\nWave plans from legacy EDW patterns toward lakehouse/cloud while protecting SLAs—measurable modernization, not slogan slides.\n\n### Q5. Operational excellence?\n\n**Answer (documentation-aligned)**\n\nFewer recurring incidents, stable SLAs, automated toil removal, and transparent stakeholder reporting.\n\n\n## Documentation deep dive\nIn regulated environments, DBQL/Viewpoint/audit evidence is part of compliance posture. Treat monitoring as control evidence, not only ops convenience.\n\n**Why this matters for Lead / Principal / Architect roles**\nIndia Lead/Principal Teradata roles in BFSI are accountability jobs.\n\n**Implementation checklist**\n- Peak calendar (ME/YE) capacity plan\n- BCP/DR test evidence current\n- Access recertification on schedule\n\n**Common mistakes**\n- Big changes in peak windows\n- No audit trail for privileged activity\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 116,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Certifications, Agile/DevOps, TOGAF, Six Sigma",
+    "tags": [
+      "Teradata Certified Professional",
+      "ITIL Certification",
+      "Agile",
+      "TOGAF",
+      "Six Sigma"
+    ],
+    "excerpt": "Credentials and methodology Q&A—how Architects cite Teradata certs and delivery frameworks honestly (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-certs-methodologies",
+    "createdAt": "2026-09-23T12:53:13.041Z",
+    "level": "Intermediate",
+    "content": "## Scope\nHow to present certifications without empty badge collecting.\n\n### Q1. Which Teradata certifications matter for Lead roles?\n\n**Answer (documentation-aligned)**\n\nCommon signals: **Teradata Certified Professional**, Database Associate-level foundations, **VantageCloud Administrator**, **Vantage Data Engineering**. Certs open doors; production ownership of TASM/DR/migration closes offers.\n\n### Q2. ITIL, Agile/Scrum, DevOps—how do they show up?\n\n**Answer (documentation-aligned)**\n\nITIL for ops rigor; Agile/Scrum for change delivery of DDL/automation backlogs; DevOps for Git+CI of DBA assets. Describe ceremonies you actually ran.\n\n### Q3. TOGAF and Six Sigma?\n\n**Answer (documentation-aligned)**\n\nTOGAF frames enterprise architecture conversations; Six Sigma/process excellence supports measurable process improvement (incident reduction, SLA variance). Use them as lenses, not buzzwords.\n\n\n## Documentation deep dive\nKeep cert names accurate to current Teradata learning paths; pair each cert claim with a project metric on the résumé.\n\n**Why this matters for Lead / Principal / Architect roles**\nATS likes keywords; interviewers probe authenticity in minutes.\n\n**Implementation checklist**\n- One bullet of evidence per certification listed\n- Methodology claims tied to a delivery example\n\n**Common mistakes**\n- Listing expired/irrelevant badges without context\n- Claiming TOGAF-level EA ownership without artifacts\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 115,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Leadership, ITIL, SLA, global delivery",
+    "tags": [
+      "Team Leadership",
+      "ITIL",
+      "SLA Management",
+      "Stakeholder Management",
+      "Onshore-Offshore"
+    ],
+    "excerpt": "Leadership Q&A for client-facing Teradata Leads—ITIL, SLA, mentoring, vendors, global delivery (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-leadership-itil-sla",
+    "createdAt": "2026-09-23T12:53:13.033Z",
+    "level": "Advanced",
+    "content": "## Scope\nNon-negotiable soft-power skills for ₹50LPA+ Teradata roles.\n\n### Q1. How do you describe leadership on a Teradata account?\n\n**Answer (documentation-aligned)**\n\nOwn outcomes: SLA, risk, cost, and knowledge transfer. Mentor juniors on RCA/TASM/physical design; escalate early with options—not surprises.\n\n### Q2. ITIL / incident & problem management?\n\n**Answer (documentation-aligned)**\n\nIncidents restore service; problems remove root causes. Leads ensure P1 bridges, communication cadences, and preventive CAB items after major incidents.\n\n### Q3. Stakeholder and client-facing delivery?\n\n**Answer (documentation-aligned)**\n\nTranslate AMP skew into business impact and choices. Pre-sales/architecture presentations should show trade-offs and governance.\n\n### Q4. Onshore-offshore / global delivery?\n\n**Answer (documentation-aligned)**\n\nClear RACI, follow-the-sun handoffs, shared runbooks, and overlapping coverage for month-end peaks. Vendor management for Teradata/hardware/cloud partners included.\n\n### Q5. Solution vs enterprise architecture?\n\n**Answer (documentation-aligned)**\n\nSolution architecture for a workload/platform decision; enterprise architecture aligns EDW with lake, MDM, and regulatory strategy (TOGAF-style thinking without dogma).\n\n\n## Documentation deep dive\nPair ITIL language with Teradata evidence (Viewpoint/DBQL). Executives trust metrics more than adjectives.\n\n**Why this matters for Lead / Principal / Architect roles**\nThese roles are hired as trusted advisors, not only as deep technicians.\n\n**Implementation checklist**\n- SLA dashboard reviewed weekly with business\n- Mentoring plan for two juniors\n- Escalation matrix published\n\n**Common mistakes**\n- Hero culture without documentation\n- Hiding risk until P1\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 114,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Shell/Python automation, CI/CD, Git, runbooks",
+    "tags": [
+      "Shell Scripting",
+      "Python",
+      "Jenkins",
+      "Azure DevOps",
+      "Git",
+      "Runbook Automation"
+    ],
+    "excerpt": "DBA DevOps Q&A—scripting, CI/CD, provisioning, self-healing, and documentation automation (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-automation-devops",
+    "createdAt": "2026-09-23T12:53:13.022Z",
+    "level": "Advanced",
+    "content": "## Scope\nAutomation expected from modern Lead DBAs (not pure L1 ticket closers).\n\n### Q1. What should be automated first in a Teradata estate?\n\n**Answer (documentation-aligned)**\n\nHealth checks, space reports, stats jobs, grant packages, environment compares, Viewpoint alert enrichment, and restartable load wrappers. Prefer idempotent scripts with logging over brittle click ops.\n\n### Q2. Shell vs Python?\n\n**Answer (documentation-aligned)**\n\nShell for tight OS/orchestration glue; **Python** for APIs, JSON, Datadog, parsing DBQL extracts, and maintainable tooling. Both belong on a Lead résumé when tied to outcomes.\n\n### Q3. CI/CD with Jenkins / Azure DevOps?\n\n**Answer (documentation-aligned)**\n\nPipeline DDL/TPT templates/ruleset exports through Git → review → deploy to lower envs → CAB → prod. DBA process automation is still change-managed.\n\n### Q4. Self-healing systems?\n\n**Answer (documentation-aligned)**\n\nControlled responses to known alerts (clear spool pressure via throttle, restart noncritical collectors)—never silent DDL or unsupervised aborts of business jobs.\n\n### Q5. Documentation automation?\n\n**Answer (documentation-aligned)**\n\nGenerate runbooks/capacity digests from live metadata. JIRA tickets should link to script versions in Git.\n\n\n## Documentation deep dive\nTreat TASM rulesets, privilege scripts, and TPT job templates as version-controlled artifacts—the same discipline Terraform applies to cloud infra.\n\n**Why this matters for Lead / Principal / Architect roles**\nArchitects multiply team capacity through automation and standards.\n\n**Implementation checklist**\n- Git is source of truth for DBA scripts\n- CI lint/syntax checks for BTEQ/TPT/SQL packs\n- Runbook links from every P1 alert\n\n**Common mistakes**\n- Prod-only scripts on a jump box with no repo\n- CD straight to prod without CAB for DDL\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 113,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Hadoop, Hive, Informatica, JDBC/ODBC, pipelines",
+    "tags": [
+      "Hadoop",
+      "Hive",
+      "Informatica PowerCenter",
+      "ETL/ELT",
+      "JDBC",
+      "Data Integration"
+    ],
+    "excerpt": "Integration ecosystem Q&A around EDW—Hadoop/Hive, Informatica, APIs, and pipeline management (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-bigdata-integration",
+    "createdAt": "2026-09-23T12:53:13.014Z",
+    "level": "Advanced",
+    "content": "## Scope\nEnterprise integration patterns surrounding Teradata platforms.\n\n### Q1. Why do Teradata Architects still need Hadoop/Hive literacy?\n\n**Answer (documentation-aligned)**\n\nMany banks land raw/cheap data in **HDFS/YARN/Hive** lakes then refine into Teradata for governed serving. You must speak partition strategies, Hive query pitfalls, and when NOT to duplicate lake chaos into the EDW.\n\n### Q2. Informatica PowerCenter / ETL-ELT role?\n\n**Answer (documentation-aligned)**\n\nPowerCenter remains common for enterprise ETL into Teradata. Modern direction often adds ELT/dbt-style transforms, but Leads still debug mappings, SCD patterns, and load windows that intersect TASM.\n\n### Q3. JDBC/ODBC and API integration?\n\n**Answer (documentation-aligned)**\n\nBI tools, apps, and services connect via drivers; pool sizing and poorly written SQL can create tactical incidents. API/JSON payload scripting appears in operational automation and data exchange—validate schemas and secrets handling.\n\n### Q4. Batch vs real-time processing?\n\n**Answer (documentation-aligned)**\n\nEDWs are batch-heavy; real-time paths need clear latency SLAs and must not starve tactical workloads. Architect the concurrency policy first.\n\n### Q5. MDM and data governance?\n\n**Answer (documentation-aligned)**\n\nMaster Data Management and governance decide which golden sources feed Teradata. Without governance, performance tuning fights bad data forever.\n\n\n## Documentation deep dive\nPair Teradata utility/DBQL application logging with Informatica/Hive job metadata so RCA can cross systems. Object storage (e.g., GCS) often stages extracts before TPT.\n\n**Why this matters for Lead / Principal / Architect roles**\nPrincipal Consultants are integration architects as much as database tuners.\n\n**Implementation checklist**\n- Interface catalog (source → staging → EDW)\n- Contract tests for critical feeds\n- Driver/pool standards for BI apps\n\n**Common mistakes**\n- Uncontrolled Hive→EDW dumps\n- Ignoring JDBC fan-out as a concurrency attack\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 112,
+    "category": "Teradata",
+    "title": "Teradata Q&A: VantageCloud migration and hybrid multi-cloud",
+    "tags": [
+      "VantageCloud Migration",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Hybrid Cloud",
+      "Cloud Cost Optimization"
+    ],
+    "excerpt": "Cloud migration Q&A for on-prem→VantageCloud/Lake, AWS/Azure/GCP, cost and governance (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-cloud-migration",
+    "createdAt": "2026-09-23T12:53:13.000Z",
+    "level": "Advanced",
+    "content": "## Scope\nData Platform Architect concerns for Teradata cloud modernization (AZ-900-level cloud literacy + Teradata-specific controls).\n\n### Q1. What does a senior Teradata cloud migration actually include?\n\n**Answer (documentation-aligned)**\n\nNot only database restore: workload classification, network/security, identity, utility/ETL redesign (TPT), TASM/policy remapping, DBQL/monitoring parity, DR drills, cost guardrails, and dual-run reconciliation. **VantageCloud / Lake** choices change compute/storage operating models.\n\n### Q2. AWS vs Azure vs GCP in this context?\n\n**Answer (documentation-aligned)**\n\nCloud choice is usually enterprise estate-driven. Architects need **cloud data warehousing** patterns, IAM, networking, and cost telemetry on each. AZ-900-level fundamentals help conversations; deep skill is mapping Teradata workloads to the chosen cloud's controls.\n\n### Q3. Hybrid and multi-cloud data management?\n\n**Answer (documentation-aligned)**\n\nOften unavoidable during waves: on-prem EDW + cloud analytics + object storage landing (e.g., GCS/S3/ADLS). Govern data movement, encryption, and latency SLAs explicitly.\n\n### Q4. Cloud cost optimization for analytics?\n\n**Answer (documentation-aligned)**\n\nRight-size compute, schedule batch elasticity, stop idle sandboxes, chargeback by workload, and prevent unconstrained exploratory concurrency from burning budget—the cloud equivalent of TASM discipline.\n\n### Q5. Cloud migration governance?\n\n**Answer (documentation-aligned)**\n\nCAB, risk register, rollback, data validation sign-off, regulatory evidence, and clear RACI across onshore/offshore + vendor.\n\n\n## Documentation deep dive\nTeradata public materials distinguish VantageCloud / Lake deployments while the engine concepts (PE/AMP/BYNET) remain the mental model. Pair with cloud-provider IAM and encryption docs for the landing zone.\n\n**Why this matters for Lead / Principal / Architect roles**\n₹50LPA+ roles are paid for migration judgment—wave plans, risk, and cost—not for clicking a provision wizard once.\n\n**Implementation checklist**\n- Workload inventory from DBQL before wave planning\n- Security & residency design review\n- Dual-run reconciliation metrics\n- FinOps dashboard for analytics spend\n\n**Common mistakes**\n- Lift-and-shift without TASM/policy redesign\n- No cost owner for sandboxes\n\n## Worked scenario\nA bank asks to \"move Teradata to cloud in six months\" while keeping 24×7 tactical SLAs. You would: (1) inventory workloads via DBQL, (2) separate tactical vs batch migration waves, (3) map TASM controls to cloud workload management, (4) prove backup/DR and access governance, (5) run dual-run reconciliation, and (6) present cost/risk options to CAB and business sponsors.\n\n## 3-minute study path\n1. Skim Q&As.\n2. Map each answer to a résumé bullet you can defend with a metric.\n3. Practice a stakeholder update: outcome, risk, timeline, cost.\n",
+    "pipeline": true
+  },
+  {
+    "id": 111,
+    "category": "Teradata",
+    "title": "Teradata Q&A: DBQL deep analysis and Viewpoint monitoring",
+    "tags": [
+      "DBQL",
+      "Teradata Viewpoint",
+      "Query Classification",
+      "Alerting",
+      "Operational Reporting"
+    ],
+    "excerpt": "DBQL and Viewpoint Q&A—BEGIN QUERY LOGGING options, utility rules, dashboards, and proactive monitoring (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-dbql-viewpoint-monitoring",
+    "createdAt": "2026-09-23T12:53:12.473Z",
+    "level": "Advanced",
+    "content": "## Scope\nOfficial DBQL controls from VantageCloud Lake database administration docs ([BEGIN QUERY LOGGING guidelines](https://docs.teradata.com/r/Lake-Working-with-SQL/SQL-Commands/SQL-Data-Definition-Language/Logging-Statements/BEGIN-QUERY-LOGGING/BEGIN-QUERY-LOGGING-Usage-Notes/General-Usage-Guidelines-for-BEGIN-QUERY-LOGGING), [WITH options](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/SQL-Statements-to-Control-Logging/WITH-Logging-Options), [application rules](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/DBQL-Overview/Logging-Rules-for-Applications)).\n\n### Q1. What is DBQL?\n\n**Answer (documentation-aligned)**\n\n**Database Query Log** captures measures so DBAs can verify usage and investigate expensive queries. Enable/adjust with `BEGIN`/`REPLACE QUERY LOGGING`; disable paths with `WITH NONE` where appropriate.\n\n### Q2. Which WITH options should seniors know?\n\n**Answer (documentation-aligned)**\n\nExamples from docs: `SQL`, `STEPINFO`, `OBJECTS`, `EXPLAIN`, `XMLPLAN`, `STATSUSAGE`, `UTILITYINFO`, `PARAMINFO`, `ALL` (broad—use carefully). Options write to tables such as `DBQLogTbl`, `DBQLStepTbl`, `DBQLSQLTbl`, `DBQLObjTbl`, `DBQLUtilityTbl`, etc. Threshold/summary limits control volume.\n\n### Q3. Session-mode constraints?\n\n**Answer (documentation-aligned)**\n\nDocs note BEGIN QUERY LOGGING in Teradata session mode must be outside explicit BT/ET transactions; not performed in ANSI session mode. Know dynamic enable limits (e.g., max users per request called out in guidelines).\n\n### Q4. Viewpoint's role?\n\n**Answer (documentation-aligned)**\n\nReal-time system monitoring, alerting/thresholds, workload designer, space/capacity views, and operational dashboards. Many teams also forward metrics to **Datadog** or enterprise APM—Architects design the signal path end-to-end.\n\n### Q5. Deep DBQL analysis?\n\n**Answer (documentation-aligned)**\n\nClassify queries, find misrouted workloads, validate stats issues via steps, and feed TASM tuning. Join DBQL views by QueryID; separate interactive vs utility logging rules.\n\n## Official references\n- [BEGIN QUERY LOGGING guidelines](https://docs.teradata.com/r/Lake-Working-with-SQL/SQL-Commands/SQL-Data-Definition-Language/Logging-Statements/BEGIN-QUERY-LOGGING/BEGIN-QUERY-LOGGING-Usage-Notes/General-Usage-Guidelines-for-BEGIN-QUERY-LOGGING) · [WITH Logging Options](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/SQL-Statements-to-Control-Logging/WITH-Logging-Options)\n\n\n## Documentation deep dive (free public Teradata sources)\nAPPLNAME rules let you log utilities differently from interactive users even when they share accounts—critical for banking ops realism.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nWithout disciplined DBQL, TASM and performance debates lack evidence.\n\n**Implementation checklist**\n- Logging matrix by app/user/account\n- Retention + space plan for DBQL tables\n- Viewpoint alerts tied to on-call\n- Weekly operational report for stakeholders\n\n**Common mistakes**\n- WITH ALL everywhere → DBQL becomes the incident\n- No utility-specific rules\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 110,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Backup, ARCMAIN, DR, HA, patch & incident ops",
+    "tags": [
+      "Backup & Recovery",
+      "ARCMAIN",
+      "Disaster Recovery",
+      "High Availability",
+      "Incident Management"
+    ],
+    "excerpt": "Resilience Q&A covering ARCMAIN backups, DR/HA, patches, hardware remediation, and RCA (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-backup-dr-ha-ops",
+    "createdAt": "2026-09-23T12:53:12.466Z",
+    "level": "Advanced",
+    "content": "## Scope\nProduction operations for mission-critical Teradata estates.\n\n### Q1. What is ARCMAIN in DBA practice?\n\n**Answer (documentation-aligned)**\n\nClassic Teradata archive/recovery utility path used in many enterprises for backup/restore patterns (alongside broader DSA discussions in modern logging docs). Leads must know RPO/RTO, backup windows, and restore drills—not only job names.\n\n### Q2. HA vs DR?\n\n**Answer (documentation-aligned)**\n\n**HA** reduces local failure impact (redundant components, HSN/clique practices, failover). **DR** recovers from site-level loss with tested runbooks. Both need measurable objectives and rehearsal.\n\n### Q3. Patch management & service recycle?\n\n**Answer (documentation-aligned)**\n\nCoordinate DBS/PDE patches, SSL cert renewals, array/disk remediation, and controlled service recycles through CAB with backout. Document customer impact windows.\n\n### Q4. Incident management & RCA?\n\n**Answer (documentation-aligned)**\n\nITIL-aligned detect→contain→recover→RCA→corrective action. Evidence from Viewpoint, DBQL, ResUsage, and utility logs. Mentoring juniors on RCA quality is a Lead expectation.\n\n\n## Documentation deep dive (free public Teradata sources)\nModern DBQL utility logging (UTILITYINFO/DSA phases) supports operational forensics for load/backup-related jobs—wire monitoring before the outage.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\n24×7 banking platforms hire Architects who stay calm, communicate, and prevent repeats.\n\n**Implementation checklist**\n- RPO/RTO published per critical subject area\n- Quarterly restore test evidence\n- Patch calendar + SSL expiry alerts\n- RCA template with preventive actions\n\n**Common mistakes**\n- Untested backups\n- Silent patches without stakeholder notice\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 109,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Users, roles, privileges, security governance",
+    "tags": [
+      "User & Role Management",
+      "Profile Management",
+      "Privilege Management",
+      "Access Governance",
+      "Security Governance"
+    ],
+    "excerpt": "DBA security Q&A for roles, profiles, grants/revokes, and access governance (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-security-roles-privileges",
+    "createdAt": "2026-09-23T12:53:12.455Z",
+    "level": "Advanced",
+    "content": "## Scope\nEnterprise access governance on business-critical Teradata platforms.\n\n### Q1. How should Lead DBAs model users, roles, and profiles?\n\n**Answer (documentation-aligned)**\n\n**Users** are principals; **roles** bundle privileges for job functions; **profiles** (and related controls) shape resource/password/session behaviors depending on platform features. Prefer role-based access over direct grants for auditability.\n\n### Q2. Object-level vs system-level access control?\n\n**Answer (documentation-aligned)**\n\nObject-level: tables/views/procedures/macros. System-level: broader admin capabilities. Architects enforce least privilege and segregate duties (DDL admin vs data reader vs workload admin).\n\n### Q3. Grant/Revoke processes?\n\n**Answer (documentation-aligned)**\n\nTicketed requests, approver matrix, scripted grants, evidence in CAB/audit logs, periodic access reviews—especially for regulated banking.\n\n### Q4. Security governance vs checkbox grants?\n\n**Answer (documentation-aligned)**\n\nGovernance means policy + evidence + recertification + monitoring of privileged use—not a one-time GRANT ALL.\n\n\n## Documentation deep dive (free public Teradata sources)\nOperational excellence for DBAs always pairs privilege design with Viewpoint/DBQL monitoring of powerful accounts and utility logons.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nAudit findings against EDW access are executive-visible. Leads own the control design.\n\n**Implementation checklist**\n- Role catalog mapped to HR job functions\n- Quarterly access recertification\n- Break-glass admin procedure with logging\n\n**Common mistakes**\n- Shared generic app IDs with unchecked privileges\n- Manual grants without revoke hygiene\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 108,
+    "category": "Teradata",
+    "title": "Teradata Q&A: ResUsage, AWT, capacity planning, SLA baselines",
+    "tags": [
+      "ResUsage",
+      "AWT Monitoring",
+      "Capacity Planning",
+      "SLA Compliance",
+      "Bottleneck Identification"
+    ],
+    "excerpt": "Platform performance Q&A on ResUsage, AMP Worker Tasks, capacity, and SLA reporting (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-resusage-awt-capacity",
+    "createdAt": "2026-09-23T12:53:12.446Z",
+    "level": "Advanced",
+    "content": "## Scope\nSystem-level performance and capacity management for mission-critical EDWs.\n\n### Q1. What is ResUsage analysis?\n\n**Answer (documentation-aligned)**\n\nResUsage provides resource utilization telemetry (CPU, disk, BYNET-related pressure indicators depending on tables/views used). Leads trend it for capacity planning and bottleneck RCA—not only for one-off incidents.\n\n### Q2. What is AWT monitoring?\n\n**Answer (documentation-aligned)**\n\n**AMP Worker Tasks** are the workers that execute AMP steps. AWT saturation means concurrency exceeded healthy parallelism—often a TASM/throttle problem as much as a SQL problem.\n\n### Q3. How do you do capacity planning?\n\n**Answer (documentation-aligned)**\n\nCombine growth forecasts (data + users + concurrency), ResUsage trends, node/AMP headroom, and cloud elasticity options. Present costed options to stakeholders (scale-up vs tune vs offload).\n\n### Q4. Performance baseline reporting?\n\n**Answer (documentation-aligned)**\n\nStore pre-change DBQL/ResUsage baselines; after CAB changes, compare SLA compliance and hotspot AMPs. Without baselines, tuning debates become opinions.\n\n\n## Documentation deep dive (free public Teradata sources)\nPair Viewpoint real-time monitors with historical DBQL/ResUsage. Architects should narrate bottleneck → evidence → action → verification.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\n₹50LPA+ interviews probe whether you manage the platform as a product with SLAs and forecasts.\n\n**Implementation checklist**\n- Weekly capacity digest for leadership\n- AWT/throttle dashboards for peak windows\n- Baseline pack attached to every major CAB\n\n**Common mistakes**\n- Buying nodes before fixing skew/TASM\n- No SLA definition for 'slow'\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 107,
+    "category": "Teradata",
+    "title": "Teradata Q&A: EXPLAIN, skew, spool, statistics, join strategies",
+    "tags": [
+      "EXPLAIN Plan",
+      "Skew Analysis",
+      "Spool Space",
+      "Collect Statistics",
+      "Join Strategy"
+    ],
+    "excerpt": "Performance tuning Q&A for plans, skew, spool, stats, and join strategy choices (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-performance-explain-skew",
+    "createdAt": "2026-09-23T12:53:12.437Z",
+    "level": "Advanced",
+    "content": "## Scope\nCost-based optimization literacy for senior Teradata performance engineers.\n\n### Q1. How do you use EXPLAIN as a Lead DBA?\n\n**Answer (documentation-aligned)**\n\nRead estimated costs, confidence, join strategies, redistribution steps, and partition elimination. EXPLAIN is a hypothesis generator—confirm with DBQL step timings and skew metrics before changing production objects.\n\n### Q2. What is skew analysis?\n\n**Answer (documentation-aligned)**\n\nDetect uneven AMP CPU/IO/row distribution. Causes: poor PI, skewed join keys, hot partitions. Remediation may include PI redesign, PPI, aggregate join indexes, or query rewrite—always CAB-governed for large tables.\n\n### Q3. Spool space management?\n\n**Answer (documentation-aligned)**\n\nSpool is working space for intermediate results. Spool failures often signal bad plans, missing stats, product joins, or runaway concurrency. Fix the plan/workload—not only raising spool limits forever.\n\n### Q4. Collect Statistics optimization?\n\n**Answer (documentation-aligned)**\n\nStats drive cardinality estimates. Stale/missing stats → bad join order and product joins. Governance: which columns, sample vs full, cadence after large loads, and verification that stats jobs themselves are throttled.\n\n### Q5. Hash vs merge vs product joins?\n\n**Answer (documentation-aligned)**\n\nExplain when the optimizer picks each; **product join elimination** is a common win (better predicates/stats/indexes). Interviewers want you to connect join choice to redistribution cost across AMPs.\n\n\n## Documentation deep dive (free public Teradata sources)\nArchitecture docs make redistribution and all-AMP behavior visible; performance tuning is applied architecture plus stats hygiene plus TASM protection.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nPrincipal performance ownership is measured in restored SLAs and prevented repeats—not one heroic SQL tweak.\n\n**Implementation checklist**\n- Stats policy per subject area\n- Skew review after major ETL\n- Before/after baselines for every tuning change\n\n**Common mistakes**\n- Collecting stats on everything daily without ROI\n- Raising spool as the only fix\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 106,
+    "category": "Teradata",
+    "title": "Teradata Q&A: TASM events, exceptions, SLAs, mixed workloads",
+    "tags": [
+      "TASM States",
+      "Workload Exception Actions",
+      "SLA-Based Prioritization",
+      "Tactical Workload",
+      "Concurrency Management"
+    ],
+    "excerpt": "Advanced TASM Q&A on states, events, exception actions, and tactical vs batch concurrency (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-tasm-events-sla",
+    "createdAt": "2026-09-23T12:53:12.429Z",
+    "level": "Advanced",
+    "content": "## Scope\nOperational TASM behaviors expected from Lead DBAs in banking 24×7 estates.\n\n### Q1. What are TASM states and operational environments?\n\n**Answer (documentation-aligned)**\n\nRulesets can behave differently by **environment/state** (e.g., business hours vs batch window). Architects encode calendar reality into workload policy instead of manual firefighting.\n\n### Q2. System event thresholds and threshold triggers?\n\n**Answer (documentation-aligned)**\n\nEvents detect unhealthy conditions (resource pressure, queue delays, etc.) and can trigger **exception actions**—change priority, abort, notify, move workload behavior—so the system self-protects.\n\n### Q3. How do you manage mixed tactical + batch workloads?\n\n**Answer (documentation-aligned)**\n\nClassify tactical work tightly (AMP count, row counts, account/app), give it protected priority, throttle heavy BI/batch, and use DBQL to prove classification accuracy. Batch optimization is about windows + concurrency caps, not only SQL rewrites.\n\n### Q4. What is workload health monitoring?\n\n**Answer (documentation-aligned)**\n\nTrack rejects/delays/exceptions, SLA hit rate, and whether queries land in the intended workload. Misclassification is the silent killer of TASM designs.\n\n\n## Documentation deep dive (free public Teradata sources)\nViewpoint workload materials emphasize service-level oriented methods (tactical/SLG/timeshare). Pair that with DBQL proof that classification filters match reality.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nClient-facing Leads must explain trade-offs: protecting ATM/online tactical SQL may delay a report—and that is intentional governance.\n\n**Implementation checklist**\n- Define exception actions with owners and paging rules\n- Quarterly classification audit via DBQL\n- Document state changes for month-end/year-end\n\n**Common mistakes**\n- Exception actions that abort without stakeholder agreement\n- No proof that filters still match after app upgrades\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 105,
+    "category": "Teradata",
+    "title": "Teradata Q&A: TASM, TDWM, Workload Designer, rulesets",
+    "tags": [
+      "TASM",
+      "TDWM",
+      "Workload Designer",
+      "Priority Scheduler",
+      "Throttles"
+    ],
+    "excerpt": "Workload management Q&A covering TASM rulesets, classification, throttles, and Viewpoint Workload Designer (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-tasm-workload-designer",
+    "createdAt": "2026-09-23T12:53:12.420Z",
+    "level": "Advanced",
+    "content": "## Scope\nAligned with [Viewpoint Workload Designer / Creating and Editing a Workload](https://docs.teradata.com/r/Enterprise_IntelliFlex_Lake_VMware/Teradata-Viewpoint-User-Guide-24.08/Workload-Management/Workload-Designer-Overview/Workload-Designer-Teradata-System/Workloads-View/Creating-and-Editing-a-Workload) and senior TASM practice (TDWM).\n\n### Q1. What is TASM?\n\n**Answer (documentation-aligned)**\n\n**Teradata Active System Management** is the workload management layer that classifies queries and applies priorities, throttles, and exception actions so mixed tactical/BI/batch work can share one EDW without collapsing SLAs. **TDWM** refers to the Teradata workload management subsystem/config you administer (often via Viewpoint).\n\n### Q2. What is a TASM ruleset architecture?\n\n**Answer (documentation-aligned)**\n\nA versioned set of classification rules, workloads, throttles, events, and states that define how the system behaves. Architects treat rulesets like code: review, test in lower envs, CAB, activate, monitor.\n\n### Q3. How does Workload Designer classify work?\n\n**Answer (documentation-aligned)**\n\nQueries sharing characteristics are grouped into a **workload** so controls apply as a set. Viewpoint docs note differences by OS/license (e.g., SLES 10 enforcement priority vs SLES 11 workload management methods such as Tactical / SLG Tier / Timeshare on licensed TASM systems).\n\n### Q4. What are system vs workload vs arrival-rate throttles?\n\n**Answer (documentation-aligned)**\n\n**Throttles** limit concurrency or arrivals so the platform stays healthy. System throttles protect the box; workload throttles protect a class; query arrival-rate throttles smooth bursts. Delay queues hold work until resources allow—tuning them is a Lead skill.\n\n### Q5. Priority Scheduler / resource partitions / allocation groups?\n\n**Answer (documentation-aligned)**\n\nThese constructs allocate relative resource shares across workloads (exact UI/method depends on SLES/TASM generation). Interview answer: explain **relative priority + protection of tactical work** rather than memorizing every screen.\n\n## Official references\n- [Creating and Editing a Workload (Viewpoint)](https://docs.teradata.com/r/Enterprise_IntelliFlex_Lake_VMware/Teradata-Viewpoint-User-Guide-24.08/Workload-Management/Workload-Designer-Overview/Workload-Designer-Teradata-System/Workloads-View/Creating-and-Editing-a-Workload)\n\n\n## Documentation deep dive (free public Teradata sources)\nViewpoint docs distinguish tactical (short, high priority, often single/few-AMP, low CPU-second goals), SLG tiers, and timeshare leftovers. Flex throttles appear on newer EDW releases—confirm platform version before promising features.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nWithout TASM, every new dashboard becomes a production incident. This is the difference between DBA and Platform Architect.\n\n**Implementation checklist**\n- Map business SLAs → workloads → throttles\n- Protect tactical paths explicitly\n- Test ruleset changes under replay/DBQL samples\n- Monitor delay queue & exceptions after activation\n\n**Common mistakes**\n- One default workload for everything\n- Copying rulesets across SLES generations blindly\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 104,
+    "category": "Teradata",
+    "title": "Teradata Q&A: PI, PPI, secondary indexes, join indexes, distribution",
+    "tags": [
+      "Primary Index Design",
+      "PPI",
+      "Join Index",
+      "Data Distribution",
+      "Physical Database Design"
+    ],
+    "excerpt": "Physical design Q&A for data distribution, PI/PPI, secondary and join indexes (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-physical-design-pi-ppi",
+    "createdAt": "2026-09-23T12:53:12.413Z",
+    "level": "Advanced",
+    "content": "## Scope\nPhysical database design for MPP—connecting access paths to AMP placement.\n\n### Q1. Why is Primary Index (PI) design the #1 Teradata skill?\n\n**Answer (documentation-aligned)**\n\nThe PI (or other distribution mechanism in modern options) determines **which AMP owns a row**. Good PI → even distribution + efficient single/few-AMP access. Bad PI → skew, hot AMPs, spool explosions, and unfixable SLAs.\n\n### Q2. What is Partitioned Primary Index (PPI)?\n\n**Answer (documentation-aligned)**\n\nPPI adds **row partitioning** (often by date/range) on top of PI distribution so partition elimination can skip irrelevant storage—critical for large time-series fact tables in banking.\n\n### Q3. Secondary Index vs Join Index?\n\n**Answer (documentation-aligned)**\n\n**Secondary indexes** support alternate access paths (with maintenance cost). **Join indexes** prejoin/preaggregate to accelerate repeated join shapes—powerful but storage- and refresh-sensitive. Architects demand workload justification, not index sprawl.\n\n### Q4. What is data distribution design in practice?\n\n**Answer (documentation-aligned)**\n\nChoose PI columns for access + uniqueness/cardinality balance; validate skew after load; revisit when query patterns change. Table redistribution is a deliberate change with CAB, not a casual ALTER in prod.\n\n\n## Documentation deep dive (free public Teradata sources)\nOfficial query-processing docs show unique-PI single-row paths hitting one AMP versus broadcast all-AMP paths—physical design is literally the difference between those two cost models.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nPrincipal Consultants are paid to stop irreversible skew early and to govern index changes through CAB.\n\n**Implementation checklist**\n- PI decision record per large table (access path + cardinality + skew test)\n- PPI strategy for large dated facts\n- Join index ROI review quarterly\n- Skew dashboards after major loads\n\n**Common mistakes**\n- NUPI with extreme skew 'because the join key matched'\n- Creating join indexes for every slow query without TASM/plan review\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 103,
+    "category": "Teradata",
+    "title": "Teradata Q&A: BTEQ, FastLoad, MultiLoad, TPT, FastExport",
+    "tags": [
+      "BTEQ",
+      "FastLoad",
+      "MultiLoad",
+      "TPT",
+      "FastExport",
+      "ETL"
+    ],
+    "excerpt": "Load/unload utility Q&A with modern TPT naming and DBQL UTILITYINFO awareness (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-load-utilities-tpt",
+    "createdAt": "2026-09-23T12:53:12.404Z",
+    "level": "Advanced",
+    "content": "## Scope\nOperational utility literacy for senior DBAs, aligned with Teradata DBQL application-name guidance ([Logging Rules for Applications](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/DBQL-Overview/Logging-Rules-for-Applications)).\n\n### Q1. What is BTEQ used for?\n\n**Answer (documentation-aligned)**\n\n**BTEQ** is the classic scriptable SQL client for batch SQL, exports, and operational scripts. Still common in runbooks, but new automation often prefers TPT + orchestration (Jenkins/Azure DevOps) with clearer logging.\n\n### Q2. FastLoad vs MultiLoad vs TPT?\n\n**Answer (documentation-aligned)**\n\nStandalone **FastLoad** / **MultiLoad** / **FastExport** are legacy protocols still seen in banks. **Teradata Parallel Transporter (TPT)** is the modern parallel framework: Load / Update / Export operators supersede many standalone patterns. Official DBQL docs list UtilityName values such as `TPTLOAD`, `TPTUPD`, `TPTEXP` (current) vs deprecated `FASTLOAD` / `MULTILOAD` / `FASTEXP` standalone names.\n\n### Q3. How do you monitor loads with DBQL?\n\n**Answer (documentation-aligned)**\n\nUse `BEGIN QUERY LOGGING` with application rules, e.g. `ON APPLNAME= 'TPTLOAD' WITH UTILITYINFO` to capture utility phase data in `DBC.DBQLUtilityTbl` / `QryLogUtilityV` (setup, acquisition, application, cleanup for load protocols).\n\n### Q4. Architect stance on utilities?\n\n**Answer (documentation-aligned)**\n\nStandardize on TPT templates, idempotent restarts, file landing contracts, and SLA windows. Keep FastLoad knowledge for legacy, but do not design greenfield on deprecated standalone utilities alone.\n\n## Official references\n- [DBQL Logging Rules for Applications](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/DBQL-Overview/Logging-Rules-for-Applications) · [WITH Logging Options](https://docs.teradata.com/r/Lake-Database-Reference/Database-Administration/Tracking-Query-Behavior-with-Database-Query-Logging-Operational-DBAs/SQL-Statements-to-Control-Logging/WITH-Logging-Options)\n\n\n## Documentation deep dive (free public Teradata sources)\nDBQL docs explicitly separate interactive vs utility logging via APPLNAME/UtilityName so heavy loads do not inherit interactive verbose logging (and vice versa).\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nMorning batch failures are career-defining in banking EDWs. Utility phase visibility is how Leads run RCA.\n\n**Implementation checklist**\n- Inventory utilities by UtilityName / APPLNAME\n- Enable UTILITYINFO for critical load jobs\n- Document restartability and duplicate-check strategy\n- Align load windows with TASM batch workloads\n\n**Common mistakes**\n- Verbose DBQL on every load row path without thresholds\n- No distinction between TPTLOAD and legacy FASTLOAD in monitoring\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 102,
+    "category": "Teradata",
+    "title": "Teradata Q&A: VantageCloud, Lake, Studio, and SQL tools",
+    "tags": [
+      "Teradata Vantage",
+      "VantageCloud",
+      "VantageCloud Lake",
+      "Teradata Studio",
+      "SQL Assistant"
+    ],
+    "excerpt": "Platform product Q&A for Vantage vs VantageCloud vs Lake plus day-to-day DBA tools (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-vantagecloud-studio-tools",
+    "createdAt": "2026-09-23T12:53:12.396Z",
+    "level": "Intermediate",
+    "content": "## Scope\nProduct positioning for senior platform roles spanning on-prem Enterprise/IntelliFlex and cloud deployments.\n\n### Q1. How do you distinguish Teradata Database Administration vs Vantage?\n\n**Answer (documentation-aligned)**\n\n**Teradata Database / Analytics Database** is the engine you administer (users, space, performance, recovery). **Teradata Vantage** is the modern analytics platform branding around that engine plus ecosystem capabilities. Lead resumes should show both classic DBA depth and Vantage platform literacy.\n\n### Q2. What is VantageCloud vs VantageCloud Lake?\n\n**Answer (documentation-aligned)**\n\n**VantageCloud** brings the Vantage engine to cloud operating models. **VantageCloud Lake** emphasizes lakehouse-style separation patterns on cloud while still using Vantage engine concepts on the primary cluster (per Teradata architecture materials). Architects must speak migration, cost, and governance—not only \"lift SQL\".\n\n### Q3. Where do Teradata Studio and SQL Assistant fit?\n\n**Answer (documentation-aligned)**\n\n**SQL Assistant** is the classic query client many DBAs/developers still use. **Teradata Studio** is the richer Eclipse-based / studio tooling path for development and admin tasks. Viewpoint is the operations/monitoring plane (separate from these clients).\n\n### Q4. What does upgrade & patch management mean at Architect level?\n\n**Answer (documentation-aligned)**\n\nVersion/PDE/DBS alignment, compatibility testing, CAB approval, rollback plans, and communication to onshore/offshore support—not silent production patching.\n\n\n## Documentation deep dive (free public Teradata sources)\nTeradata public docs tag deployments as VantageCloud / VantageCore and editions such as Enterprise, IntelliFlex, VMware, Lake. Always cite the deployment family when recommending features (TASM options differ by SLES/license in Viewpoint docs).\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\nHiring managers at Principal level expect you to map on-prem pain to cloud target state with risk and cost controls.\n\n**Implementation checklist**\n- Name current platform (Enterprise/IntelliFlex/VantageCloud/Lake) in every design review\n- Separate client tools (Studio/SQLA) from ops plane (Viewpoint/Ecosystem Manager)\n- Keep a patch calendar with CAB + backout\n\n**Common mistakes**\n- Résumé keyword stuffing 'Lake' without migration evidence\n- Using deprecated utility names in cloud runbooks without TPT equivalents\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
+    "id": 101,
+    "category": "Teradata",
+    "title": "Teradata Q&A: Vantage architecture — PE, AMP, BYNET, nodes",
+    "tags": [
+      "Teradata Architecture",
+      "AMP",
+      "PE",
+      "BYNET",
+      "MPP",
+      "Vantage"
+    ],
+    "excerpt": "Senior DBA architecture Q&A on Parsing Engines, AMPs, BYNET, shared-nothing MPP—and how single-AMP vs all-AMP requests behave (~3-minute read).",
+    "sourceUrl": "https://learnhub.local/teradata/qa-architecture-amp-pe-bynet",
+    "createdAt": "2026-09-23T12:53:12.384Z",
+    "level": "Advanced",
+    "content": "## Scope\nOfficial concepts from Teradata Vantage Database Introduction ([AMPs](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Database-Introduction/Vantage-Hardware-and-Software-Architecture/Request-Processing/AMPs), [Queries and AMPs](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/SQL-Fundamentals/Query-Processing/Queries-and-AMPs), [BYNET](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Database-Introduction/Vantage-Hardware-and-Software-Architecture/SMP-and-MPP-Platforms/The-BYNET)) and the [Developers Portal architecture overview](https://developers.teradata.com/quickstarts/introduction/teradata-vantage-engine-architecture-and-concepts/).\n\n### Q1. What is Teradata Vantage's core engine architecture?\n\n**Answer (documentation-aligned)**\n\nVantage uses a **Massively Parallel Processing (MPP), shared-nothing** design. Work is distributed across virtual processors. The vproc that stores and processes table rows is the **Access Module Processor (AMP)**. Parsing Engines (**PEs**) parse/optimize SQL and dispatch steps; the **BYNET** interconnect carries messages among PEs and AMPs. Enterprise platforms assign Virtual Disks (Vdisks) to AMPs; VantageCloud Lake primary cluster concepts still use the same engine ideas.\n\n### Q2. What does a Parsing Engine (PE) do?\n\n**Answer (documentation-aligned)**\n\nThe PE accepts SQL, parses and optimizes it, produces AMP steps, and returns results to the client. For a unique primary-index single-row request, the PE can target **one AMP**. For many-row / all-AMP work, it can **broadcast** steps via the BYNET. It can also send steps to a dynamic subset of AMPs to reduce overhead.\n\n### Q3. What does an AMP do?\n\n**Answer (documentation-aligned)**\n\nEach AMP owns its portion of the data on associated storage and performs retrieve/join/sort/aggregate work on that slice. No other AMP reads another AMP's disks directly (shared-nothing). Parallelism comes from many AMPs executing steps concurrently.\n\n### Q4. What is the BYNET?\n\n**Answer (documentation-aligned)**\n\nMore than a simple bus: a switched fabric with high-speed logic for bi-directional **broadcast, multicast, and point-to-point** messaging plus merge functions. Multinode systems typically have **at least two BYNETs** for fault tolerance and load-balanced messaging; if one fails, the other can carry traffic.\n\n### Q5. How should a Lead DBA talk about nodes, cliques, and Hot Standby Nodes?\n\n**Answer (documentation-aligned)**\n\nNodes host PEs/AMPs and provide compute/IO. Clique/HSN concepts support high availability when hardware fails—Architect answers should connect HA design to SLA, failover testing, and patch windows rather than only naming the feature.\n\n### Q6. Interview tip: single-AMP vs all-AMP?\n\n**Answer (documentation-aligned)**\n\nPI-driven single-row access → typically one AMP (efficient). Untargeted scans/joins → many/all AMPs (higher resource cost). Physical design and TASM must protect the system when all-AMP tactical mistakes land in production.\n\n## Official references\n- [AMPs](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Database-Introduction/Vantage-Hardware-and-Software-Architecture/Request-Processing/AMPs) · [Queries and AMPs](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/SQL-Fundamentals/Query-Processing/Queries-and-AMPs) · [BYNET](https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Database-Introduction/Vantage-Hardware-and-Software-Architecture/SMP-and-MPP-Platforms/The-BYNET)\n\n\n## Documentation deep dive (free public Teradata sources)\nDocs consistently describe PE → BYNET → one/selected/all AMPs. Parallel steps may overlap for some queries; completion messages synchronize step progression. Architects use this model to explain skew, hotspot AMPs, and why PI design dominates performance.\n\n**Why this matters for Lead DBA / Data Platform Architect roles**\n₹50LPA+ roles are hired to prevent architectural pain: bad PI → permanent skew; misunderstood all-AMP patterns → SLA breaches under mixed workloads.\n\n**Implementation checklist**\n- Draw PE/BYNET/AMP data path for one tactical and one batch query\n- Identify which critical tables are single-AMP friendly vs all-AMP heavy\n- Document HA expectations (clique/HSN/failover drills)\n- Tie architecture talk to capacity and TASM—not isolated theory\n\n**Common mistakes**\n- Treating Teradata like a single-node RDBMS in designs\n- Ignoring BYNET/AMP imbalance when chasing SQL-only fixes\n\n## Worked scenario\nA business-critical bank warehouse misses morning SLA after a new BI cohort lands. You would: (1) classify the workload in TASM/Viewpoint, (2) confirm physical design/skew with EXPLAIN and DBQL, (3) protect tactical paths with throttles/priorities, (4) document CAB change + rollback, and (5) baseline ResUsage/AWT before/after. That is Architect-level delivery—not only restarting a service.\n\n## 3-minute study path\n1. Skim each Q&A once.\n2. Open one official link from the references.\n3. Practice a 40-second interview answer: definition → control → failure mode.\n",
+    "pipeline": true
+  },
+  {
     "id": 100,
     "category": "GenAI",
     "title": "Leadership Q&A: Stakeholders, executives, collaboration, change, innovation",

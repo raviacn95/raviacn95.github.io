@@ -2,7 +2,7 @@
    APP.JS - LearnHub (fast, paginated, path-aware, dynamic)
    ================================================================ */
 
-const CONTENT_VERSION = 18;
+const CONTENT_VERSION = 19;
 const PAGE_SIZE = 9;
 const RECENT_KEY = "learnhub-recent-v1";
 const PROGRESS_KEY = "learnhub-progress-v1";
@@ -37,6 +37,12 @@ const LEARNING_PATHS = {
     title: "Tricentis Tosca",
     blurb: "Modules, ActionModes, TestCase-Design, ExecutionLists, and DEX — documentation-aligned Q&A.",
     category: "TOSCA",
+  },
+  teradata: {
+    id: "teradata",
+    title: "Teradata DBA / Platform Architect",
+    blurb: "Vantage architecture, TASM, DBQL, performance, cloud migration, and leadership for Lead/Principal roles.",
+    category: "Teradata",
   },
 };
 
@@ -417,6 +423,7 @@ function renderHome() {
     GenAI: "GenAI / AI Architect tutorials",
     MCP: "MCP tutorials",
     TOSCA: "TOSCA tutorials",
+    Teradata: "Teradata DBA / Platform Architect",
   };
   feedTitle.textContent = categoryLabels[currentCategory] || "All tutorials";
 
